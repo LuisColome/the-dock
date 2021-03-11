@@ -1,0 +1,329 @@
+
+
+/* Button
+--------------------------------------------- */
+
+$default: nth( nth( $brand_colors, 1 ), 1 ); // first color in $brand_colors array
+
+.wp-block-button__link {
+	border: 2px solid brand-color( $default );
+	border-radius: 3px;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 32px;
+	padding: 16px 32px;
+	text-decoration: none;
+
+	.is-style-full &,
+	&.full {
+		display: block;
+		width: 100%;
+	}
+
+	&:not(.has-text-color) {
+		color: white;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	&:not(.has-background) {
+		background-color: brand-color( $default );
+
+		&:hover,
+		&:focus {
+            border: 2px solid brand-color( $default, 'darken' );
+			background-color: brand-color( $default, 'darken' );
+		}
+	}
+
+    .is-style-outline > &:not(.has-text-color), // front-end
+    &.is-style-outline {
+        border: 2px solid brand-color( $default );
+        color: brand-color( $default );
+		background-color: transparent;
+
+        &:hover,
+        &:focus {
+            border: 2px solid brand-color( $default, 'darken' );
+			background-color: brand-color( $default, 'darken' );
+            color: $white;
+        }
+    }
+    
+    // > .wp-block-button__link:not(.has-text-color), .wp-block-button__link.is-style-outline:not(.has-text-color)
+
+	@each $name, $color in $brand_colors {
+
+		&.has-#{$name}-color:hover,
+		&.has-#{$name}-color:focus {
+			color: $color;
+		}
+
+		&.has-#{$name}-background-color:hover,
+		&.has-#{$name}-background-color:focus {
+			background-color: brand-color( $name, 'darken' );
+		}
+	}
+
+}
+
+/* Blockquote
+--------------------------------------------- */
+
+blockquote.wp-block-quote {
+    position: relative;
+    padding: 4% 0 0 4%;
+
+    &::before {
+        @include block-cover();
+        top: -35px;
+        background: transparent url(../icons/utility/quote.svg) no-repeat top left;
+        background-size: 120px;
+        text-align: left;
+        opacity: .1;
+    }
+
+	p {
+		color: $base-color;
+		@include font-sizes(22px, 22px 24px);
+		font-style: italic;
+		font-weight: 400;
+	}
+
+	cite {
+		color: $base-color;
+		display: block;
+		font-size: 85%;
+		font-weight: 700;
+		margin-top: 12px;
+		opacity: .5;
+		text-transform: uppercase;
+	}
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+
+}
+
+.wp-block-pullquote {
+    text-align: left;
+    padding: 0;
+    margin: $block-margin auto;
+
+    blockquote {
+        margin: 0;
+        padding: 4% 8%; 
+        background-color: brand-color('grey');
+        border-left: 3px solid $primary-color;
+
+        p{            
+            color: $base-color;
+            @include font-sizes(19px, 20px, 22px);
+            font-style: italic;
+        }
+    }  
+}
+
+/* Separator
+--------------------------------------------- */
+
+.wp-block-separator,
+hr {
+	background: transparent;
+	border: none;
+	width: 100%;
+	height: 32px;
+	position: relative;
+
+	&::before {
+		background: $border-color;
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		top: 50%;
+		margin-top: -.5px;
+	}
+}
+
+/* Image and Gallery
+--------------------------------------------- */
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-radius: $border-radius;
+
+	&.alignleft {
+		float: left;
+		margin: 0 $block-margin $block-margin 0;
+	}
+
+	&.alignright {
+		float: right;
+		margin: 0 0 $block-margin $block-margin;
+	}
+
+	&.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+.wp-block-image figcaption {
+	color: $grey_7;
+	text-align: left;
+	font-size: 14px;
+	font-style: normal;
+}
+
+.site-container .blocks-gallery-grid,
+.site-container .wp-block-gallery,
+.site-container .wp-block-social-links {  // still don't have a place for social icons.
+  padding-left: 0;
+}
+
+/* Tables
+--------------------------------------------- */
+
+.wp-block-table  {
+
+    border-collapse: collapse;
+    width: 100%;
+
+	td, th {
+		padding: .5em;
+	    border: 1px solid;
+	}
+}
+
+/* Color Options
+--------------------------------------------- */
+
+@each $name, $color in $brand_colors {
+
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
+}
+
+.site-container {
+	p.has-background {
+		padding: $base-margin $margin_2x;
+
+		&.box-shadow {
+			box-shadow: 1px 3px 15px rgba(0, 0, 0, .4);
+		}
+	}
+}
+
+/* Group
+--------------------------------------------- */
+
+.wp-block-group {
+
+	.wp-block-group__inner-container {
+		max-width: $content_width; // limit container width
+		margin: 0 auto;
+		@include clearfix;
+
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&.alignwide,
+	&.alignfull {
+
+		.wp-block-group__inner-container {
+		max-width: $grid-width;  // limit container width
+	}
+	}
+
+	// Dark background
+	&.has-background:not(.has-grey-background-color) {
+		color: $white;
+
+		h1, h2, h3, h4, h5, h6, p {
+			color: $white;
+		}
+	}
+}
+
+// Overwriting the containers paddings in alignwide and align full for Group Block 
+.full-width-content,
+.content-width {
+
+	.entry-content,
+	.block-area {
+
+		.wp-block-group,
+		.wp-block-group.alignwide,
+		.wp-block-group.alignfull {
+			padding: 40px $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
+		
+			@include media(">=tablet") {
+				padding: 60px $wrap_edge;
+			}
+		
+			@include media(">=medium") {
+				padding: 80px $wrap_edge;
+			}
+		}
+	}
+}
+
+/* Cover
+--------------------------------------------- */
+
+.entry-content > *,
+.block-area > * {
+
+	.full-width-content &,
+	.content-width & {
+
+		&.wp-block-cover.alignwide,
+		&.wp-block-cover.alignfull {
+			padding: 80px $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
+		}
+	}
+}
+
+/** Media and Text 
+--------------------------------------------- */
+
+.entry-content > *,
+.block-area > * {
+
+	.full-width-content &,
+	.content-width & {
+
+		@include media('>=600px') {
+			//remove the padding for alignfull and alignwide
+			&.wp-block-media-text.alignwide,
+			&.wp-block-media-text.alignfull {
+				padding: 0;
+			}
+		}
+
+        @include media('<600px') {
+            // give space between image and text on mobile
+            .wp-block-media-text.is-stacked-on-mobile figure {
+                margin-bottom: $block-margin;
+            }
+        }
+	}
+}
+
+/* Columns
+--------------------------------------------- */

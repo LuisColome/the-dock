@@ -1,0 +1,41 @@
+// Common General Styles
+
+/* Sidebar
+---------------------------------------------------------------------------- */
+
+.sidebar {
+  font-size: 16px;
+  line-height: 1.5;
+
+  .widget {
+    margin-bottom: 40px;
+  }
+
+  .widget-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    a {
+      color: $grey_9;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+/* WordPress
+--------------------------------------------- */
+
+.alignleft {
+  float: left;
+  text-align: left;
+}
+
+.alignright {
+  float: right;
+  text-align: right;
+}

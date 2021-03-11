@@ -1,0 +1,54 @@
+/** Contact Form 7
+---------------------------------------------------------------------------- */
+
+.lcm-cf7-form {
+
+    .lcm-cf7-form_columns {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: $block-margin;
+
+        @include media('>=tablet') {
+            grid-template-columns: 1fr 1fr;
+            gap: $block-margin;
+        }
+    }
+
+    .lcm-cf7-form__input input {
+        margin: $block-margin 0;
+        padding: 14px 36px;
+        width: auto;
+        min-width: 230px;
+        border: none;
+        color: $white;
+        background-color: $primary-color;
+
+        &:hover {
+            background-color: $highlight;
+        }
+    }
+}
+
+/* Genesis Blocks
+---------------------------------------------------------------------------- */
+
+.gb-block-post-grid h2 a {
+    text-decoration: none;
+  }
+  
+  .gb-block-post-grid .gb-post-grid-items h2 a:hover {
+    color: $primary-color;
+  }
+  
+  @media only screen and (max-width: 510px) {
+    .gb-block-container.alignfull::before {
+      content: " ";
+      display: table;
+    }
+  
+    .gb-block-container.alignfull::after {
+      clear: both;
+      content: " ";
+      display: table;
+    }
+  }

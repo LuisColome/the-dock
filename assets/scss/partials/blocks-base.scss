@@ -1,0 +1,162 @@
+@import "../modules/helpers";
+
+/* Typographical Elements
+--------------------------------------------- */
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include base-style();
+}
+
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+  transition: all 0.2s ease-in-out;
+}
+
+a {
+  color: $primary-color;;
+  text-decoration: underline;
+  text-decoration-color: $grey-7;
+  @include transition;
+  &:hover {
+    color: $grey-7;
+  }
+  svg {
+    @include transition;
+  }
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border: 0;
+  border-collapse: collapse;
+  border-bottom: 1px solid currentColor;
+  clear: both;
+  color: $grey_3;
+  margin: 1.65em auto;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+/* Paragraph
+--------------------------------------------- */
+
+p {
+  margin: 0 0 28px;
+  padding: 0;
+
+  &.has-small-font-size {
+    font-size: 16px;
+  }
+
+  &.has-normal-font-size {
+    font-size: 20px;
+  }
+
+  &.has-large-font-size {
+    font-size: 24px;
+  }
+}
+
+/* Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $grey_9;
+  font-family: $sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: $margin_2x 0 $block-margin;
+  scroll-margin-top: 5rem; // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
+
+  a {
+    color: $grey-9;
+
+    &:hover {
+      color: $primary-color;;
+      text-decoration: none;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+h1 {
+  @include font-sizes(34px, 48px, 42px);
+}
+
+h2 {
+  @include font-sizes(26px, 32px, 36px);
+}
+
+h3 {
+  @include font-sizes(22px, 26px, 28px);
+}
+
+h4{
+  @include font-sizes(20px, 24px, 26px);
+}
+
+h5,
+h6 {
+  @include font-sizes(18px, 22px);
+}
+
+h6 {
+  text-transform: uppercase;
+}
+
+/* Objects
+--------------------------------------------- */
+
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  vertical-align: top;
+}
+
+figure {
+  margin: 0;
+}
