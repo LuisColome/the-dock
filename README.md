@@ -16,6 +16,8 @@ It is set up to use with [Prepros](https://prepros.io/) to complie the SCSS (wit
 
 Rename folder to your theme name, change the `style.css` intro block to your theme information. Code as you will.
 
+Please, keep in mind it is a working in progress project. I'm using the Theme in every project, so I would be changing, improving or even remove stuff in the future. Thank you :octocat:
+
 ### Features
 
 1. SCSS with Prepros to compile it.
@@ -31,3 +33,4 @@ Without these projects, this WordPress Genesis Starter Child Theme wouldn't be w
 * [Genesis Framework](http://my.studiopress.com/themes/genesis/)
 * [SASS / SCSS](http://sass-lang.com/)
 * [Bill Erickson's Genesis Child Theme](https://github.com/billerickson/BE-Genesis-Child)
+* [Eduardo Boucas' Include Media Queries](https://eduardoboucas.github.io/include-media/)
