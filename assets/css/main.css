@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/**
- * Brand Color
- * 
- * Use: brand-color( 'blue', 'darken' );
- * The color has to be declare in the variable $brandcolors in base.scss
- *
- */
 /* HTML5 Reset
 ---------------------------------------------------------------------------- */
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
