@@ -626,28 +626,81 @@ img.aligncenter {
 --------------------------------------------- */
 /** Contact Form 7
 ---------------------------------------------------------------------------- */
-.lcm-cf7-form .lcm-cf7-form_columns {
+.wpcf7 .screen-reader-response {
+  display: none;
+}
+
+.failed .wpcf7-response-output, .invalid .wpcf7-response-output, .sent .wpcf7-response-output {
+  display: flex;
+  align-items: center;
+  padding: 1.5em 2em;
+  border-radius: 10px;
+  box-shadow: 0 1.3px 6.5px rgba(0, 0, 0, 0.065), 0 4.5px 21.9px rgba(0, 0, 0, 0.087), 0 20px 98px rgba(0, 0, 0, 0.12);
+  font-size: 1rem;
+}
+.failed .wpcf7-response-output::before, .invalid .wpcf7-response-output::before, .sent .wpcf7-response-output::before {
+  margin-right: 0.5em;
+  font-size: 2em;
+}
+.failed .wpcf7-response-output, .invalid .wpcf7-response-output {
+  color: crimson;
+}
+.failed .wpcf7-response-output:before, .invalid .wpcf7-response-output:before {
+  content: "⚠";
+}
+.sent .wpcf7-response-output {
+  color: green;
+}
+.sent .wpcf7-response-output::before {
+  content: "✓";
+}
+
+.lcm-cf7-form .lcm-cf7-form__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   margin-bottom: 20px;
 }
-@media (min-width: 768px) {
-  .lcm-cf7-form .lcm-cf7-form_columns {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
+.lcm-cf7-form label {
+  font-size: 15px;
+}
+.lcm-cf7-form label span.required {
+  color: crimson;
+  font-weight: 400;
+}
+.lcm-cf7-form label .wpcf7-form-control-wrap input,
+.lcm-cf7-form label .wpcf7-form-control-wrap textarea {
+  margin: 0.2em 0;
+  background-color: #fafafa;
+}
+.lcm-cf7-form label .wpcf7-form-control-wrap input:focus,
+.lcm-cf7-form label .wpcf7-form-control-wrap textarea:focus {
+  border-color: #f36523;
+  outline: none;
+}
+.lcm-cf7-form label .wpcf7-form-control-wrap input.wpcf7-not-valid,
+.lcm-cf7-form label .wpcf7-form-control-wrap textarea.wpcf7-not-valid {
+  border: 1px solid crimson;
+}
+.lcm-cf7-form label .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+  font-size: 90%;
+  color: crimson;
 }
 .lcm-cf7-form .lcm-cf7-form__input input {
   margin: 20px 0;
-  padding: 14px 36px;
+  padding: 12px 36px;
   width: auto;
   min-width: 230px;
   border: none;
   color: #ffffff;
   background-color: #f36523;
+  border-radius: 4px;
 }
 .lcm-cf7-form .lcm-cf7-form__input input:hover {
   background-color: #f68753;
+}
+.lcm-cf7-form input {
+  border-radius: 4px;
 }
 
 /* Genesis Blocks
