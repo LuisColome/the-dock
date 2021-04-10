@@ -37,5 +37,5 @@ Without these projects, this WordPress Genesis Starter Child Theme wouldn't be w
 
 
 [changelog]: ./CHANGELOG.md
-[changelog-badge]: https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.1.0-%23E05735
-[version-badge]: https://img.shields.io/badge/version-1.1.0-blue.svg
+[changelog-badge]: https://img.shields.io/badge/Changelog-TheDock%20Starter%20Theme%20v1.0.1-orange
+[version-badge]: https://img.shields.io/badge/version-1.0.1-informational.svg
