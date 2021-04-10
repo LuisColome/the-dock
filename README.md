@@ -1,6 +1,6 @@
 # TheDock - Genesis Starter Child Theme 
 
-Version: 1.0.0
+[![TheDock Starter Theme v1.0.1 badge][changelog-badge]][changelog] [![Version 1.0.1 Badge][version-badge]][changelog]
 
 ## Author:
 
@@ -34,3 +34,8 @@ Without these projects, this WordPress Genesis Starter Child Theme wouldn't be w
 * [SASS / SCSS](http://sass-lang.com/)
 * [Bill Erickson's Genesis Child Theme](https://github.com/billerickson/BE-Genesis-Child)
 * [Eduardo Boucas' Include Media Queries](https://eduardoboucas.github.io/include-media/)
+
+
+[changelog]: ./CHANGELOG.md
+[changelog-badge]: https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.1.0-%23E05735
+[version-badge]: https://img.shields.io/badge/version-1.1.0-blue.svg
