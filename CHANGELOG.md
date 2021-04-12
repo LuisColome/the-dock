@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improve mobile responsive menu. Added a nav header for responsive navigation with an option to negative site logo.
 - Improve post comments form with CSS grid.
 ### Added
-- Support for Custom Genesis logo. Still have the option for a full custom logo in ./inc/site-logo.php.
+- Support for Custom Genesis logo. Still have the option for a full custom logo in [inc/site-logo.php](./inc/site-logo.php).
 ### Remove
 - Default Google fonts. Using system's by default.  
 
