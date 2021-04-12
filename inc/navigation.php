@@ -19,10 +19,11 @@ remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 function ea_site_header() {
 	echo ea_mobile_menu_toggle();
 	// echo ea_search_toggle();
-
+    echo '<div class="lcm-dark-overlay"></div>';
 	echo '<nav' . ea_amp_class( 'nav-menu', 'active', 'menuActive' ) . ' role="navigation">';
+    echo '<div class="nav-header"><a class="nav-header__logo" title="' . get_bloginfo('name') . '" href="' . get_bloginfo('url') . '" style="background: url(' . get_bloginfo('url') . '/wp-content/themes/thedock/assets/images/logo-negative.png);background-size:cover;">' . get_bloginfo('name') . '</a></div>';
 	if( has_nav_menu( 'primary' ) ) {
-		wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'nav-primary' ) );
+		wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'nav-primary', 'link_before'    => '<span>', 'link_after'     => '</span>' ) );
 	}
 	// if( has_nav_menu( 'secondary' ) ) {
 	// 	wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'container_class' => 'nav-secondary' ) );

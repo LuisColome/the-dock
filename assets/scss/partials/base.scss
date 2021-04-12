@@ -16,17 +16,19 @@ $black: #000;
 
 // Brand Colors
 $brand_colors: (
-	'orange': #f36523,
-    'yellow'   : #ffc401,
+	'green': #1b7e90,
+    // 'green'   : #35b3ab,
+    // 'light-green' : #add7d3,
+    'orange' : #de8974,
 	'grey'	: $grey_2,
     'dark-grey' : $grey_8,
 );
 @import "../modules/brand-color";
 
-$primary-color: brand-color( 'orange' );
-$secondary-color: brand-color('yellow');
+$primary-color: brand-color( 'green' );
+$secondary-color: brand-color('orange');
 $base-color: $grey_8;
-$highlight: brand-color( 'orange', 'lighten' );
+$highlight: brand-color( 'green', 'darken' );
 $border-color: $grey_4;
 
 $facebook: #3b5998;
@@ -55,7 +57,7 @@ $margin_2x: $base-margin * 2;
 $margin_4x: $base-margin * 4;
 
 // Site Header
-$logo_width: 300px;
+$logo_width: 55px;
 
 // Include Media Breakpoints
 $breakpoints: (

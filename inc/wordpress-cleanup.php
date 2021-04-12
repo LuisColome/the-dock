@@ -63,6 +63,7 @@ add_filter( 'body_class', 'ea_singular_body_class' );
 		'sidebar-content',
 		'content-width',
 		'landing-page',
+        'wp-custom-logo',
 	];
 
 	return array_intersect( $classes, $allowed_classes );

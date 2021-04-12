@@ -29,10 +29,20 @@ add_theme_support(
 	)
 );
 
-// Adds posrt type support for featured image
+add_theme_support(
+    'genesis-custom-logo',
+    [
+        'height'      => 55,
+        'width'       => 55,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ]
+);
+
+// Adds post type support for featured image
 add_post_type_support( 'post', 'page', array( 'genesis-singular-images' ) );
 
-// h1 on home
+// wrap site title with h1 on home
 add_filter( 'genesis_site_title_wrap', function( $wrap ) { return is_front_page() ? 'h1' : $wrap; } );
 
 // Remove admin bar styling
