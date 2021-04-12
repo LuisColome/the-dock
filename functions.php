@@ -58,7 +58,7 @@ add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
 *
 */
 function lcm_theme_fonts_url() {
-	return 'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap';
+	return '';
 }
 
 function ea_child_theme_setup() {
