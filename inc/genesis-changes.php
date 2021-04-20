@@ -29,10 +29,20 @@ add_theme_support(
 	)
 );
 
-// Adds posrt type support for featured image
+add_theme_support(
+    'genesis-custom-logo',
+    [
+        'height'      => 55,
+        'width'       => 55,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ]
+);
+
+// Adds post type support for featured image
 add_post_type_support( 'post', 'page', array( 'genesis-singular-images' ) );
 
-// h1 on home
+// wrap site title with h1 on home
 add_filter( 'genesis_site_title_wrap', function( $wrap ) { return is_front_page() ? 'h1' : $wrap; } );
 
 // Remove admin bar styling
@@ -127,3 +137,49 @@ function genesis_sample_comments_gravatar( $args ) {
 
 }
 add_filter( 'genesis_comment_list_args', 'genesis_sample_comments_gravatar' );
+
+
+/**
+ * Adds body classes to help with block styling.
+ *
+ * - `has-no-blocks` if content contains no blocks.
+ * - `first-block-[block-name]` to allow changes based on the first block (such as removing padding above a Cover block).
+ * - `first-block-align-[alignment]` to allow styling adjustment if the first block is wide or full-width.
+ *
+ * @since 0.9.0.6
+ *
+ * @param array $classes The original classes.
+ * @return array The modified classes.
+ */
+function genesis_sample_blocks_body_classes( $classes ) {
+
+	if ( ! is_singular() || ! function_exists( 'has_blocks' ) || ! function_exists( 'parse_blocks' ) ) {
+		return $classes;
+	}
+
+	$post_object = get_post( get_the_ID() );
+	$blocks      = (array) parse_blocks( $post_object->post_content );
+
+	if ( $blocks[0]['blockName'] === 'core/cover' && $blocks[0]['attrs']['align'] === 'full' ) {
+		$classes[] = 'first-block-cover-full';
+	}
+
+	if ( $blocks[0]['attrs']['align'] === 'full' ) {
+		$classes[] = 'first-block-align-full';
+	}
+
+	return $classes;
+
+}
+add_filter( 'body_class', 'genesis_sample_blocks_body_classes' );
+
+/*  
+ * Display the featured image on single posts from blog.
+ * 
+ */
+function featured_post_image() {
+    if ( ! is_singular( 'post' ) )
+      return;
+      the_post_thumbnail('cfhh-featured-images');
+  }
+  add_action( 'genesis_entry_content', 'featured_post_image', 8 );

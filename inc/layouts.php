@@ -46,7 +46,7 @@ add_action( 'genesis_meta', function() {
 function ea_editor_layout_style() {
 	wp_enqueue_style( 'ea-editor-layout', get_stylesheet_directory_uri() . '/assets/css/editor-layout.css', [], filemtime( get_stylesheet_directory() . '/assets/css/editor-layout.css' ) );
 }
-add_action( 'enqueue_block_editor_assets', 'ea_editor_layout_style', 5 );
+// add_action( 'enqueue_block_editor_assets', 'ea_editor_layout_style', 5 );
 
 /**
  * Editor layout class

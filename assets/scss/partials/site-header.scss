@@ -73,6 +73,11 @@
   z-index: 9; // make the site title,visible when menu is active
   padding: 0;
   max-width: $logo-width;
+  @include transition;
+
+  .wp-custom-logo .shrink & {
+      max-width: calc(#{$logo-width}/1.5);
+  }
 }
 
 .site-title {
@@ -80,6 +85,10 @@
   font-weight: 600;
   line-height: 1;
   margin: 0;
+
+  .wp-custom-logo & {
+      text-indent: -9999;
+  }
 
   a,
   a:focus,

@@ -1,7 +1,7 @@
 @mixin base-style {
   color: $grey_9;
   font-family: $sans-serif;
-  @include font-sizes(18px, 20px);
+  font-size: 1em;
   font-weight: 400;
   line-height: 1.55;
   overflow-x: hidden;

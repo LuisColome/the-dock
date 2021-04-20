@@ -9,39 +9,68 @@
   margin-bottom: 40px;
 }
 
-.comment-list li {
-  padding: 40px 0 0 30px;
-}
+.comment-list {
 
-.comment-list .depth-1 {
-  padding-left: 0;
+    li {
+        padding: 40px 0 0 30px;
+    }
+
+    .depth-1 {
+        padding-left: 0;
+    }
 }
 
 .comment-header {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
+
+    p {
+        margin-bottom: 0;
+    }
 }
 
 .comment-content {
-  clear: both;
+    clear: both;
+
+        ul > li {
+            list-style-type: disc;
+        }
 }
 
-.comment-content ul > li {
-  list-style-type: disc;
-}
+.comment-respond {
 
-.comment-respond input[type="email"],
-.comment-respond input[type="text"],
-.comment-respond input[type="url"] {
-  width: 50%;
-}
+    .comment-reply-title {
+        font-size: 22px;
+        font-weight: 700;
+    }
 
-.comment-respond label {
-  display: block;
-  margin-right: 12px;
-}
+    .comment-form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0 $grid-gap;
 
-.comment-header p {
-  margin-bottom: 0;
+        a {
+            font-weight: 400;
+        }
+    }
+
+    .comment-form-comment,
+    .comment-form-cookies-consent {
+        grid-column: 1/-1;
+    }
+
+    .comment-form-cookies-consent {
+        display: flex;
+        flex-flow: row nowrap;
+
+        input {
+            max-width: 14px;
+        }
+    }
+
+    label {
+        display: block;
+        margin-right: 12px;
+    }
 }
 
 .entry-pings .reply {
