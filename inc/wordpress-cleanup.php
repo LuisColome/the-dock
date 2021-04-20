@@ -64,6 +64,8 @@ add_filter( 'body_class', 'ea_singular_body_class' );
 		'content-width',
 		'landing-page',
         'wp-custom-logo',
+        'first-block-cover-full',
+        'first-block-align-full',
 	];
 
 	return array_intersect( $classes, $allowed_classes );

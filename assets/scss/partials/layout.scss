@@ -39,14 +39,22 @@ input[type="search"] {
 --------------------------------------------- */
 
 .site-inner {
-  clear: both;
-  max-width: calc($grid-width + 60px); // 1200px wide plus padding
-  margin: 0 auto;
-  padding: 60px 0 30px;
+    clear: both;
+    max-width: calc($grid-width + 60px); // 1200px wide plus padding
+    margin: 0 auto;
+    padding: 60px 0 30px;
 
-  @include media("<=1200px") {
-    padding: 60px $wrap_edge 30px;
-  }
+    @include media("<=1200px") {
+        padding: 60px $wrap_edge 30px;
+    }
+
+
+
+    // Remove the top padding if the first block is alignfull.
+    .first-block-align-full &,
+    .first-block-cover-full & {
+        padding-top: 0;
+    }
 }
 
 

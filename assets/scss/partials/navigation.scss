@@ -108,13 +108,13 @@
         }
 	}
 
-	.submenu-expand {
+    .submenu-expand {
 		@include button-reset;
 		position: absolute;
 		line-height: 0;
 		top: 50%;
-		transform: translateY(-50%);
-		right: 5px;
+		transform: translateY(-45%);
+		right: 9px;
 
 		// svg {
 		// 	fill: $base-color; // to fill the icon

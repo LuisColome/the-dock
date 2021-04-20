@@ -21,3 +21,27 @@ ul, ol {
 		}
 	}
 }
+
+/** Custom Lists 
+--------------------------------------------- */
+
+ul.check-list {
+    list-style: none;
+
+    li {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            right:0;
+            bottom: 0;
+            left: -24px;
+            width: 22px;
+            height: 22px;
+            background: url(/wp-content/themes/box-theme/assets/icons/utility/check.svg) no-repeat ;
+            background-size: cover;
+        }
+    }
+}
