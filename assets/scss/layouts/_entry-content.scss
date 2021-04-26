@@ -1,0 +1,68 @@
+/* WordPress
+--------------------------------------------- */
+
+.alignleft {
+    float: left;
+    text-align: left;
+}
+
+.alignright {
+    float: right;
+    text-align: right;
+}
+
+.entry-content > *,
+.editor-styles-wrapper > * {
+
+    /* Lists
+    --------------------------------------------- */
+
+    ul, ol {
+        padding-left: 1.5rem;
+
+        li {
+            padding-bottom: .5rem;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            ul, ol {
+                padding-top: .5rem;
+            }
+        }
+
+        &.wp-block-gallery {
+            padding-left: 0;
+
+            li {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    /** Custom List
+    --------------------------------------------- */
+
+    ul.check-list {
+        list-style: none;
+
+        li {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 2px;
+                right:0;
+                bottom: 0;
+                left: -24px;
+                width: 22px;
+                height: 22px;
+                background: url(/wp-content/themes/box-theme/assets/icons/utility/check.svg) no-repeat ;
+                background-size: cover;
+            }
+        }
+    }
+
+}

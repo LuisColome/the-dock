@@ -1,0 +1,59 @@
+@use "abstracts" as *;
+
+/* Blockquote
+--------------------------------------------- */
+
+blockquote.wp-block-quote {
+    position: relative;
+    padding: 4% 0 0 4%;
+
+    &::before {
+        @include block-cover();
+        top: -35px;
+        background: transparent url(../icons/utility/quote.svg) no-repeat top left;
+        background-size: 120px;
+        text-align: left;
+        opacity: .1;
+    }
+
+	p {
+		color: $base-color;
+		@include font-sizes(22px, 22px 24px);
+		font-style: italic;
+		font-weight: 400;
+	}
+
+	cite {
+		color: $base-color;
+		display: block;
+		font-size: 85%;
+		font-weight: 700;
+		margin-top: 12px;
+		opacity: .5;
+		text-transform: uppercase;
+	}
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+
+}
+
+.wp-block-pullquote {
+    text-align: left;
+    padding: 0;
+    margin: $block-margin auto;
+
+    blockquote {
+        margin: 0;
+        padding: 4% 8%; 
+        background-color: brand-color('grey');
+        border-left: 3px solid $primary-color;
+
+        p{            
+            color: $base-color;
+            @include font-sizes(19px, 20px, 22px);
+            font-style: italic;
+        }
+    }  
+}

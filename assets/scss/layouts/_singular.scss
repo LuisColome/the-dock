@@ -1,0 +1,115 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/* Singular
+---------------------------------------------------------------------------------------------------- */
+
+.entry-content > *,
+.editor-styles-wrapper > * {
+
+	margin: $block-margin 0;
+	max-width: 100%;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.full-width-content &,
+	.content-width & {
+		&.alignwide {
+			margin: calc( 2 * #{$block-margin} ) calc(50% - 50vw);
+			max-width: 100vw;
+			width: auto;
+			padding: 0 $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
+
+			@include media(">=large") {
+				margin: calc( 2 * #{$block-margin}) calc(25% - 25vw);
+			}
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		&.alignfull {
+			margin: calc( 2 * #{$block-margin} ) calc(50% - 50vw);
+			max-width: 100vw;
+			width: 100vw;
+			padding: 0 $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
+		}
+
+		&.aligncontent {
+			max-width: $content-width;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&.alignwide,
+		&.alignfull {
+
+			.alignwide {
+				max-width: $grid-width;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.aligncontent {
+				max-width: $content-width;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+	&.alignleft {
+		/*rtl:ignore*/
+		float: left;
+		margin: 0 $block-margin $block-margin 0;
+	}
+
+	&.alignright {
+		/*rtl:ignore*/
+		float: right;
+		margin: 0 0 $block-margin $block-margin;
+	}
+
+	&.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.wp-block-quote,
+	&.post-listing-block {
+		margin-top: calc( 2 * #{$block-margin});
+		margin-bottom: calc( 2 * #{$block-margin});
+	}
+
+	&.wp-block-search {
+		max-width: 568px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+.entry-content > .alignfull {
+
+	&:first-child {
+		margin-top: 0;
+		// @include media(">=tablet") {
+		// 	margin-top: -48px;
+		// }
+	}
+
+	// &:last-child {
+	// 	margin-bottom: -36px;
+	// 	@include media(">=tablet") {
+	// 		margin-bottom: -48px;
+	// 	}
+	// }
+
+}

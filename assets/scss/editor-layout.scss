@@ -1,4 +1,4 @@
-@import "partials/base";
+@use "abstracts/variables" as *;
 
 .full-width-content .editor-styles-wrapper .wp-block,
 .full-width-content .editor-styles-wrapper .editor-post-title__block.wp-block,

@@ -1,0 +1,175 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+.archive .site-main {
+    margin-bottom: $margin_4x;
+}
+
+
+/* Archive Styles (based on partials/archive).
+------------------------------------------------------------------------------ */
+
+.lcm-posts {
+
+    &.grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $margin_2x $grid-gap;
+
+        @include media(">=phablet") {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include media(">=medium") {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+.lcm-post {
+    display: flex;
+    flex-flow: column;
+
+    // @include media('>=tablet') {
+    //     flex-flow: row;
+    // }
+
+    .lcm-post__image-link img {
+        border-radius: $border-radius;
+    }
+
+    .lcm-post__title {
+        line-height: 1;
+        margin: 0 0 $base-margin 0;
+        
+        a {
+            @include font-sizes(20px, 22px, 22px);
+            text-decoration: none;
+            color: $grey_9;
+            font-weight: 400;
+            
+            &:hover {
+                color: $primary-color;;
+            }
+        }
+    }
+
+    .lcm-post__category {
+        color: $grey_6;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: $base-margin / 2 0 0 0;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .lcm-post__excerpt {
+        font-size: 17px;
+    }
+
+	.lcm-post__read-more-link {
+		text-decoration: none;
+		font-size: 60%;
+		text-transform: uppercase;
+
+		&::after {
+			content: "\2192";
+			display: inline-block;
+			margin-left: 4px;
+		}
+	}
+}
+
+/* Archive Header
+--------------------------------------------- */
+
+.archive-description {
+	text-align: center;
+	width: 100%;
+	max-width: $content-width;
+	margin: 0 auto $grid-gap;
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+
+	.search-form {
+		margin: 0 auto;
+	}
+
+}
+
+.author-archive-description {
+
+	.avatar {
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto 16px;
+	}
+
+	h3:last-child {
+		@include media(">=tablet") {
+			margin-top: 48px;
+		}
+	}
+}
+
+.author-title {
+	color: $grey_8;
+	@include font-sizes( 18px, 20px );
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
+/* Entry Navigation
+--------------------------------------------- */
+
+.pagination {
+    grid-column: 1 / -1;
+	border-top: 1px solid $border-color;
+	font-size: 16px;
+	text-align: center;
+	padding-top: 22px;
+    margin-top: $block-margin;
+
+	ul {
+		margin: 0;
+
+		li {
+			list-style-type: none;
+			display: inline-block;
+
+			a {
+				color: $base-color;
+				border-radius: 50%;
+				display: block;
+				font-weight: 400;
+				text-decoration: none;
+				width: 29px;
+				height: 29px;
+				line-height: 30px;
+				text-align: center;
+			}
+
+			&.pagination-next a,
+			&.pagination-previous a {
+				width: auto;
+			}
+
+			&:hover > a {
+				color: $highlight;
+			}
+
+			&.active > a {
+				background: $highlight;
+				color: $white;
+				font-weight: 700;
+			}
+		}
+	}
+}

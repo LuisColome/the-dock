@@ -1,17 +1,13 @@
-// Gutenberg Styles. 
-@import "../../assets/scss/partials/base";
-@import "../../assets/scss/partials/blocks-base";
-@import "../../assets/scss/partials/blocks-core";
-@import "../../assets/scss/partials/blocks-plugin";
-@import "../../assets/scss/partials/blocks-custom";
-@import "../../assets/scss/partials/singular";
-@import "../../assets/scss/partials/post-summary";
-@import "../../assets/scss/partials/gutenberg";
+@use "abstracts";
+@use "base";
+@use "components";
+@use "layouts";
+@use "vendor/include-media";
 
 
-body {
-  overflow-x: visible;
-}
+// body {
+//   overflow-x: visible;
+// }
 
 .wp-block.aligncontent {
     max-width: $content-width;

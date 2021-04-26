@@ -1,0 +1,138 @@
+@use "../abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/* Structure and Layout
+---------------------------------------------------------------------------- */
+
+/* Site Container
+--------------------------------------------- */
+
+.site-container {
+    animation: fadein 1s;
+    word-wrap: break-word;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Site Inner
+--------------------------------------------- */
+
+.site-inner {
+    clear: both;
+    max-width: calc($grid-width + 60px); // 1200px wide plus padding
+    margin: 0 auto;
+    padding: 60px 0 30px;
+
+    @include media("<=1200px") {
+        padding: 60px $wrap_edge 30px;
+    }
+
+
+
+    // Remove the top padding if the first block is alignfull.
+    .first-block-align-full &,
+    .first-block-cover-full & {
+        padding-top: 0;
+    }
+}
+
+
+.content-sidebar,
+.sidebar-content {
+
+    .site-inner {
+        max-width: 1200px;
+    }
+
+    .content-area {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: $grid-gap;
+    }
+}
+
+.full-width-content .site-main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-width .site-main {
+    max-width: $content-width;
+    margin: 0 auto;
+}
+
+@include media("screen", ">=tablet", "<=medium") {
+    .sidebar {
+        max-width: 50%; // Just keep sidebar from stretching too much in middle sizes
+    }
+}
+
+@include media("screen", ">=medium") {
+
+    /* Content
+    --------------------------------------------- */
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .site-main {
+        grid-area: site-main;
+    }
+
+    .content-sidebar .content-area {
+        grid-template-columns: 1fr minmax(250px, 30%);
+        grid-template-areas: "site-main sidebar";
+    }
+
+    .sidebar-content {
+
+        .content-area {
+            grid-template-columns: minmax(250px, 30%) 1fr;
+            grid-template-areas: "sidebar site-main";
+        }
+    }
+  
+}
+
+/* Screen Reader Text
+--------------------------------------------- */
+
+.genesis-skip-link {
+	display: none;
+}
+
+.screen-reader-text,
+.screen-reader-text span,
+.screen-reader-shortcut {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus  {
+	clip: auto !important;
+	height: auto;
+	width: auto;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 15px 23px 14px;
+	color: $grey_9;
+	background: $white;
+	z-index: 100000; /* Above WP toolbar. */
+	text-decoration: none;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+}

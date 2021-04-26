@@ -1,0 +1,72 @@
+
+
+// Colors
+$white: #ffffff;
+$grey_1: #fafafa;
+$grey_2: #f2f3f8;
+$grey_3: #eeeeee;
+$grey_4: #e0e0e0;
+$grey_5: #bdbdbd;
+$grey_6: #9e9e9e;
+$grey_7: #757575;
+$grey_8: #616161;
+$grey_9: #414243;
+$grey_10: #212223;
+$black: #000;
+
+// Brand Colors
+$brand_colors: (
+	'green': #1b7e90,
+    // 'green'   : #35b3ab,
+    // 'light-green' : #add7d3,
+    'orange' : #de8974,
+	'grey'	: $grey_2,
+    'dark-grey' : $grey_8,
+);
+
+// color variables
+$primary-color: brand-color( 'green' );
+$secondary-color: brand-color('orange');
+$base-color: $grey_8;
+$highlight: brand-color( 'green', 'darken' );
+$border-color: $grey_4;
+
+// Social colors
+$facebook: #3b5998;
+$twitter: #00b6f1;
+$pinterest: #cb2027;
+
+/**
+ * Brand Color
+ * 
+ * Use: brand-color( 'blue', 'darken' );
+ * The color has to be declare in the variable $brandcolors in base.scss
+ *
+ *  https://github.com/billerickson/EA-Genesis-Child/blob/master/assets/scss/modules/_brand-color.scss
+ *
+ */
+ 
+ @function brand-color( $key, $variant: null ) {
+	@if map-has-key( $brand_colors, $key ) {
+		$color: map-get( $brand_colors, $key );
+		@if ( 'lighten' == $variant ) {
+			$lighten_key: $key + '_lighten';
+			@if map-has-key( $brand_colors, $lighten_key ) {
+				$color: #{map-get( $brand_colors, $lighten_key )};
+			} @else {
+				$color: lighten( $color, 10% );
+			}
+		}
+		@else if( 'darken' == $variant ) {
+			$darken_key: $key + '_darken';
+			@if map-has-key( $brand_colors, $darken_key ) {
+				$color: #{map-get( $brand_colors, $darken_key )};
+			} @else {
+				$color: darken( $color, 10% );
+			}
+		}
+		@return $color;
+	} @else {
+		@error "The #{$key} color could not be found in $brand_colors";
+	}
+}
