@@ -1,0 +1,17 @@
+@use "abstracts" as *;
+
+/* Cover
+--------------------------------------------- */
+
+.entry-content > *,
+.block-area > * {
+
+	.full-width-content &,
+	.content-width & {
+
+		&.wp-block-cover.alignwide,
+		&.wp-block-cover.alignfull {
+			padding: 80px $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
+		}
+	}
+}

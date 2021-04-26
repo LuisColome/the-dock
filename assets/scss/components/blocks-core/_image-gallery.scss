@@ -1,0 +1,40 @@
+@use "abstracts" as *;
+
+/* Image and Gallery
+--------------------------------------------- */
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-radius: $border-radius;
+
+	&.alignleft {
+		float: left;
+		margin: 0 $block-margin $block-margin 0;
+	}
+
+	&.alignright {
+		float: right;
+		margin: 0 0 $block-margin $block-margin;
+	}
+
+	&.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+.wp-block-image figcaption {
+	color: $grey_7;
+	text-align: left;
+	font-size: 14px;
+	font-style: normal;
+}
+
+.site-container .blocks-gallery-grid,
+.site-container .wp-block-gallery,
+.site-container .wp-block-social-links {  // still don't have a place for social icons.
+  padding-left: 0;
+}

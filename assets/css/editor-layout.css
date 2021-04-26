@@ -1,7 +1,13 @@
-@use "abstracts/variables" as *;
-
+/**
+ * Brand Color
+ * 
+ * Use: brand-color( 'blue', 'darken' );
+ * The color has to be declare in the variable $brandcolors in base.scss
+ *
+ */
 .full-width-content .editor-styles-wrapper .wp-block,
 .full-width-content .editor-styles-wrapper .editor-post-title__block.wp-block,
 .full-width-content .editor-styles-wrapper .wp-block-group:not(.narrow) .wp-block-group__inner-container {
-	max-width: $grid-width;
+  max-width: 1200px;
 }
+/*# sourceMappingURL=editor-layout.css.map */

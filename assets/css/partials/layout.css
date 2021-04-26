@@ -1,0 +1,189 @@
+/**
+ * Brand Color
+ * 
+ * Use: brand-color( 'blue', 'darken' );
+ * The color has to be declare in the variable $brandcolors in base.scss
+ *
+ */
+/* Box Sizing
+--------------------------------------------- */
+html,
+input[type=search] {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Structure and Layout
+---------------------------------------------------------------------------- */
+/* Site Container
+--------------------------------------------- */
+.site-container {
+  animation: fadein 1s;
+  word-wrap: break-word;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Site Inner
+--------------------------------------------- */
+.site-inner {
+  clear: both;
+  max-width: calc($grid-width + 60px);
+  margin: 0 auto;
+  padding: 60px 0 30px;
+}
+@media (max-width: 1200px) {
+  .site-inner {
+    padding: 60px 1.375rem 30px;
+  }
+}
+.first-block-align-full .site-inner, .first-block-cover-full .site-inner {
+  padding-top: 0;
+}
+
+.content-sidebar .site-inner,
+.sidebar-content .site-inner {
+  max-width: 1200px;
+}
+.content-sidebar .content-area,
+.sidebar-content .content-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.full-width-content .site-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-width .site-main {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .sidebar {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* Content
+  --------------------------------------------- */
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .site-main {
+    grid-area: site-main;
+  }
+
+  .content-sidebar .content-area {
+    grid-template-columns: 1fr minmax(250px, 30%);
+    grid-template-areas: "site-main sidebar";
+  }
+
+  .sidebar-content .content-area {
+    grid-template-columns: minmax(250px, 30%) 1fr;
+    grid-template-areas: "sidebar site-main";
+  }
+}
+@media screen and (min-width: 960px) {
+
+  .sidebar {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+
+  .sidebar-content .content-area > .sidebar {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .site-main {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .sidebar-content .content-area > .site-main {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+/* Screen Reader Text
+--------------------------------------------- */
+.genesis-skip-link {
+  display: none;
+}
+
+.screen-reader-text,
+.screen-reader-text span,
+.screen-reader-shortcut {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus {
+  clip: auto !important;
+  height: auto;
+  width: auto;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 15px 23px 14px;
+  color: #414243;
+  background: #ffffff;
+  z-index: 100000;
+  /* Above WP toolbar. */
+  text-decoration: none;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Screen Reader Text
+--------------------------------------------- */
+.screen-reader-shortcut,
+.screen-reader-text,
+.screen-reader-shortcut {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.widget_search input[type=submit]:focus {
+  background: #ffffff;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #414243;
+  display: block;
+  font-size: 1em;
+  font-weight: 700;
+  height: auto;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+/*# sourceMappingURL=layout.css.map */

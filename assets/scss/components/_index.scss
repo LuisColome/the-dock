@@ -1,0 +1,17 @@
+//components
+@forward "color-options";
+
+// Blocks Core
+@forward "blocks-core/blockquote";
+@forward "blocks-core/buttons";
+@forward "blocks-core/group";
+@forward "blocks-core/cover";
+@forward "blocks-core/media-text";
+@forward "blocks-core/image-gallery";
+@forward "blocks-core/separator";
+@forward "blocks-core/tables";
+
+// Blocks Plugins
+@forward "blocks-plugins/cf7";
+@forward "blocks-plugins/genesis-simple-faq";
+@forward "blocks-plugins/genesis-blocks";
