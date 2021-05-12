@@ -2,7 +2,7 @@
 
 [![TheDock Genesis Starter Theme v1.0.4.1 badge][changelog-badge]][changelog]  [![Version 1.0.4.1 Badge][version-badge]][changelog]  [![Last commit badge][last-commit]][last-commit-link]
 
-![alt text](https://github.com/LuisColome/the-dock/screenshot.png?raw=true)
+![The Dock Screenshot](screenshot.png)
 
 ## Author:
 
