@@ -1,6 +1,6 @@
 # TheDock - Genesis Starter Child Theme 
 
-[![TheDock Genesis Starter Theme v1.0.4.1 badge][changelog-badge]][changelog] [![Version 1.0.4.1 Badge][version-badge]][changelog] [![Last commit badge][last-commit]][last-commit-link]
+[![TheDock Genesis Starter Theme v1.0.4.1 badge][changelog-badge]][changelog]  [![Version 1.0.4.1 Badge][version-badge]][changelog]  [![Last commit badge][last-commit]][last-commit-link]
 
 ## Author:
 
@@ -27,6 +27,8 @@ Please, keep in mind it is a working in progress project. I'm using the Theme in
 6. ACF support
 
 ### Credits
+
+* [Vector creado por vectorpocket](https://www.freepik.es/vectorpocket)
 
 Without these projects, this WordPress Genesis Starter Child Theme wouldn't be where it is today.
 
