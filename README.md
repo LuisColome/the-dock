@@ -2,7 +2,7 @@
 
 [![TheDock Genesis Starter Theme v1.0.4.1 badge][changelog-badge]][changelog]  [![Version 1.0.4.1 Badge][version-badge]][changelog]  [![Last commit badge][last-commit]][last-commit-link]
 
-![The Dock Screenshot](screenshot.png)
+![TheDock Screenshot](screenshot.png)
 
 ## Author:
 
@@ -30,7 +30,7 @@ Please, keep in mind it is a working in progress project. I'm using the Theme in
 
 ### Credits
 
-* [Vector creado por vectorpocket](https://www.freepik.es/vectorpocket)
+* [Vector image created by vectorpocket](https://www.freepik.es/vectorpocket)
 
 Without these projects, this WordPress Genesis Starter Child Theme wouldn't be where it is today.
 
