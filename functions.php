@@ -220,21 +220,3 @@ add_filter( 'template_include', 'ea_template_hierarchy' );
  * 
  */
 add_filter('wpcf7_autop_or_not', '__return_false');
-
-/**
- * Load Recaptcha and CF7 CSS/JS only on pages where contact form exists.
- * It uses get_header hook to load the functions before wp_head. 
- * 
- * https://contactform7.com/loading-javascript-and-stylesheet-only-when-it-is-necessary/
- * 
- */
-function load_recaptcha_only_with_cf7() {
-	global $post;
-	if ( is_a( $post, 'WP_Post' ) && !has_shortcode( $post->post_content, 'contact-form-7') ) {
-		wp_dequeue_script( 'google-recaptcha' );
-		wp_dequeue_script( 'wpcf7-recaptcha' );
-        add_filter( 'wpcf7_load_js', '__return_false' );
-        add_filter( 'wpcf7_load_css', '__return_false' );
-	}
-}
-add_action('get_header', 'load_recaptcha_only_with_cf7', 22);
