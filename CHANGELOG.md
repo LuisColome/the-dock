@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ~~Start using @use and @fordward instead of @import (depracated) in SASS.~~
 - Support for Genesis Blocks plugin.
 
+## [1.0.4.2] - 2021-09-10
+### Add
+- Kadence block support on full width by removing the internal margin (padding).
+
 ## [1.0.4.1] - 2021-04-26
 ### Changed
 - Stop using `_index.scs` files to call the SCSS partials (for now). Instead, use @use for every individual file. 
