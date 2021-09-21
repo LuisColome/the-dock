@@ -1857,7 +1857,7 @@ hr::before {
 .full-width-content .entry-content > *.alignwide[class^=wp-block-kadence], .content-width .entry-content > *.alignwide[class^=wp-block-kadence],
 .full-width-content .editor-styles-wrapper > *.alignwide[class^=wp-block-kadence],
 .content-width .editor-styles-wrapper > *.alignwide[class^=wp-block-kadence] {
-  padding: 0 !important;
+  padding: 0;
 }
 @media (min-width: 1200px) {
   .full-width-content .entry-content > *.alignwide, .content-width .entry-content > *.alignwide,
@@ -1882,7 +1882,7 @@ hr::before {
 .full-width-content .entry-content > *.alignfull[class^=wp-block-kadence], .content-width .entry-content > *.alignfull[class^=wp-block-kadence],
 .full-width-content .editor-styles-wrapper > *.alignfull[class^=wp-block-kadence],
 .content-width .editor-styles-wrapper > *.alignfull[class^=wp-block-kadence] {
-  padding: 0 !important;
+  padding: 0;
 }
 .full-width-content .entry-content > *.aligncontent, .content-width .entry-content > *.aligncontent,
 .full-width-content .editor-styles-wrapper > *.aligncontent,
