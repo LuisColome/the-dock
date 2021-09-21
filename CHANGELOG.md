@@ -6,10 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [Unreleased]
 - ~~Better way to organize SASS files.~~
-- Better support for Guetenberg editor styles.
-- Live Demo.
-- ~~Start using @use and @fordward instead of @import (depracated) in SASS.~~
-- Support for Genesis Blocks plugin.
+- Better support for Guetenberg editor styles
+- Live Demo
+- ~~Start using @use and @fordward instead of @import (depracated) in SASS~~
+- ~~Support for Kadence Blocks plugin~~.
+- Highlight link on main menu.
+
+#### [1.0.5](https://github.com/LuisColome/the-dock/releases/tag/v1.0.5) - 2021-09-21
+#### Update
+- Responsive typography with clamp().
 
 #### [1.0.4.2](https://github.com/LuisColome/the-dock/releases/tag/v1.0.4.2) - 2021-09-10
 #### Add
