@@ -146,7 +146,7 @@ function ea_child_theme_setup() {
 	) );
 
 	// -- Disable Custom Colors
-	add_theme_support( 'disable-custom-colors' );
+	// add_theme_support( 'disable-custom-colors' );
 
 	// -- Editor Color Palette
 	add_theme_support( 'editor-color-palette', array(
