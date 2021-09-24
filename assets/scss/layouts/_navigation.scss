@@ -58,8 +58,8 @@
                 content: '';
                 display: block;
                 width: 0;
-                height: 1px;
-                background: brand-color( 'green', 'lighten' );
+                height: 2px;
+                background: brand-color('green');
                 transition: width .3s;
                 margin-top: 5px;
             }
