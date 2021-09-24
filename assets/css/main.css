@@ -617,7 +617,7 @@ blockquote.wp-block-quote p:last-of-type {
   font-size: 20px;
   font-weight: 700;
   line-height: 32px;
-  padding: 16px 32px;
+  padding: 0.5em 1.5em;
   text-decoration: none;
 }
 .is-style-full .wp-block-button__link, .wp-block-button__link.full {
@@ -641,6 +641,7 @@ blockquote.wp-block-quote p:last-of-type {
   border: 2px solid #29a39b;
   color: #29a39b;
   background-color: transparent;
+  padding: 0.5em 1.5em;
 }
 .is-style-outline > .wp-block-button__link:not(.has-text-color):hover, .is-style-outline > .wp-block-button__link:not(.has-text-color):focus, .wp-block-button__link.is-style-outline:hover, .wp-block-button__link.is-style-outline:focus {
   border: 2px solid #1f7a74;
