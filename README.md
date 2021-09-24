@@ -1,6 +1,6 @@
 # TheDock - Genesis Starter Child Theme 
 
-[![TheDock Genesis Starter Theme v1.0.5 badge][changelog-badge]][changelog]  [![Version 1.0.5 Badge][version-badge]][changelog]  [![Last commit badge][last-commit]][last-commit-link]
+[![TheDock Genesis Starter Theme v1.0.5.1 badge][changelog-badge]][changelog]  [![Version 1.0.5.1 Badge][version-badge]][changelog]  [![Last commit badge][last-commit]][last-commit-link]
 
 ![TheDock Screenshot](screenshot.png)
 
@@ -10,7 +10,7 @@ Luis Colomé ( [@luiscolome](https://twitter.com/luiscolome) / [luiscolome.com](
 
 ## Summary
 
-WordPress Starter Theme for use as Child Theme of the Genesis Framework for building custom themes. Uses SCSS and PrePros to compile it. Tested up to WordPress 5.7.1 and Genesis 3.3.3.
+WordPress Starter Theme for use as Child Theme of the Genesis Framework for building custom themes. Uses SCSS and PrePros to compile it. Tested up to WordPress 5.8.1 and Genesis 3.3.5.
 
 ## Usage
 
@@ -41,7 +41,7 @@ Without these projects, this WordPress Genesis Starter Child Theme wouldn't be w
 
 
 [changelog]: ./CHANGELOG.md
-[changelog-badge]: https://img.shields.io/badge/Changelog-TheDock%20Genesis%20Starter%20Theme%20v1.0.5-orange
-[version-badge]: https://img.shields.io/badge/version-1.0.5-informational.svg
+[changelog-badge]: https://img.shields.io/badge/Changelog-TheDock%20Genesis%20Starter%20Theme%20v1.0.5.1-orange
+[version-badge]: https://img.shields.io/badge/version-1.0.5.1-informational.svg
 [last-commit]: https://img.shields.io/github/last-commit/luiscolome/Thedock/develop?color=yellow&logoColor=red
 [last-commit-link]: https://github.com/LuisColome/the-dock/commit/develop

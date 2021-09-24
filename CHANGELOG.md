@@ -12,6 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ~~Support for Kadence Blocks plugin~~.
 - Highlight link on main menu.
 
+#### [1.0.5.1](https://github.com/LuisColome/the-dock/releases/tag/v1.0.5.1) - 2021-09-24
+#### Fix
+- Padding on secondary buttons (outlined)
+- Color variables conflict with brand-color funciton.
+
 #### [1.0.5](https://github.com/LuisColome/the-dock/releases/tag/v1.0.5) - 2021-09-21
 #### Update
 - Responsive typography with clamp().
