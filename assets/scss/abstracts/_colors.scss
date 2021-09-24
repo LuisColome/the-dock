@@ -1,5 +1,3 @@
-
-
 // Colors
 $white: #ffffff;
 $grey_1: #fafafa;
@@ -16,19 +14,19 @@ $black: #000;
 
 // Brand Colors
 $brand_colors: (
-	'green': #1b7e90,
-    // 'green'   : #35b3ab,
-    // 'light-green' : #add7d3,
+    'green'   : #29a39b,
+	'dark-green': #1b7e90,
+    'light-green' : #add7d3,
     'orange' : #de8974,
 	'grey'	: $grey_2,
     'dark-grey' : $grey_8,
 );
 
 // color variables
-$primary-color: brand-color( 'green' );
-$secondary-color: brand-color('orange');
+$primary-color: #35b3ab;
+$secondary-color: #de8974;
 $base-color: $grey_8;
-$highlight: brand-color( 'green', 'darken' );
+$highlight: #1b7e90;
 $border-color: $grey_4;
 
 // Social colors
