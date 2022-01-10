@@ -1,6 +1,6 @@
 @use "abstracts" as *;
 
-// Forms, Tables and buttons (not block)
+// Forms, Tables and buttons base styles (not block)
 
 /* Forms
 --------------------------------------------- */
@@ -28,7 +28,6 @@ textarea {
 @include placeholder-color( $grey_5 );
 
 /* Search Form
-
 --------------------------------------------- */
 
 .search-form {
