@@ -1625,7 +1625,7 @@ hr::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.77);
   opacity: 0;
   z-index: 996;
   transition: opacity 0.3s ease-in-out;
@@ -1639,6 +1639,7 @@ hr::before {
 }
 .lcm-dark-overlay.active {
   opacity: 1;
+  pointer-events: visible;
 }
 
 /* Toggles
