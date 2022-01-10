@@ -64,7 +64,7 @@ p {
     margin: 0 0 28px;
     padding: 0;
 }
-
+// Add !important to override Gutenberg styles. 
 .has-small-font-size {
     font-size: .9rem !important;
 }
