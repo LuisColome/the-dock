@@ -363,21 +363,21 @@ p {
 }
 
 .has-small-font-size {
-  font-size: 0.9em;
+  font-size: 0.9rem !important;
 }
 
 .has-normal-font-size {
-  font-size: 1em;
+  font-size: 1rem !important;
 }
 
 .has-large-font-size {
-  font-size: 1.2em;
-  font-size: clamp(1.1rem, 1rem + .5vw, 1.25rem);
+  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 1rem + .5vw, 1.25rem) !important;
 }
 
 .has-huge-font-size {
-  font-size: 1.5em;
-  font-size: clamp(1.35rem, 1.2rem + .5vw, 1.55rem);
+  font-size: 1.5rem;
+  font-size: clamp(1.45rem, 1.2rem + .5vw, 1.65rem) !important;
 }
 
 /* Headings
