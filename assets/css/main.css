@@ -1282,7 +1282,7 @@ hr::before {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 75px;
+  height: 60px;
   background-color: #ffffff;
   padding: 0 1.375rem;
   border-bottom: 1px solid #eeeeee;
@@ -1290,13 +1290,6 @@ hr::before {
 }
 .site-header::before, .site-header::after {
   content: none;
-}
-.site-header.shrink {
-  height: 50px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-.site-header.shrink .site-title a {
-  color: #414243;
 }
 .site-header .wrap {
   width: 100%;
@@ -1332,9 +1325,6 @@ hr::before {
   padding: 0;
   max-width: 300px;
   transition: all 0.2s ease-in-out;
-}
-.wp-custom-logo .shrink .title-area {
-  max-width: calc(300px/1.5);
 }
 
 .site-title {
@@ -1388,9 +1378,11 @@ hr::before {
   font-weight: 400;
   line-height: 1.2;
   padding: 0.5em 1em;
-  margin-right: 0.7em;
   position: relative;
   text-decoration: none;
+}
+.nav-menu .menu-item.menu-item-has-children a {
+  margin-right: 0.7em;
 }
 .nav-menu .menu-item:last-child a {
   margin-right: 0;
@@ -1416,11 +1408,17 @@ hr::before {
   transition: width 0.3s;
   margin-top: 5px;
 }
+.nav-menu .menu-item.highlight {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .nav-menu .menu-item.highlight a {
-  margin-top: 3px;
   border: 2px solid #35b3ab;
   border-radius: 4px;
   color: #35b3ab;
+  margin-left: 0.5em;
 }
 @media (max-width: 768px) {
   .nav-menu .menu-item.highlight a {
@@ -1433,7 +1431,7 @@ hr::before {
   color: #ffffff;
 }
 .nav-menu .menu-item.highlight a span {
-  padding-top: 0;
+  padding: 0;
 }
 .nav-menu .menu-item.highlight a span::after {
   content: none;

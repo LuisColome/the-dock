@@ -29,10 +29,17 @@
 			font-weight: 400;
 			line-height: 1.2;
 			padding: .5em 1em;
-            margin-right: .7em;
+            // margin-right: .7em;
 			position: relative;
 			text-decoration: none;
 		}
+
+        &.menu-item-has-children {
+
+            a {
+                margin-right: .7em;
+            }
+        }
         
         &:last-child a {
             margin-right: 0;
@@ -66,12 +73,16 @@
         }
 
         &.highlight {
-                
+            height: 100%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            
             a {
-                margin-top: 3px;
                 border: 2px solid $primary-color;
                 border-radius: $border-radius;
                 color: $primary-color;
+                margin-left: .5em;
 
                 @include media('<=mobile_menu') {
                     text-align: center;
@@ -85,7 +96,7 @@
                 }
 
                 span {
-                    padding-top: 0;
+                    padding: 0;
 
                     &::after {
                         content: none;
@@ -99,7 +110,6 @@
         .current-menu-item > a,
         .sub-menu .current-menu-item > a:focus,
         .sub-menu .current-menu-item > a:hover {
-          // color: brand-color( 'dark-green' );
           text-decoration: none;
       
           span::after {
