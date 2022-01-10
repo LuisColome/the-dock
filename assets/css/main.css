@@ -1424,6 +1424,7 @@ hr::before {
   .nav-menu .menu-item.highlight a {
     text-align: center;
     margin-top: 1em;
+    width: 100%;
   }
 }
 .nav-menu .menu-item.highlight a:hover, .nav-menu .menu-item.highlight a:focus {
@@ -1460,9 +1461,21 @@ hr::before {
   cursor: pointer;
   position: absolute;
   line-height: 0;
-  top: 50%;
-  transform: translateY(-45%);
-  right: 9px;
+  top: 5px;
+  right: 0;
+  transform: none;
+  width: 44px;
+  height: 44px;
+}
+.nav-menu .submenu-expand svg {
+  width: 14px;
+  height: 14px;
+}
+.nav-menu .submenu-expand.expanded {
+  transform: rotate(180deg);
+}
+.nav-menu .submenu-expand.expanded + .sub-menu {
+  display: block;
 }
 @media (max-width: 768px) {
   .nav-menu .nav-secondary .menu-item.search {
@@ -1543,7 +1556,7 @@ hr::before {
   .nav-menu {
     position: fixed;
     width: 100%;
-    max-width: 320px;
+    max-width: 325px;
     height: 100%;
     top: 0;
     right: -100%;
@@ -1560,23 +1573,6 @@ hr::before {
   .nav-menu .menu > .menu-item > a {
     padding: 11px 18px;
     font-size: 18px;
-  }
-  .nav-menu .submenu-expand {
-    top: 0;
-    right: 0;
-    transform: none;
-    width: 44px;
-    height: 44px;
-  }
-  .nav-menu .submenu-expand svg {
-    width: 14px;
-    height: 14px;
-  }
-  .nav-menu .submenu-expand.expanded {
-    transform: rotate(180deg);
-  }
-  .nav-menu .submenu-expand.expanded + .sub-menu {
-    display: block;
   }
   .nav-menu .sub-menu {
     display: none;
