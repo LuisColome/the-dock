@@ -126,13 +126,8 @@
 		top: 5px;
         right: 0;
 		transform: none;
-		@include icon-position( 44px );
-
-        svg {
-            @include icon-position( 14px );
-            // 	fill: $base-color; // to fill the icon
-        }
-
+        @include icon-position( 44px );
+        
         &.expanded {
             transform: rotate(180deg);
 
@@ -140,6 +135,18 @@
                 display: block;
             }
         }
+
+        @include media(">=mobile_menu") {
+            top: 50%;
+            transform: translateY(-45%);
+            right: 9px;
+            @include icon-position( 14px );
+
+            &.expanded {
+                transform: translateY(-45%);
+            }
+        }
+
 
 	}
 
@@ -248,7 +255,7 @@
 	@include media("<=mobile_menu") {
         position: fixed;
         width: 100%;
-        max-width: 325px;
+        max-width: 350px;
         height: 100%;
         top: 0;
         right: -100%;
@@ -446,9 +453,9 @@
 		background: $base-color;
 		border-radius: 2em;
 		opacity: 1;
-		left: 0;
+		right: 0;
 		transform: rotate(0deg);
-		transform-origin: left center;
+		transform-origin: center center;
 		transition: all .35s ease-in-out;
 
 		&.first {
@@ -472,24 +479,48 @@
 
 	&.active {
 		background-color: transparent; // prevent button defaults
-		.toggl__bar {
-			background: $white;
-            height: 4px;
+		// .toggl__bar {
+		// 	background: $white;
+        //     height: 4px;
+		// 	&.first {
+		// 		transform: rotate(45deg);
+		// 		top: 0px;
+		// 		left: 8px;
+		// 		width: 60%;
+		// 	}
+		// 	&.second {
+		// 		left: -1em;
+		// 		opacity: 0;
+		// 	}
+		// 	&.third {
+		// 		transform: rotate(-45deg);
+		// 		top: 11px;
+		// 		left: 8px;
+		// 		width: 60%;
+		// 	}
+		// }
+        .toggl__bar {
+			background: $grey_4;
+            height: 3px;
+
 			&.first {
-				transform: rotate(45deg);
-				top: 0px;
-				left: 8px;
-				width: 60%;
+				transform: rotate(315deg);
+                top: 10px;
+                right: -2px;
+                width: 50%;
+                height: 3px;
 			}
+
 			&.second {
-				left: -1em;
-				opacity: 0;
+				transform: rotate(180deg);
 			}
+
 			&.third {
-				transform: rotate(-45deg);
-				top: 11px;
-				left: 8px;
-				width: 60%;
+				transform: rotate(225deg);
+				top: 3px;
+                right: -2px;
+				width: 50%;
+                height: 3px;
 			}
 		}
 	}

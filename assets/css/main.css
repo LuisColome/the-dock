@@ -1499,15 +1499,23 @@ hr::before {
   width: 44px;
   height: 44px;
 }
-.nav-menu .submenu-expand svg {
-  width: 14px;
-  height: 14px;
-}
 .nav-menu .submenu-expand.expanded {
   transform: rotate(180deg);
 }
 .nav-menu .submenu-expand.expanded + .sub-menu {
   display: block;
+}
+@media (min-width: 768px) {
+  .nav-menu .submenu-expand {
+    top: 50%;
+    transform: translateY(-45%);
+    right: 9px;
+    width: 14px;
+    height: 14px;
+  }
+  .nav-menu .submenu-expand.expanded {
+    transform: translateY(-45%);
+  }
 }
 @media (max-width: 768px) {
   .nav-menu .nav-secondary .menu-item.search {
@@ -1588,7 +1596,7 @@ hr::before {
   .nav-menu {
     position: fixed;
     width: 100%;
-    max-width: 325px;
+    max-width: 350px;
     height: 100%;
     top: 0;
     right: -100%;
@@ -1771,9 +1779,9 @@ hr::before {
   background: #616161;
   border-radius: 2em;
   opacity: 1;
-  left: 0;
+  right: 0;
   transform: rotate(0deg);
-  transform-origin: left center;
+  transform-origin: center center;
   transition: all 0.35s ease-in-out;
 }
 .menu-toggle .toggl__bar.first {
@@ -1792,24 +1800,25 @@ hr::before {
   background-color: transparent;
 }
 .menu-toggle.active .toggl__bar {
-  background: #ffffff;
-  height: 4px;
+  background: #e0e0e0;
+  height: 3px;
 }
 .menu-toggle.active .toggl__bar.first {
-  transform: rotate(45deg);
-  top: 0px;
-  left: 8px;
-  width: 60%;
+  transform: rotate(315deg);
+  top: 10px;
+  right: -2px;
+  width: 50%;
+  height: 3px;
 }
 .menu-toggle.active .toggl__bar.second {
-  left: -1em;
-  opacity: 0;
+  transform: rotate(180deg);
 }
 .menu-toggle.active .toggl__bar.third {
-  transform: rotate(-45deg);
-  top: 11px;
-  left: 8px;
-  width: 60%;
+  transform: rotate(225deg);
+  top: 3px;
+  right: -2px;
+  width: 50%;
+  height: 3px;
 }
 
 /* Sidebar
