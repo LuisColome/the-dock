@@ -1370,20 +1370,23 @@ figure {
 
 /* Singular
 ---------------------------------------------------------------------------------------------------- */
-.entry-content > *[class^=wp-block],
-.editor-styles-wrapper > * {
+.entry-content > *[class^=wp-block] {
   margin: 20px 0;
+}
+
+.entry-content > *,
+.editor-styles-wrapper > * {
   max-width: 100%;
 }
-.entry-content > *[class^=wp-block]:first-child,
+.entry-content > *:first-child,
 .editor-styles-wrapper > *:first-child {
   margin-top: 0;
 }
-.entry-content > *[class^=wp-block]:last-child,
+.entry-content > *:last-child,
 .editor-styles-wrapper > *:last-child {
   margin-bottom: 0;
 }
-.full-width-content .entry-content > *[class^=wp-block].alignwide, .content-width .entry-content > *[class^=wp-block].alignwide,
+.full-width-content .entry-content > *.alignwide, .content-width .entry-content > *.alignwide,
 .full-width-content .editor-styles-wrapper > *.alignwide,
 .content-width .editor-styles-wrapper > *.alignwide {
   margin: calc( 2 * 20px ) calc(50% - 50vw);
@@ -1391,24 +1394,24 @@ figure {
   width: auto;
   padding: 0 1.375rem;
 }
-.full-width-content .entry-content > *[class^=wp-block].alignwide[class^=wp-block-kadence], .content-width .entry-content > *[class^=wp-block].alignwide[class^=wp-block-kadence],
+.full-width-content .entry-content > *.alignwide[class^=wp-block-kadence], .content-width .entry-content > *.alignwide[class^=wp-block-kadence],
 .full-width-content .editor-styles-wrapper > *.alignwide[class^=wp-block-kadence],
 .content-width .editor-styles-wrapper > *.alignwide[class^=wp-block-kadence] {
   padding: 0;
 }
 @media (min-width: 1200px) {
-  .full-width-content .entry-content > *[class^=wp-block].alignwide, .content-width .entry-content > *[class^=wp-block].alignwide,
+  .full-width-content .entry-content > *.alignwide, .content-width .entry-content > *.alignwide,
 .full-width-content .editor-styles-wrapper > *.alignwide,
 .content-width .editor-styles-wrapper > *.alignwide {
     margin: calc( 2 * 20px) calc(25% - 25vw);
   }
 }
-.full-width-content .entry-content > *[class^=wp-block].alignwide:first-child, .content-width .entry-content > *[class^=wp-block].alignwide:first-child,
+.full-width-content .entry-content > *.alignwide:first-child, .content-width .entry-content > *.alignwide:first-child,
 .full-width-content .editor-styles-wrapper > *.alignwide:first-child,
 .content-width .editor-styles-wrapper > *.alignwide:first-child {
   margin-top: 0;
 }
-.full-width-content .entry-content > *[class^=wp-block].alignfull, .content-width .entry-content > *[class^=wp-block].alignfull,
+.full-width-content .entry-content > *.alignfull, .content-width .entry-content > *.alignfull,
 .full-width-content .editor-styles-wrapper > *.alignfull,
 .content-width .editor-styles-wrapper > *.alignfull {
   margin: calc( 2 * 20px ) calc(50% - 50vw);
@@ -1416,19 +1419,19 @@ figure {
   width: 100vw;
   padding: 0 1.375rem;
 }
-.full-width-content .entry-content > *[class^=wp-block].alignfull[class^=wp-block-kadence], .content-width .entry-content > *[class^=wp-block].alignfull[class^=wp-block-kadence],
+.full-width-content .entry-content > *.alignfull[class^=wp-block-kadence], .content-width .entry-content > *.alignfull[class^=wp-block-kadence],
 .full-width-content .editor-styles-wrapper > *.alignfull[class^=wp-block-kadence],
 .content-width .editor-styles-wrapper > *.alignfull[class^=wp-block-kadence] {
   padding: 0;
 }
-.full-width-content .entry-content > *[class^=wp-block].aligncontent, .content-width .entry-content > *[class^=wp-block].aligncontent,
+.full-width-content .entry-content > *.aligncontent, .content-width .entry-content > *.aligncontent,
 .full-width-content .editor-styles-wrapper > *.aligncontent,
 .content-width .editor-styles-wrapper > *.aligncontent {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
 }
-.full-width-content .entry-content > *[class^=wp-block].alignwide .alignwide, .full-width-content .entry-content > *[class^=wp-block].alignfull .alignwide, .content-width .entry-content > *[class^=wp-block].alignwide .alignwide, .content-width .entry-content > *[class^=wp-block].alignfull .alignwide,
+.full-width-content .entry-content > *.alignwide .alignwide, .full-width-content .entry-content > *.alignfull .alignwide, .content-width .entry-content > *.alignwide .alignwide, .content-width .entry-content > *.alignfull .alignwide,
 .full-width-content .editor-styles-wrapper > *.alignwide .alignwide,
 .full-width-content .editor-styles-wrapper > *.alignfull .alignwide,
 .content-width .editor-styles-wrapper > *.alignwide .alignwide,
@@ -1437,7 +1440,7 @@ figure {
   margin-left: auto;
   margin-right: auto;
 }
-.full-width-content .entry-content > *[class^=wp-block].alignwide .aligncontent, .full-width-content .entry-content > *[class^=wp-block].alignfull .aligncontent, .content-width .entry-content > *[class^=wp-block].alignwide .aligncontent, .content-width .entry-content > *[class^=wp-block].alignfull .aligncontent,
+.full-width-content .entry-content > *.alignwide .aligncontent, .full-width-content .entry-content > *.alignfull .aligncontent, .content-width .entry-content > *.alignwide .aligncontent, .content-width .entry-content > *.alignfull .aligncontent,
 .full-width-content .editor-styles-wrapper > *.alignwide .aligncontent,
 .full-width-content .editor-styles-wrapper > *.alignfull .aligncontent,
 .content-width .editor-styles-wrapper > *.alignwide .aligncontent,
@@ -1446,30 +1449,30 @@ figure {
   margin-left: auto;
   margin-right: auto;
 }
-.entry-content > *[class^=wp-block].alignleft,
+.entry-content > *.alignleft,
 .editor-styles-wrapper > *.alignleft {
   /*rtl:ignore*/
   float: left;
   margin: 0 20px 20px 0;
 }
-.entry-content > *[class^=wp-block].alignright,
+.entry-content > *.alignright,
 .editor-styles-wrapper > *.alignright {
   /*rtl:ignore*/
   float: right;
   margin: 0 0 20px 20px;
 }
-.entry-content > *[class^=wp-block].aligncenter,
+.entry-content > *.aligncenter,
 .editor-styles-wrapper > *.aligncenter {
   margin-left: auto;
   margin-right: auto;
 }
-.entry-content > *[class^=wp-block].wp-block-quote, .entry-content > *[class^=wp-block].post-listing-block,
+.entry-content > *.wp-block-quote, .entry-content > *.post-listing-block,
 .editor-styles-wrapper > *.wp-block-quote,
 .editor-styles-wrapper > *.post-listing-block {
   margin-top: calc( 2 * 20px);
   margin-bottom: calc( 2 * 20px);
 }
-.entry-content > *[class^=wp-block].wp-block-search,
+.entry-content > *.wp-block-search,
 .editor-styles-wrapper > *.wp-block-search {
   max-width: 568px;
   margin-left: auto;
