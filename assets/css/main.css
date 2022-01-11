@@ -1529,6 +1529,10 @@ figure {
   margin-top: 0;
 }
 
+.entry {
+  margin-bottom: 2.2rem;
+}
+
 /* Entry Meta
 --------------------------------------------- */
 .entry-author {
