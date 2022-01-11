@@ -1,6 +1,6 @@
 @use "abstracts" as *;
 
-/* Typographical Elements
+/* Typographical Elements - General styles
 --------------------------------------------- */
 
 button,
@@ -29,11 +29,11 @@ a {
     }
 }
 
-ol,
-ul {
-    margin: 0;
-    padding: 0;
-}
+// ol,
+// ul {
+//     // margin: 0;
+//     // padding: 0;
+// }
 
 hr {
     border: 0;
@@ -64,23 +64,23 @@ p {
     margin: 0 0 28px;
     padding: 0;
 }
-
+// Add !important to override Gutenberg styles. 
 .has-small-font-size {
-    font-size: .9em;
+    font-size: .9rem !important;
 }
 
 .has-normal-font-size {
-    font-size: 1em;
+    font-size: 1rem !important;
 }
 
 .has-large-font-size {
-    font-size: 1.2em;
-    font-size: clamp(1.1rem, 1rem + .5vw, 1.25rem);
+    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 1rem + .5vw, 1.25rem) !important;
 }
 
 .has-huge-font-size {
-    font-size: 1.5em;
-    font-size: clamp(1.35rem, 1.2rem + .5vw, 1.55rem);
+    font-size: 1.5rem;
+    font-size: clamp(1.45rem, 1.2rem + .5vw, 1.65rem) !important;
 }
 
 /* Headings
@@ -96,7 +96,7 @@ h6 {
     font-family: $sans-serif;
     font-weight: 600;
     line-height: 1.2;
-    margin: $margin_2x 0 $block-margin;
+    margin: 1.15em 0 $block-margin;
     scroll-margin-top: 5rem;  // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
 
     &.entry-title,
@@ -147,6 +147,60 @@ h6 {
     font-size: clamp(1.05rem, 1rem + .5vw, 1.25rem);
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Lists
+--------------------------------------------- */
+.entry-content > *,
+.block-editor > * {
+    
+    // Common lists
+    ul, ol {
+        padding-left: 2.5rem;
+        margin: $block-margin 0;
+
+        li {
+            // padding-bottom: .5rem;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            ul, ol {
+                padding-top: .5rem;
+            }
+        }
+
+        &.wp-block-gallery {
+            padding-left: 0;
+
+            li {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    // Custom checked list
+    ul.checked-list {
+        list-style: none;
+
+        li {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 2px;
+                right:0;
+                bottom: 0;
+                left: -26px;
+                width: 24px;
+                height: 24px;
+                background: url(../icons/utility/check.svg) no-repeat ;
+                background-size: cover;
+            }
+        }
+    }
 }
 
 /* Objects

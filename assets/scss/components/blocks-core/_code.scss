@@ -1,0 +1,12 @@
+@use "abstracts" as *;
+
+/* Code block
+------------------------------------------------------------------------------ */
+.wp-block-code {
+    padding: $block-margin;
+    margin-bottom: $wrap_edge;
+    background-color: $grey_3;
+    border-radius: $border-radius;
+    overflow: auto;
+    white-space: nowrap;
+}

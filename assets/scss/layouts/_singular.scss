@@ -3,11 +3,13 @@
 
 /* Singular
 ---------------------------------------------------------------------------------------------------- */
+// Apply a general margin bottom only to blocks. 
+.entry-content > *[class^="wp-block"] {
+    margin: $block-margin 0;
+}
 
 .entry-content > *,
 .editor-styles-wrapper > * {
-
-	margin: $block-margin 0;
 	max-width: 100%;
 
 	&:first-child {
@@ -121,4 +123,9 @@
 	// 	}
 	// }
 
+}
+
+// Give some space before footer.
+.entry {
+    margin-bottom: $margin_2x;
 }
