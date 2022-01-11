@@ -4,7 +4,7 @@
 /* Singular
 ---------------------------------------------------------------------------------------------------- */
 
-.entry-content > *,
+.entry-content > *[class^="wp-block"],
 .editor-styles-wrapper > * {
 
 	margin: $block-margin 0;
