@@ -86,8 +86,8 @@ function ea_child_theme_setup() {
 
 	// Editor Styles
 	add_theme_support( 'editor-styles' );
-	add_editor_style( '/inc/gutenberg/style-editor.css' );
-	// add_editor_style( '/assets/css/editor-style.css' );
+	// add_editor_style( '/inc/gutenberg/style-editor.css' );
+	add_editor_style( '/assets/css/editor-style.css' );
 
 	// Remove image sizes
 	remove_image_size( '1536x1536' );
