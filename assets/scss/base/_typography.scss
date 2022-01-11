@@ -96,7 +96,7 @@ h6 {
     font-family: $sans-serif;
     font-weight: 600;
     line-height: 1.2;
-    margin: $margin_2x 0 $block-margin;
+    margin: 1.15em 0 $block-margin;
     scroll-margin-top: 5rem;  // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
 
     &.entry-title,
