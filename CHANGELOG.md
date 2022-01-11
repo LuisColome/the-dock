@@ -10,7 +10,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Live Demo
 - ~~Start using @use and @fordward instead of @import (depracated) in SASS~~
 - ~~Support for Kadence Blocks plugin~~.
-- Highlight link on main menu.
+- ~~Highlight link on main menu~~.
+
+#### [1.0.6](https://github.com/LuisColome/the-dock/releases/tag/v1.0.6) - 2022-01-11
+#### Added
+- Space between entry and footer
+- General editor styles in separate file
+- Editor styles to scss folder
+- Code block styles
+- List styles to _typography.scss
+#### Updated
+- Gitignore
+- Margins on headings
+- Style for blockquote and pullquote block
+- Close mobile menu when clicking outside of it
+- Fixed site header size on scrolling down
+#### Fixed
+- Submenu arrow icons
+- Font sizes on Gutenberg paragraph variations
+- Arrows on parent links on mobile 
+#### Removed
+- Non needed files
+- Entry-content file from list on functions.php
+- Entry-content file due to outdated code
+- Index.scss file due to not used at the moment
 
 #### [1.0.5.1](https://github.com/LuisColome/the-dock/releases/tag/v1.0.5.1) - 2021-09-24
 #### Fix
