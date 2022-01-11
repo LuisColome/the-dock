@@ -14,21 +14,6 @@
 // Components
 @use "components/color-options";
 
-// -- Blocks Core
-@use "components/blocks-core/blockquote";
-@use "components/blocks-core/buttons";
-@use "components/blocks-core/group";
-@use "components/blocks-core/cover";
-@use "components/blocks-core/media-text";
-@use "components/blocks-core/image-gallery";
-@use "components/blocks-core/separator";
-@use "components/blocks-core/tables";
-
-// -- Blocks Plugins
-@use "components/blocks-plugins/cf7";
-@use "components/blocks-plugins/genesis-simple-faq";
-@use "components/blocks-plugins/genesis-blocks";
-
 // Layouts
 @use "layouts/layout";
 @use "layouts/archive";
@@ -44,5 +29,21 @@
 @use "layouts/gutenberg";
 @use "layouts/forms";
 @use "layouts/site-footer";
+
+// -- Blocks Core
+@use "components/blocks-core/blockquote";
+@use "components/blocks-core/code";
+@use "components/blocks-core/buttons";
+@use "components/blocks-core/group";
+@use "components/blocks-core/cover";
+@use "components/blocks-core/media-text";
+@use "components/blocks-core/image-gallery";
+@use "components/blocks-core/separator";
+@use "components/blocks-core/tables";
+
+// -- Blocks Plugins
+@use "components/blocks-plugins/cf7";
+@use "components/blocks-plugins/genesis-simple-faq";
+@use "components/blocks-plugins/genesis-blocks";
 
 @use "vendor/include-media";
