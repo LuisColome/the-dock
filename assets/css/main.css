@@ -298,7 +298,7 @@ body {
   }
 }
 
-/* Typographical Elements
+/* Typographical Elements - General styles
 --------------------------------------------- */
 button,
 input:focus,
@@ -323,12 +323,6 @@ a:hover {
 }
 a svg {
   transition: all 0.2s ease-in-out;
-}
-
-ol,
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 hr {
@@ -458,6 +452,58 @@ h6 {
   font-size: clamp(1.05rem, 1rem + .5vw, 1.25rem);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* Lists
+--------------------------------------------- */
+.entry-content > * ul, .entry-content > * ol,
+.block-editor > * ul,
+.block-editor > * ol {
+  padding-left: 2.5rem;
+  margin: 20px 0;
+}
+.entry-content > * ul li:last-child, .entry-content > * ol li:last-child,
+.block-editor > * ul li:last-child,
+.block-editor > * ol li:last-child {
+  padding-bottom: 0;
+}
+.entry-content > * ul li ul, .entry-content > * ul li ol, .entry-content > * ol li ul, .entry-content > * ol li ol,
+.block-editor > * ul li ul,
+.block-editor > * ul li ol,
+.block-editor > * ol li ul,
+.block-editor > * ol li ol {
+  padding-top: 0.5rem;
+}
+.entry-content > * ul.wp-block-gallery, .entry-content > * ol.wp-block-gallery,
+.block-editor > * ul.wp-block-gallery,
+.block-editor > * ol.wp-block-gallery {
+  padding-left: 0;
+}
+.entry-content > * ul.wp-block-gallery li, .entry-content > * ol.wp-block-gallery li,
+.block-editor > * ul.wp-block-gallery li,
+.block-editor > * ol.wp-block-gallery li {
+  padding-bottom: 0;
+}
+.entry-content > * ul.checked-list,
+.block-editor > * ul.checked-list {
+  list-style: none;
+}
+.entry-content > * ul.checked-list li,
+.block-editor > * ul.checked-list li {
+  position: relative;
+}
+.entry-content > * ul.checked-list li::before,
+.block-editor > * ul.checked-list li::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  left: -26px;
+  width: 24px;
+  height: 24px;
+  background: url(../icons/utility/check.svg) no-repeat;
+  background-size: cover;
 }
 
 /* Objects
@@ -1481,79 +1527,6 @@ figure {
 
 .entry-content > .alignfull:first-child {
   margin-top: 0;
-}
-
-/* WordPress
---------------------------------------------- */
-.alignleft {
-  float: left;
-  text-align: left;
-}
-
-.alignright {
-  float: right;
-  text-align: right;
-}
-
-.entry-content > *,
-.editor-styles-wrapper > * {
-  /* Lists
-  --------------------------------------------- */
-  /** Custom List
-  --------------------------------------------- */
-}
-.entry-content > * ul, .entry-content > * ol,
-.editor-styles-wrapper > * ul,
-.editor-styles-wrapper > * ol {
-  padding-left: 1.5rem;
-}
-.entry-content > * ul li, .entry-content > * ol li,
-.editor-styles-wrapper > * ul li,
-.editor-styles-wrapper > * ol li {
-  padding-bottom: 0.5rem;
-}
-.entry-content > * ul li:last-child, .entry-content > * ol li:last-child,
-.editor-styles-wrapper > * ul li:last-child,
-.editor-styles-wrapper > * ol li:last-child {
-  padding-bottom: 0;
-}
-.entry-content > * ul li ul, .entry-content > * ul li ol, .entry-content > * ol li ul, .entry-content > * ol li ol,
-.editor-styles-wrapper > * ul li ul,
-.editor-styles-wrapper > * ul li ol,
-.editor-styles-wrapper > * ol li ul,
-.editor-styles-wrapper > * ol li ol {
-  padding-top: 0.5rem;
-}
-.entry-content > * ul.wp-block-gallery, .entry-content > * ol.wp-block-gallery,
-.editor-styles-wrapper > * ul.wp-block-gallery,
-.editor-styles-wrapper > * ol.wp-block-gallery {
-  padding-left: 0;
-}
-.entry-content > * ul.wp-block-gallery li, .entry-content > * ol.wp-block-gallery li,
-.editor-styles-wrapper > * ul.wp-block-gallery li,
-.editor-styles-wrapper > * ol.wp-block-gallery li {
-  padding-bottom: 0;
-}
-.entry-content > * ul.check-list,
-.editor-styles-wrapper > * ul.check-list {
-  list-style: none;
-}
-.entry-content > * ul.check-list li,
-.editor-styles-wrapper > * ul.check-list li {
-  position: relative;
-}
-.entry-content > * ul.check-list li::before,
-.editor-styles-wrapper > * ul.check-list li::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  right: 0;
-  bottom: 0;
-  left: -24px;
-  width: 23px;
-  height: 23px;
-  background: url(../icons/utility/check.svg) no-repeat;
-  background-size: cover;
 }
 
 /* Entry Meta
