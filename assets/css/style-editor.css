@@ -1431,6 +1431,10 @@ table {
     margin-bottom: 20px;
   }
 }
+.entry-content > *.wp-block-media-text.is-image-fill .wp-block-media-text__media,
+.block-area > *.wp-block-media-text.is-image-fill .wp-block-media-text__media {
+  border-radius: 4px;
+}
 
 /* Image and Gallery
 --------------------------------------------- */

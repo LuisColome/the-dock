@@ -25,4 +25,12 @@
             }
         }
 	}
+
+    // Make sure the border radius is working when the images is filling the content
+    &.wp-block-media-text.is-image-fill {
+
+        .wp-block-media-text__media {
+            border-radius: $border-radius;
+        }
+    }
 }
