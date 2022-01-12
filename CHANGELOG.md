@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ~~Support for Kadence Blocks plugin~~.
 - ~~Highlight link on main menu~~.
 
-#### [1.0.6](https://github.com/LuisColome/the-dock/releases/tag/v1.0.6) - 2022-01-11
+#### [1.0.6](https://github.com/LuisColome/the-dock/releases/tag/v1.0.6) - 2022-01-12
 #### Fixed
 - Border radius on image in Media and Text block, when the image is marked to fill the content.
 
