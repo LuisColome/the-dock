@@ -8,11 +8,11 @@ $sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
 $content-width: 768px;
 $block-margin: 1.5rem; // 24px (8pt grid system)
 $base-margin: 1rem; // 16px (8pt grid system)
-$border-radius: 4px;
+$border-radius: 10px;
 
 // Grid
 $grid: grid;
-$grid-width: 1200px;
+$grid-width: 1128px;
 $grid-gap: 32px;
 $wrap_edge: 1rem;
 $margin_2x: $base-margin * 2; // 32px (8pt grid system)
