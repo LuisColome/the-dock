@@ -83,6 +83,7 @@ function ea_child_theme_setup() {
     // Plugin Support
 	include_once( get_stylesheet_directory() . '/inc/acf.php' );
 	include_once( get_stylesheet_directory() . '/inc/amp.php' );
+	include_once( get_stylesheet_directory() . '/inc/dps.php' );
 
 	// Editor Styles
 	add_theme_support( 'editor-styles' );
