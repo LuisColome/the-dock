@@ -616,13 +616,13 @@ figure {
 --------------------------------------------- */
 .site-inner {
   clear: both;
-  max-width: calc($grid-width + 60px);
+  max-width: calc($grid-width + $wrap_edge);
   margin: 0 auto;
   padding: 60px 0 30px;
 }
 @media (max-width: 1200px) {
   .site-inner {
-    padding: 60px 1rem 30px;
+    padding: 60px 16px 30px;
   }
 }
 .first-block-align-full .site-inner, .first-block-cover-full .site-inner {
@@ -631,7 +631,7 @@ figure {
 
 .content-sidebar .site-inner,
 .sidebar-content .site-inner {
-  max-width: 1200px;
+  max-width: 1128px;
 }
 .content-sidebar .content-area,
 .sidebar-content .content-area {
@@ -899,7 +899,7 @@ figure {
   width: 100%;
   height: 60px;
   background-color: #ffffff;
-  padding: 0 1rem;
+  padding: 0 16px;
   border-bottom: 1px solid #eeeeee;
   transition: all 0.2s ease-in-out;
 }
@@ -1449,7 +1449,7 @@ figure {
   margin: calc( 2 * 1.5rem ) calc(50% - 50vw);
   max-width: 100vw;
   width: auto;
-  padding: 0 1rem;
+  padding: 0 16px;
 }
 .full-width-content .entry-content > *.alignwide[class^=wp-block-kadence], .content-width .entry-content > *.alignwide[class^=wp-block-kadence],
 .full-width-content .editor-styles-wrapper > *.alignwide[class^=wp-block-kadence],
@@ -1474,7 +1474,7 @@ figure {
   margin: calc( 2 * 1.5rem ) calc(50% - 50vw);
   max-width: 100vw;
   width: 100vw;
-  padding: 0 1rem;
+  padding: 0 16px;
 }
 .full-width-content .entry-content > *.alignfull[class^=wp-block-kadence], .content-width .entry-content > *.alignfull[class^=wp-block-kadence],
 .full-width-content .editor-styles-wrapper > *.alignfull[class^=wp-block-kadence],
@@ -1930,7 +1930,7 @@ textarea:focus:-ms-input-placeholder {
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
   background: #616161;
-  padding: 40px 1rem 10px;
+  padding: 40px 16px 10px;
   position: relative;
   color: #ffffff;
 }
@@ -2190,7 +2190,7 @@ textarea:focus:-ms-input-placeholder {
 ------------------------------------------------------------------------------ */
 .wp-block-code {
   padding: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   background-color: #eeeeee;
   border-radius: 10px;
   overflow: auto;
@@ -2312,7 +2312,7 @@ textarea:focus:-ms-input-placeholder {
 .content-width .block-area .wp-block-group,
 .content-width .block-area .wp-block-group.alignwide,
 .content-width .block-area .wp-block-group.alignfull {
-  padding: 64px 1rem;
+  padding: 64px 16px;
 }
 
 /* Cover
