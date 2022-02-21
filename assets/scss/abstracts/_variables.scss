@@ -1,23 +1,23 @@
-
 // Fonts
 $serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,
-  "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
-  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 // Content
 $content-width: 768px;
-$block-margin: 20px;
-$base-margin: 1.1rem;
-$border-radius: 4px;
+$block-margin: 1.5rem; // 24px (8pt grid system)
+$base-margin: 1rem; // 16px (8pt grid system)
+$border-radius: 10px;
 
 // Grid
 $grid: grid;
-$grid-width: 1200px;
+$grid-width: 1128px;
 $grid-gap: 32px;
-$wrap_edge: $base-margin * 1.25;
-$margin_2x: $base-margin * 2;
-$margin_4x: $base-margin * 4;
+$wrap_edge: 16px; // 1rem
+$margin_2x: $base-margin * 2; // 32px (8pt grid system)
+$margin_4x: $base-margin * 4; // 64px (8pt grid system)
 
 // Site Header
 $logo_width: 300px;
+$header-height: 60px;

@@ -5,7 +5,6 @@
 @use "abstracts/functions";
 @use "abstracts/variables";
 
-
 // Base
 @use "base/reset";
 @use "base/base";
@@ -42,7 +41,5 @@
 
 // -- Blocks Plugins
 @use "components/blocks-plugins/cf7";
-@use "components/blocks-plugins/genesis-simple-faq";
-@use "components/blocks-plugins/genesis-blocks";
 
 @use "vendor/include-media";

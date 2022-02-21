@@ -70,7 +70,7 @@ function ea_child_theme_setup() {
 	include_once( get_stylesheet_directory() . '/inc/genesis-changes.php' );
 
 	// Theme
-	//include_once( get_stylesheet_directory() . '/inc/site-logo.php' );
+	include_once( get_stylesheet_directory() . '/inc/site-logo.php' );
 	include_once( get_stylesheet_directory() . '/inc/site-footer.php' );
 	include_once( get_stylesheet_directory() . '/inc/login-logo.php' );
 	include_once( get_stylesheet_directory() . '/inc/layouts.php' );
@@ -83,6 +83,7 @@ function ea_child_theme_setup() {
     // Plugin Support
 	include_once( get_stylesheet_directory() . '/inc/acf.php' );
 	include_once( get_stylesheet_directory() . '/inc/amp.php' );
+	include_once( get_stylesheet_directory() . '/inc/dps.php' );
 
 	// Editor Styles
 	add_theme_support( 'editor-styles' );
@@ -134,7 +135,7 @@ function ea_child_theme_setup() {
 		array(
 			'name'      => __( 'Normal', 'ea_genesis_child' ),
 			'shortName' => __( 'M', 'ea_genesis_child' ),
-			'size'      => 20,
+			'size'      => 18,
 			'slug'      => 'normal'
 		),
 		array(
@@ -142,6 +143,12 @@ function ea_child_theme_setup() {
 			'shortName' => __( 'L', 'ea_genesis_child' ),
 			'size'      => 24,
 			'slug'      => 'large'
+		),
+		array(
+			'name'      => __( 'Huge', 'ea_genesis_child' ),
+			'shortName' => __( 'H', 'ea_genesis_child' ),
+			'size'      => 28,
+			'slug'      => 'huge'
 		),
 	) );
 
@@ -153,12 +160,17 @@ function ea_child_theme_setup() {
 		array(
 			'name'  => __( 'Orange', 'ea_genesis_child' ),
 			'slug'  => 'orange',
-			'color'	=> '#f36523',
+			'color'	=> '#dd6b20',
 		),
 		array(
-			'name'  => __( 'Yellow', 'ea_genesis_child' ),
-			'slug'  => 'yellow',
-			'color'	=> '#ffc401',
+			'name'  => __( 'Light Orange', 'ea_genesis_child' ),
+			'slug'  => 'light-orange',
+			'color'	=> '#de8974',
+		),
+		array(
+			'name'  => __( 'Red', 'ea_genesis_child' ),
+			'slug'  => 'red',
+			'color'	=> '#cf3033',
 		),
 		array(
 			'name'  => __( 'Grey', 'ea_genesis_child' ),
@@ -174,6 +186,11 @@ function ea_child_theme_setup() {
 			'name'  => __( 'White', 'ea_genesis_child' ),
 			'slug'  => 'white',
 			'color' => '#ffffff',
+        ),
+		array(
+			'name'  => __( 'Black', 'ea_genesis_child' ),
+			'slug'  => 'black',
+			'color' => '#232425',
 		),
 	) );
 

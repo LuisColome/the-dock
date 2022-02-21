@@ -4,54 +4,58 @@
 --------------------------------------------- */
 
 .wp-block-group {
+    max-width: $grid-width;
 
-	.wp-block-group__inner-container {
-		max-width: $content_width; // limit container width
-		margin: 0 auto;
-		@include clearfix;
+    .wp-block-group__inner-container {
+        max-width: $content_width; // limit container width
+        margin: 0 auto;
+        @include clearfix;
 
-		& > *:last-child {
-			margin-bottom: 0;
-		}
-	}
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
 
-	&.alignwide,
-	&.alignfull {
+    &.alignwide,
+    &.alignfull {
+        .wp-block-group__inner-container {
+            max-width: $grid-width; // limit container width
+        }
+    }
 
-		.wp-block-group__inner-container {
-		max-width: $grid-width;  // limit container width
-	}
-	}
+    // Dark background
+    &.has-background:not(.has-grey-background-color) {
+        color: $white;
 
-	// Dark background
-	&.has-background:not(.has-grey-background-color) {
-		color: $white;
-
-		h1, h2, h3, h4, h5, h6, p {
-			color: $white;
-		}
-	}
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            color: $white;
+        }
+    }
 }
 
-// Overwriting the containers paddings in alignwide and align full for Group Block 
+// Overwriting the containers paddings in alignwide and align full for Group Block
 .full-width-content,
 .content-width {
+    .entry-content,
+    .block-area {
+        .wp-block-group,
+        .wp-block-group.alignwide,
+        .wp-block-group.alignfull {
+            padding: 64px $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
 
-	.entry-content,
-	.block-area {
+            // @include media(">=tablet") {
+            //     padding: 60px $wrap_edge;
+            // }
 
-		.wp-block-group,
-		.wp-block-group.alignwide,
-		.wp-block-group.alignfull {
-			padding: 40px $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
-		
-			@include media(">=tablet") {
-				padding: 60px $wrap_edge;
-			}
-		
-			@include media(">=medium") {
-				padding: 80px $wrap_edge;
-			}
-		}
-	}
+            // @include media(">=medium") {
+            //     padding: 80px $wrap_edge;
+            // }
+        }
+    }
 }

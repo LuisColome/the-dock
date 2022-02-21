@@ -27,15 +27,13 @@
 
 .site-inner {
     clear: both;
-    max-width: calc($grid-width + 60px); // 1200px wide plus padding
+    max-width: calc($grid-width + $wrap_edge); // 1160px
     margin: 0 auto;
     padding: 60px 0 30px;
 
-    @include media("<=1200px") {
+    @include media("<=large") {
         padding: 60px $wrap_edge 30px;
     }
-
-
 
     // Remove the top padding if the first block is alignfull.
     .first-block-align-full &,
@@ -44,12 +42,10 @@
     }
 }
 
-
 .content-sidebar,
 .sidebar-content {
-
     .site-inner {
-        max-width: 1200px;
+        max-width: $grid-width;
     }
 
     .content-area {
@@ -60,7 +56,7 @@
 }
 
 .full-width-content .site-main {
-    max-width: 1200px;
+    max-width: $grid-width;
     margin: 0 auto;
 }
 
@@ -76,7 +72,6 @@
 }
 
 @include media("screen", ">=medium") {
-
     /* Content
     --------------------------------------------- */
 
@@ -94,45 +89,43 @@
     }
 
     .sidebar-content {
-
         .content-area {
             grid-template-columns: minmax(250px, 30%) 1fr;
             grid-template-areas: "sidebar site-main";
         }
     }
-  
 }
 
 /* Screen Reader Text
 --------------------------------------------- */
 
 .genesis-skip-link {
-	display: none;
+    display: none;
 }
 
 .screen-reader-text,
 .screen-reader-text span,
 .screen-reader-shortcut {
-	position: absolute !important;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	width: 1px;
-	border: 0;
-	overflow: hidden;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
 }
 
 .screen-reader-text:focus,
-.screen-reader-shortcut:focus  {
-	clip: auto !important;
-	height: auto;
-	width: auto;
-	display: block;
-	font-size: 1em;
-	font-weight: bold;
-	padding: 15px 23px 14px;
-	color: $grey_9;
-	background: $white;
-	z-index: 100000; /* Above WP toolbar. */
-	text-decoration: none;
-	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+.screen-reader-shortcut:focus {
+    clip: auto !important;
+    height: auto;
+    width: auto;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 15px 23px 14px;
+    color: $grey_9;
+    background: $white;
+    z-index: 100000; /* Above WP toolbar. */
+    text-decoration: none;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 }

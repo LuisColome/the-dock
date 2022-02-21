@@ -5,13 +5,41 @@
 
 .entry-content > *,
 .block-area > * {
+    .full-width-content &,
+    .content-width & {
+        // &.wp-block-cover.alignwide,
+        // &.wp-block-cover.alignfull {
+        // 	padding: 80px $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
+        // }
 
-	.full-width-content &,
-	.content-width & {
+        &.wp-block-cover {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
 
-		&.wp-block-cover.alignwide,
-		&.wp-block-cover.alignfull {
-			padding: 80px $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
-		}
-	}
+            .wp-block-cover__inner-container {
+                max-width: $grid-width;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &.wp-block-cover {
+        &.is-blend-mode-multiply {
+            .wp-block-cover__gradient-background {
+                mix-blend-mode: multiply;
+            }
+        }
+
+        &.is-border-radius {
+            .wp-block-cover__gradient-background {
+                border-radius: $border-radius;
+            }
+        }
+
+        // Avoid the rounded corners on background image.
+        img.wp-block-cover__image-background {
+            border-radius: 0;
+        }
+    }
 }
