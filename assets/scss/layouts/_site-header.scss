@@ -92,16 +92,29 @@
     margin: 0;
     overflow: hidden;
 
-    .wp-custom-logo & {
-        text-indent: -9999;
+    a {
+        display: block;
+        text-indent: -9999px;
+        text-decoration: none;
+        transition: none;
+
+        width: 189px;
+        height: 45px;
     }
 
-    a,
-    a:focus,
-    a:hover {
-        color: $grey_8;
-        text-decoration: none;
-    }
+    // .shrink & {
+    //     a {
+    //         width: 124px;
+    //         height: 40px;
+    //     }
+    // }
+
+    // .first-block-align-full .shrink & {
+    //     a {
+    //         background-image: url(../images/logo.svg) !important;
+    //         // background-size: cover;
+    //     }
+    // }
 }
 
 .site-description,
