@@ -1409,6 +1409,10 @@ table {
 .block-area > *.wp-block-cover.is-blend-mode-multiply .wp-block-cover__gradient-background {
   mix-blend-mode: multiply;
 }
+.entry-content > *.wp-block-cover.is-border-radius .wp-block-cover__gradient-background,
+.block-area > *.wp-block-cover.is-border-radius .wp-block-cover__gradient-background {
+  border-radius: 10px;
+}
 .entry-content > *.wp-block-cover img.wp-block-cover__image-background,
 .block-area > *.wp-block-cover img.wp-block-cover__image-background {
   border-radius: 0;

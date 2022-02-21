@@ -31,6 +31,12 @@
             }
         }
 
+        &.is-border-radius {
+            .wp-block-cover__gradient-background {
+                border-radius: $border-radius;
+            }
+        }
+
         // Avoid the rounded corners on background image.
         img.wp-block-cover__image-background {
             border-radius: 0;
