@@ -5,7 +5,6 @@
 @use "abstracts/functions";
 @use "abstracts/variables";
 
-
 // Base
 @use "base/reset";
 @use "base/base";
@@ -16,18 +15,10 @@
 
 // Layouts
 @use "layouts/layout";
-// @use "layouts/archive";
-// @use "layouts/site-header";
-// @use "layouts/navigation";
-// @use "layouts/sidebar";
 @use "layouts/singular";
-// @use "layouts/entry-meta";
 @use "layouts/post-summary";
-// @use "layouts/comments";
-// @use "layouts/widgets";
 @use "layouts/gutenberg";
 @use "layouts/forms";
-// @use "layouts/site-footer";
 
 // Editor layous
 @use "editor-layout";
@@ -45,7 +36,5 @@
 
 // -- Blocks Plugins
 @use "components/blocks-plugins/cf7";
-@use "components/blocks-plugins/genesis-simple-faq";
-@use "components/blocks-plugins/genesis-blocks";
 
 @use "vendor/include-media";
