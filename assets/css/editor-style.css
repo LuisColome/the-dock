@@ -315,8 +315,8 @@ a {
   color: #dd6b20;
   font-weight: 600;
   text-decoration: underline;
-  -webkit-text-decoration-color: #757575;
-          text-decoration-color: #757575;
+  -webkit-text-decoration-color: #de8974;
+          text-decoration-color: #de8974;
   transition: all 0.2s ease-in-out;
 }
 a:hover {

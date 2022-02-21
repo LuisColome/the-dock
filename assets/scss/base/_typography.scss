@@ -18,7 +18,7 @@ a {
     color: $primary-color;
     font-weight: 600;
     text-decoration: underline;
-    text-decoration-color: $grey-7;
+    text-decoration-color: $secondary-color;
     @include transition;
 
     &:hover {
