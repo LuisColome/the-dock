@@ -16,6 +16,7 @@ textarea:focus,
 
 a {
     color: $primary-color;
+    font-weight: 600;
     text-decoration: underline;
     text-decoration-color: $grey-7;
     @include transition;
@@ -64,23 +65,22 @@ p {
     margin: 0 0 28px;
     padding: 0;
 }
-// Add !important to override Gutenberg styles. 
-.has-small-font-size {
-    font-size: .9rem !important;
-}
 
-.has-normal-font-size {
+// Add !important to override Gutenberg styles.
+.has-small-font-size {
     font-size: 1rem !important;
 }
 
+.has-normal-font-size {
+    font-size: 1.125rem !important; // Value in accordance with Base-style mixins
+}
+
 .has-large-font-size {
-    font-size: 1.2rem;
-    font-size: clamp(1.1rem, 1rem + .5vw, 1.25rem) !important;
+    font-size: 1.5rem !important;
 }
 
 .has-huge-font-size {
-    font-size: 1.5rem;
-    font-size: clamp(1.45rem, 1.2rem + .5vw, 1.65rem) !important;
+    font-size: 1.75rem !important;
 }
 
 /* Headings
@@ -96,8 +96,12 @@ h6 {
     font-family: $sans-serif;
     font-weight: 600;
     line-height: 1.2;
-    margin: 1.15em 0 $block-margin;
-    scroll-margin-top: 5rem;  // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
+    margin: 0 0 $margin_2x 0;
+    scroll-margin-top: 5rem; // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
+
+    .entry-content > & {
+        margin-top: $margin_2x;
+    }
 
     &.entry-title,
     &.archive-title {
@@ -120,7 +124,7 @@ h6 {
 
 h1 {
     // @include font-sizes(34px, 48px, 42px);
-    font-size: clamp(2.2rem, 1.5rem + 2.5vw, 3rem);
+    font-size: clamp(2.4rem, 1.5rem + 2.65vw, 3.5rem);
 }
 
 h2 {
@@ -133,18 +137,18 @@ h3 {
     font-size: clamp(1.6rem, 1.2rem + 1vw, 1.85rem);
 }
 
-h4{
+h4 {
     // @include font-sizes(20px, 24px, 26px);
-    font-size: clamp(1.4rem, 1.1rem + .8vw, 1.7rem);
+    font-size: clamp(1.4rem, 1.1rem + 0.8vw, 1.7rem);
 }
 
 h5 {
     // @include font-sizes(18px, 22px);
-    font-size: clamp(1.1rem, 1rem + .7vw, 1.4rem);
+    font-size: clamp(1.1rem, 1rem + 0.7vw, 1.4rem);
 }
 
 h6 {
-    font-size: clamp(1.05rem, 1rem + .5vw, 1.25rem);
+    font-size: clamp(1.05rem, 1rem + 0.5vw, 1.25rem);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -153,9 +157,9 @@ h6 {
 --------------------------------------------- */
 .entry-content > *,
 .block-editor > * {
-    
     // Common lists
-    ul, ol {
+    ul,
+    ol {
         padding-left: 2.5rem;
         margin: $block-margin 0;
 
@@ -166,8 +170,9 @@ h6 {
                 padding-bottom: 0;
             }
 
-            ul, ol {
-                padding-top: .5rem;
+            ul,
+            ol {
+                padding-top: 0.5rem;
             }
         }
 
@@ -188,15 +193,15 @@ h6 {
             position: relative;
 
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 2px;
-                right:0;
+                right: 0;
                 bottom: 0;
                 left: -26px;
                 width: 24px;
                 height: 24px;
-                background: url(../icons/utility/check.svg) no-repeat ;
+                background: url(../icons/utility/check.svg) no-repeat;
                 background-size: cover;
             }
         }
@@ -222,4 +227,11 @@ img {
 
 figure {
     margin: 0;
+}
+
+/* Custom classes
+--------------------------------------------- */
+
+.nmb {
+    margin-bottom: 0 !important;
 }
