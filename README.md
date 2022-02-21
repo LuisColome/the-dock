@@ -1,6 +1,6 @@
-# TheDock - Genesis Starter Child Theme 
+# TheDock - Genesis Starter Child Theme
 
-[![TheDock Genesis Starter Theme v1.0.6.1 badge][changelog-badge]][changelog]  [![Version 1.0.6.1 Badge][version-badge]][changelog]  [![Last commit badge][last-commit]][last-commit-link]
+[![TheDock Genesis Starter Theme v1.0.7 badge][changelog-badge]][changelog] [![Version 1.0.7 Badge][version-badge]][changelog] [![Last commit badge][last-commit]][last-commit-link]
 
 ![TheDock Screenshot](screenshot.png)
 
@@ -24,24 +24,23 @@ Please, keep in mind it is a working in progress project. I'm using the Theme in
 
 1. SCSS with Prepros to compile it.
 2. Easy to customize
-4. Child theme tweaks
-5. WordPress cleanup functions
-6. ACF support
+3. Child theme tweaks
+4. WordPress cleanup functions
+5. ACF support
 
 ### Credits
 
-* [Vector image created by vectorpocket](https://www.freepik.es/vectorpocket)
+-   [Vector image created by vectorpocket](https://www.freepik.es/vectorpocket)
 
 Without these projects, this WordPress Genesis Starter Child Theme wouldn't be where it is today.
 
-* [Genesis Framework](http://my.studiopress.com/themes/genesis/)
-* [SASS / SCSS](http://sass-lang.com/)
-* [Bill Erickson's Genesis Child Theme](https://github.com/billerickson/BE-Genesis-Child)
-* [Eduardo Boucas' Include Media Queries](https://eduardoboucas.github.io/include-media/)
-
+-   [Genesis Framework](http://my.studiopress.com/themes/genesis/)
+-   [SASS / SCSS](http://sass-lang.com/)
+-   [Bill Erickson's Genesis Child Theme](https://github.com/billerickson/BE-Genesis-Child)
+-   [Eduardo Boucas' Include Media Queries](https://eduardoboucas.github.io/include-media/)
 
 [changelog]: ./CHANGELOG.md
-[changelog-badge]: https://img.shields.io/badge/Changelog-TheDock%20Genesis%20Starter%20Theme%20v1.0.6.1-orange
-[version-badge]: https://img.shields.io/badge/version-1.0.6.1-informational.svg
+[changelog-badge]: https://img.shields.io/badge/Changelog-TheDock%20Genesis%20Starter%20Theme%20v1.0.7-orange
+[version-badge]: https://img.shields.io/badge/version-1.0.7-informational.svg
 [last-commit]: https://img.shields.io/github/last-commit/luiscolome/Thedock/develop?color=yellow&logoColor=red
 [last-commit-link]: https://github.com/LuisColome/the-dock/commit/develop
