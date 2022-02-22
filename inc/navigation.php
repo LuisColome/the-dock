@@ -21,7 +21,6 @@ function ea_site_header() {
 	// echo ea_search_toggle();
     echo '<div class="lcm-dark-overlay"></div>';
 	echo '<nav' . ea_amp_class( 'nav-menu', 'active', 'menuActive' ) . ' role="navigation">';
-    echo '<div class="nav-header"><a class="nav-header__logo" title="' . get_bloginfo('name') . '" href="' . get_bloginfo('url') . '" style="background: url(' . get_bloginfo('url') . '/wp-content/themes/thedock/assets/images/logo-negative.png);background-size:cover;">' . get_bloginfo('name') . '</a></div>';
 	if( has_nav_menu( 'primary' ) ) {
 		wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'nav-primary', 'link_before'    => '<span>', 'link_after'     => '</span>' ) );
 	}
@@ -90,10 +89,13 @@ add_filter( 'wp_nav_menu_items', 'ea_nav_extras', 10, 2 );
  */
 function ea_mobile_menu_toggle() {
 	$output = '<button' . ea_amp_class( 'menu-toggle', 'active', 'menuActive' ) . ea_amp_toggle( 'menuActive', array( 'searchActive', 'mobileFollow' ) ) . '>';
-		// $output .= ea_icon( array( 'icon' => 'menu', 'size' => 24, 'class' => 'open' ) );
+        $output .= '<div class="menu-toggle__inner-container">';
+		
+        // $output .= ea_icon( array( 'icon' => 'menu', 'size' => 24, 'class' => 'open' ) );
 		// $output .= ea_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
 		$output .= '<span class="toggl__bar first"></span><span class="toggl__bar second"></span><span class="toggl__bar third"></span>';
 		$output .= '<span class="screen-reader-text">Menu</span>';
+        $output .= '</div>';
 	$output .= '</button>';
 	return $output;
 }
@@ -117,7 +119,7 @@ function ea_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
 	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add SVG icon to parent items.
-		$icon = ea_icon( array( 'icon' => 'chevron-bottom', 'size' => 14, 'title' => 'Submenu Dropdown' ) );
+		$icon = ea_icon( array( 'icon' => 'chevron-bottom', 'size' => 16, 'title' => 'Submenu Dropdown' ) );
 
 		$output .= sprintf(
 			'<button' . ea_amp_nav_dropdown( $args->theme_location, $depth ) . ' tabindex="-1">%s</button>',

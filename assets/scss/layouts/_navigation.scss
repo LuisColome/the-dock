@@ -5,17 +5,28 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .nav-menu {
+    // Reset line-height.
     & > * {
         line-height: 0;
     }
 
+    // Reset styles for nav lists.
     ul {
         clear: both;
         line-height: 1;
         margin: 0;
+        padding-left: 0;
         width: 100%;
     }
 
+    // As a standard, give a display:flex to all menus.
+    .menu,
+    .sub-menu {
+        display: flex;
+        gap: var(--gap, 1rem);
+    }
+
+    // Menu item. General styles.
     .menu-item {
         list-style: none;
         position: relative;
@@ -33,27 +44,32 @@
             text-decoration: none;
         }
 
+        // Menu item with a children Sub-menu.
         &.menu-item-has-children {
-            a {
+            > a {
                 margin-right: 0.7em;
             }
         }
 
+        // Last menu item with no margin right
         &:last-child a {
             margin-right: 0;
         }
 
+        // Hover and focus effects for menu links. Both links and svg.
         &:hover > a,
         &:hover .submenu-expand svg {
-            fill: $primary-color;
+            stroke: $primary-color;
             color: $primary-color;
         }
 
-        &.current-menu-item > a,
-        &.current-menu-ancestor > a {
-            color: $primary-color;
-        }
+        // Visual effetcs for current menu item if needed
+        // &.current-menu-item > a,
+        // &.current-menu-ancestor > a {
+        //     color: $primary-color;
+        // }
 
+        // Underlined effect (on hover)
         span {
             display: inline-block;
             text-decoration: none;
@@ -62,14 +78,25 @@
             &::after {
                 content: "";
                 display: block;
-                width: 0;
                 height: 2px;
                 background: $primary-color;
-                transition: width 0.3s;
+                transform: scale(0, 1);
+                transition: transform ease-in-out 0.25s;
+                transform-origin: left;
                 margin-top: 5px;
             }
         }
 
+        a:hover,
+        a:focus {
+            span {
+                &::after {
+                    transform: scale(1, 1);
+                }
+            }
+        }
+
+        // Highlighted link on menu.
         &.highlight {
             height: 100%;
             display: flex;
@@ -80,7 +107,7 @@
                 border: 2px solid $primary-color;
                 border-radius: $border-radius;
                 color: $primary-color;
-                margin-left: 0.5em;
+                // margin-left: 0.5em;
 
                 @include media("<=mobile_menu") {
                     text-align: center;
@@ -103,20 +130,9 @@
                 }
             }
         }
-
-        a:focus,
-        a:hover,
-        .current-menu-item > a,
-        .sub-menu .current-menu-item > a:focus,
-        .sub-menu .current-menu-item > a:hover {
-            text-decoration: none;
-
-            span::after {
-                width: 100%;
-            }
-        }
     }
 
+    // Chevron arrow on menu-item-has-children
     .submenu-expand {
         @include button-reset;
         position: absolute;
@@ -124,16 +140,15 @@
         top: 5px;
         right: 0;
         transform: none;
-        @include icon-position(44px);
+        // @include icon-position(44px);
 
         &.expanded {
-            transform: rotate(180deg);
-
             & + .sub-menu {
                 display: block;
             }
         }
 
+        // Chevron arrow on desktop screens
         @include media(">=mobile_menu") {
             top: 50%;
             transform: translateY(-45%);
@@ -142,6 +157,49 @@
 
             &.expanded {
                 transform: translateY(-45%);
+            }
+        }
+    }
+
+    /** Reverse menu colors for transparent background only on desktop. (first-block-align-ful class).
+    ---------------------------------------------------------------------------------------------------- */
+    .first-block-align-full .site-header:not(.shrink) & {
+        @include media(">mobile_menu") {
+            .menu-item {
+                // Styles for menu links on transparent header
+                a {
+                    color: $white;
+
+                    span {
+                        &::after {
+                            background: $white;
+                        }
+                    }
+                }
+
+                // Styles for chevron arrows on transparent header
+                .submenu-expand svg {
+                    stroke: $white;
+                }
+
+                // Hightlight menu link on transparent header
+                &.highlight {
+                    a {
+                        border-color: $white;
+
+                        &:hover,
+                        &:focus {
+                            background-color: $white;
+                            color: $base-color;
+                        }
+                    }
+                }
+
+                // &:hover > a,
+                // &:hover .submenu-expand svg {
+                //     stroke: $primary-color;
+                //     color: $primary-color;
+                // }
             }
         }
     }
@@ -181,6 +239,7 @@
         // width: calc( 100% - #{$menu_width} );
         width: auto;
         display: flex;
+        --gap: 0.5rem;
         flex-flow: column-reverse nowrap;
 
         .nav-primary,
@@ -193,14 +252,7 @@
             margin-bottom: 16px;
         }
 
-        .menu {
-            display: inline-block;
-            width: auto;
-        }
-
         .menu-item {
-            float: left;
-
             &:hover {
                 & > .sub-menu {
                     // left: auto;
@@ -213,47 +265,65 @@
         }
 
         .sub-menu {
-            background: $white;
-            // left: -9999px;
+            flex-flow: column nowrap;
+            --gap: 0;
+            background: $submenu-bg;
             visibility: hidden;
             opacity: 0;
             position: absolute;
             width: 215px;
-            padding: 8px 0;
-            border-radius: $border-radius;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 8%),
-                0 2px 8px rgba(0, 0, 0, 0.12);
+            // padding: 8px 0;
+            border-radius: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 16%),
+                0 2px 8px rgba(0, 0, 0, 0.32);
             z-index: 99;
             transform: translateY(20px);
             transition: all 0.2s ease-in-out;
 
             .menu-item {
-                float: none;
+                // Links on submenus.
+                a {
+                    color: $white;
+                    font-size: 0.875rem; // 14px
+                    padding: 1rem;
 
-                &:hover > a {
-                    color: $primary-color;
+                    &:hover,
+                    &:focus {
+                        background-color: $submenu-bg-hover;
+                    }
+
+                    span {
+                        padding: 0;
+                        &::after {
+                            content: none;
+                        }
+                    }
                 }
 
+                // Chevron arrow on submenu.
                 .submenu-expand {
+                    stroke: $white;
                     right: 15px;
                     transform: translateY(-50%) rotate(-90deg);
                 }
             }
 
+            // Second level of submenu position
             .sub-menu {
                 margin: -48px 0 0 215px;
             }
         }
     }
 
+    /* Mobile menu
+    ------------------------------------------------------------------------------ */
     @include media("<=mobile_menu") {
         position: fixed;
-        width: 100%;
-        max-width: 350px;
+        width: min(90%, 600px);
         height: 100%;
         top: 0;
         right: -100%;
-        background: $white;
+        background: $mobile-menu-bg;
         transition: all 0.3s ease-in-out;
         padding: 105px $grid-gap 0;
         overflow: auto;
@@ -264,14 +334,77 @@
             overflow: auto;
         }
 
-        .menu > .menu-item > a {
-            padding: 11px 18px;
-            font-size: 18px;
+        // make sure nav-primary takes all the space.
+        .nav-primary {
+            width: 100%;
         }
 
+        // Menu items in column
+        .menu,
+        .sub-menu {
+            flex-flow: column nowrap;
+        }
+
+        // Menu and menu-item styles for Mobile
+        .menu {
+            padding: 0;
+            --gap: 0;
+
+            // Everything white.
+            .menu-item {
+                // No need margin-right on mobile menu
+                &.menu-item-has-children {
+                    a {
+                        margin-right: 0;
+                    }
+                }
+
+                // White links on mobile menu and no animations
+                a {
+                    color: $white;
+                    border-bottom: 1px solid $grey_10;
+                    padding: 1rem 0;
+                    font-size: 1rem;
+
+                    span {
+                        padding-top: 0;
+                        &::after {
+                            content: none;
+                        }
+                    }
+                }
+
+                &.highlight {
+                    a {
+                        border: 1px solid $white;
+                        color: $white;
+                        margin: 2rem 0;
+                        max-width: 70%;
+
+                        &:hover {
+                            background-color: $white;
+                            color: $submenu-bg;
+                        }
+                    }
+                }
+
+                // Chevron arrow as a square block.
+                .submenu-expand {
+                    padding: 1.1rem 1.25rem;
+                    top: 0;
+                    border-left: 1px solid $grey_10;
+
+                    svg {
+                        stroke: $white;
+                    }
+                }
+            }
+        }
+
+        // Submenu styles for Mobile.
         .sub-menu {
             display: none;
-            padding-left: 12px;
+            padding-left: 1rem;
 
             & > .menu-item > a {
                 font-size: 15px;
@@ -281,39 +414,11 @@
     }
 }
 
-/* Nav Header with Site logo
---------------------------------------------- */
-
-.nav-header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    padding-left: 20px;
-    display: flex;
-    align-items: center;
-    background-color: $primary-color;
-
-    &__logo {
-        display: block;
-        width: 40px;
-        height: 40px;
-        text-indent: -9999px;
-    }
-
-    @include media(">tablet") {
-        display: none;
-    }
-}
-
 /* Nav Header overlay layer
 --------------------------------------------- */
 
 .lcm-dark-overlay {
-    position: absolute;
+    position: fixed;
     width: 100%;
     min-height: 100vh;
     top: 0;
@@ -340,8 +445,7 @@
 /* Toggles
 --------------------------------------------- */
 
-.search-toggle,
-.menu-toggle {
+.search-toggle {
     @include button-reset;
     line-height: 0;
     text-align: center;
@@ -368,7 +472,6 @@
 }
 
 .site-header .wrap {
-    & > .menu-toggle,
     & > .search-toggle {
         // position: absolute;
         // top: 0;
@@ -425,13 +528,40 @@
 .menu-toggle {
     @include button-reset;
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
     line-height: 0;
     text-align: center;
     order: 3;
+    z-index: 9999;
 
-    .close {
-        display: none;
+    @include media(">mobile_menu") {
+        display: none; // Only display the toggle menu on mobile.
+    }
+
+    // Display Toggle menu when scroll down on mobile.
+    @include media("<=mobile_menu") {
+        .shrink & {
+            position: fixed;
+            top: 0;
+            right: 0;
+            border-radius: 200px;
+            line-height: 0;
+            text-align: center;
+            background-color: $white;
+            box-shadow: 0px 8px 20px -4px rgba(0, 0, 0, 0.48);
+            transform: translate(-1rem, 1rem);
+        }
+    }
+
+    .menu-toggle__inner-container {
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 19px;
     }
 
     .toggl__bar {
@@ -452,76 +582,55 @@
         }
 
         &.second {
-            top: 6px;
+            top: 8px;
+            transition-delay: 100ms;
         }
 
         &.third {
-            top: 12px;
+            top: 16px;
+            transition-delay: 100ms;
         }
     }
 
-    &:hover,
-    &:focus,
-    &.active {
-        background-color: transparent; // prevent button defaults
-    }
-
-    &.active {
-        background-color: transparent; // prevent button defaults
-        // .toggl__bar {
-        // 	background: $white;
-        //     height: 4px;
-        // 	&.first {
-        // 		transform: rotate(45deg);
-        // 		top: 0px;
-        // 		left: 8px;
-        // 		width: 60%;
-        // 	}
-        // 	&.second {
-        // 		left: -1em;
-        // 		opacity: 0;
-        // 	}
-        // 	&.third {
-        // 		transform: rotate(-45deg);
-        // 		top: 11px;
-        // 		left: 8px;
-        // 		width: 60%;
-        // 	}
-        // }
+    // togll__bar color when header is transparent.
+    .first-block-align-full .site-header:not(.shrink) & {
         .toggl__bar {
-            background: $grey_4;
-            height: 3px;
+            background: $white;
+        }
 
-            &.first {
-                transform: rotate(315deg);
-                top: 10px;
-                right: -2px;
-                width: 50%;
-                height: 3px;
-            }
-
-            &.second {
-                transform: rotate(180deg);
-            }
-
-            &.third {
-                transform: rotate(225deg);
-                top: 3px;
-                right: -2px;
-                width: 50%;
-                height: 3px;
+        &.active {
+            .toggl__bar {
+                background: $primary-color;
             }
         }
     }
 
-    // &.active {
+    // Toggl__bar color, on hover and active.
+    &:hover,
+    &.active {
+        .toggl__bar {
+            background: $primary-color;
+        }
+    }
 
-    // 	.close {
-    // 		display: inline;
-    // 	}
-
-    // 	.open {
-    // 		display: none;
-    // 	}
-    // }
+    &.active {
+        background-color: transparent; // prevent button defaults
+        .toggl__bar {
+            height: 3px;
+            &.first {
+                transform: rotate(135deg);
+                left: 0px;
+                top: 8px;
+            }
+            &.second {
+                transform: rotate(45deg);
+            }
+            &.third {
+                transform: rotate(135deg);
+                top: 8px;
+                left: 0px;
+                opacity: 0;
+            }
+        }
+    }
 }

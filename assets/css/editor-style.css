@@ -298,6 +298,10 @@ body {
   }
 }
 
+body.noscroll {
+  overflow: hidden;
+}
+
 /* Typographical Elements - General styles
 --------------------------------------------- */
 button,
