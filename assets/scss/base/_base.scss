@@ -1,15 +1,14 @@
 @use "abstracts" as *;
 
-
 html,
 input[type="search"] {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 html {
@@ -21,4 +20,9 @@ html {
 
 body {
     @include base-style();
+}
+
+// Prevent scrolling when the naviogation is activated.
+body.noscroll {
+    overflow: hidden;
 }
