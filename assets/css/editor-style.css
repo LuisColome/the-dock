@@ -623,7 +623,7 @@ figure {
 .site-container p.has-background {
   padding: 1rem 2rem;
 }
-.site-container p.has-background.box-shadow {
+.site-container p.has-background.has-box-shadow {
   box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -881,6 +881,10 @@ figure {
 
 .entry-content > .alignfull:first-child {
   margin-top: 0;
+}
+
+.entry-featured-image {
+  margin-bottom: 2rem;
 }
 
 .entry {

@@ -4,22 +4,21 @@
 --------------------------------------------- */
 
 @each $name, $color in $brand_colors {
+    .has-#{$name}-color {
+        color: $color;
+    }
 
-	.has-#{$name}-color {
-		color: $color;
-	}
-
-	.has-#{$name}-background-color {
-		background-color: $color;
-	}
+    .has-#{$name}-background-color {
+        background-color: $color;
+    }
 }
 
 .site-container {
-	p.has-background {
-		padding: $base-margin $margin_2x;
+    p.has-background {
+        padding: $base-margin $margin_2x;
 
-		&.box-shadow {
-			box-shadow: 1px 3px 15px rgba(0, 0, 0, .4);
-		}
-	}
+        &.has-box-shadow {
+            box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.4);
+        }
+    }
 }
