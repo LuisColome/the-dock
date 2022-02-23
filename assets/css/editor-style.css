@@ -1465,26 +1465,22 @@ table {
   border-radius: 10px;
 }
 
-/* Image and Gallery
+/* Image
 --------------------------------------------- */
-.wp-block-image:not(.is-style-rounded) img,
 img {
   display: block;
   max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
-.wp-block-image:not(.is-style-rounded) img.alignleft,
 img.alignleft {
   float: left;
   margin: 0 1.5rem 1.5rem 0;
 }
-.wp-block-image:not(.is-style-rounded) img.alignright,
 img.alignright {
   float: right;
   margin: 0 0 1.5rem 1.5rem;
 }
-.wp-block-image:not(.is-style-rounded) img.aligncenter,
 img.aligncenter {
   margin-left: auto;
   margin-right: auto;
@@ -1497,10 +1493,10 @@ img.aligncenter {
   font-style: normal;
 }
 
-.site-container .blocks-gallery-grid,
-.site-container .wp-block-gallery,
-.site-container .wp-block-social-links {
-  padding-left: 0;
+/* Gutenberg Gallery
+--------------------------------------------- */
+.wp-block-gallery .wp-block-image:not(.is-style-rounded) img {
+  border-radius: 10px;
 }
 
 /* Separator

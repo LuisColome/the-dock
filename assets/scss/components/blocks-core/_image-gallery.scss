@@ -1,8 +1,8 @@
 @use "abstracts" as *;
 
-/* Image and Gallery
+/* Image
 --------------------------------------------- */
-.wp-block-image:not(.is-style-rounded) img,
+
 img {
     display: block;
     max-width: 100%;
@@ -32,9 +32,12 @@ img {
     font-style: normal;
 }
 
-.site-container .blocks-gallery-grid,
-.site-container .wp-block-gallery,
-.site-container .wp-block-social-links {
-    // still don't have a place for social icons.
-    padding-left: 0;
+/* Gutenberg Gallery
+--------------------------------------------- */
+.wp-block-gallery {
+    .wp-block-image:not(.is-style-rounded) {
+        img {
+            border-radius: $border-radius;
+        }
+    }
 }
