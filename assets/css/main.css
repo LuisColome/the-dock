@@ -844,9 +844,7 @@ figure {
 /* Archive Header
 --------------------------------------------- */
 .archive-description {
-  text-align: center;
   width: 100%;
-  max-width: 768px;
   margin: 0 auto 32px;
 }
 .archive-description > *:last-child {
