@@ -15,9 +15,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Style Contact form 7 as the general button styles
 -   Better support for Media & Text Gutenberg block
 
-#### [1.0.7](https://github.com/LuisColome/the-dock/releases/tag/v1.0.7) - 2022-02-21
+### [1.0.8](https://github.com/LuisColome/the-dock/releases/tag/v1.0.8) - 2022-02-23
 
-##### Added
+#### Added
+
+-   Fira Sans Condesed as the heading font
+-   Genesis featured image on single posts
+-   Support for embeds blocks has been added
+-   New logo, color and white version
+-   New color variables for mobile menu.
+
+#### Changed
+
+-   Updated class for paragraphs with shadow to has-shadow-box
+-   Updated archive pages style
+-   Archive title is now aligned to left
+-   Gutenberg custom colors
+-   Reduce the time of the header animation when scrolling down
+-   Mobile navigation style complety redone
+-   Update header with a transparent version available when fist block is fullwidth.
+-   New colors on Bakctotop link
+-   New favicon
+-   New variable for header height
+
+#### Fixed
+
+-   Fix Gutenberg buttons styles when apply custom colors
+-   Fix JS conflict with body class 'noscroll' when mobile menu is active
+
+#### Removed
+
+-   Mobile menu header has been removed by default
+
+### [1.0.7](https://github.com/LuisColome/the-dock/releases/tag/v1.0.7) - 2022-02-21
+
+#### Added
 
 -   Style-editor files for adding styles to WP editor
 -   New logo version and it has been added to login screen
@@ -25,7 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Support for Display Posts Shortcode plugin
 -   Border radius support (with a custom class) to native cover block.
 
-##### Updated
+#### Updated
 
 -   Body font size
 -   Marings on cover block according to the 8pt design system
@@ -42,20 +74,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Screenshot
 -   In text links color.
 
-##### Removed
+#### Removed
 
 -   Old style-editor files
 -   Genesis blocks plugin support
 -   Old logo version
 -   Base style @mixin from p tag. It was messing with the overflows.
 
-#### [1.0.6.1](https://github.com/LuisColome/the-dock/releases/tag/v1.0.6.1) - 2022-01-12
+### [1.0.6.1](https://github.com/LuisColome/the-dock/releases/tag/v1.0.6.1) - 2022-01-12
 
 #### Fixed
 
 -   Border radius on image in Media and Text block, when the image is marked to fill the content.
 
-#### [1.0.6](https://github.com/LuisColome/the-dock/releases/tag/v1.0.6) - 2022-01-11
+### [1.0.6](https://github.com/LuisColome/the-dock/releases/tag/v1.0.6) - 2022-01-11
 
 #### Added
 
@@ -86,32 +118,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Entry-content file due to outdated code
 -   Index.scss file due to not used at the moment
 
-#### [1.0.5.1](https://github.com/LuisColome/the-dock/releases/tag/v1.0.5.1) - 2021-09-24
+### [1.0.5.1](https://github.com/LuisColome/the-dock/releases/tag/v1.0.5.1) - 2021-09-24
 
 #### Fix
 
 -   Padding on secondary buttons (outlined)
 -   Color variables conflict with brand-color funciton.
 
-#### [1.0.5](https://github.com/LuisColome/the-dock/releases/tag/v1.0.5) - 2021-09-21
+### [1.0.5](https://github.com/LuisColome/the-dock/releases/tag/v1.0.5) - 2021-09-21
 
 #### Update
 
 -   Responsive typography with clamp().
 
-#### [1.0.4.2](https://github.com/LuisColome/the-dock/releases/tag/v1.0.4.2) - 2021-09-10
+### [1.0.4.2](https://github.com/LuisColome/the-dock/releases/tag/v1.0.4.2) - 2021-09-10
 
 #### Add
 
 -   Kadence block support on full width by removing the internal margin (padding).
 
-#### [1.0.4.1] - 2021-04-26
+### [1.0.4.1] - 2021-04-26
 
 #### Changed
 
 -   Stop using `_index.scs` files to call the SCSS partials (for now). Instead, use @use for every individual file.
 
-#### [1.0.4] - 2021-04-26
+### [1.0.4] - 2021-04-26
 
 #### Changed
 
@@ -122,7 +154,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   @import Sass rule depracated.
 
-#### [1.0.3] - 2021-04-20
+### [1.0.3] - 2021-04-20
 
 #### Changed
 
@@ -135,7 +167,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Two new icons. Chevron Bottom and Chevron Right.
 -   Support for Genesis featured images on single posts.
 
-#### [1.0.2] - 2021-04-12
+### [1.0.2] - 2021-04-12
 
 #### Changed
 
@@ -150,13 +182,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Default Google fonts. Using system's by default.
 
-#### [1.0.1] - 2021-04-10
+### [1.0.1] - 2021-04-10
 
 #### Changed
 
 -   Improve support for Contact Form 7 forms.
 
-#### [1.0.0] - 2021-03-11
+### [1.0.0] - 2021-03-11
 
 #### Added
 
