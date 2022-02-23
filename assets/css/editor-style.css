@@ -490,16 +490,28 @@ h6 {
 .block-editor > * ol li ol {
   padding-top: 0.5rem;
 }
-.entry-content > * ul.wp-block-gallery,
+.entry-content > * ul.wp-block-gallery, .entry-content > * ul.blocks-gallery-grid, .entry-content > * ul.wp-block-social-links,
 .entry-content > * ol.wp-block-gallery,
+.entry-content > * ol.blocks-gallery-grid,
+.entry-content > * ol.wp-block-social-links,
 .block-editor > * ul.wp-block-gallery,
-.block-editor > * ol.wp-block-gallery {
+.block-editor > * ul.blocks-gallery-grid,
+.block-editor > * ul.wp-block-social-links,
+.block-editor > * ol.wp-block-gallery,
+.block-editor > * ol.blocks-gallery-grid,
+.block-editor > * ol.wp-block-social-links {
   padding-left: 0;
 }
-.entry-content > * ul.wp-block-gallery li,
+.entry-content > * ul.wp-block-gallery li, .entry-content > * ul.blocks-gallery-grid li, .entry-content > * ul.wp-block-social-links li,
 .entry-content > * ol.wp-block-gallery li,
+.entry-content > * ol.blocks-gallery-grid li,
+.entry-content > * ol.wp-block-social-links li,
 .block-editor > * ul.wp-block-gallery li,
-.block-editor > * ol.wp-block-gallery li {
+.block-editor > * ul.blocks-gallery-grid li,
+.block-editor > * ul.wp-block-social-links li,
+.block-editor > * ol.wp-block-gallery li,
+.block-editor > * ol.blocks-gallery-grid li,
+.block-editor > * ol.wp-block-social-links li {
   padding-bottom: 0;
 }
 .entry-content > * ul.checked-list,

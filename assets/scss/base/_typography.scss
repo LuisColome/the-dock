@@ -176,7 +176,10 @@ h6 {
             }
         }
 
-        &.wp-block-gallery {
+        // Clear list styles on gallery and other lists.
+        &.wp-block-gallery,
+        &.blocks-gallery-grid,
+        &.wp-block-social-links {
             padding-left: 0;
 
             li {
