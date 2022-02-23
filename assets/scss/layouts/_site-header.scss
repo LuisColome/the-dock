@@ -57,10 +57,10 @@
 
     &.shrink {
         position: fixed;
-        background-color: hsl(0 0% 100% / 0.95);
+        background-color: $white;
         height: 64px;
         box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
-        animation: fadein 1s;
+        animation: fadein 0.5s;
 
         &::before {
             content: none;
