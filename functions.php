@@ -183,15 +183,20 @@ function ea_child_theme_setup() {
 			'color' => '#616161',
 		),
 		array(
+			'name'  => __( 'Orange grey', 'ea_genesis_child' ),
+			'slug'  => 'orange-grey',
+			'color' => '#27241d',
+		),
+		array(
+			'name'  => __( 'Black', 'ea_genesis_child' ),
+			'slug'  => 'black',
+			'color' => '#090c10',
+		),
+		array(
 			'name'  => __( 'White', 'ea_genesis_child' ),
 			'slug'  => 'white',
 			'color' => '#ffffff',
         ),
-		array(
-			'name'  => __( 'Black', 'ea_genesis_child' ),
-			'slug'  => 'black',
-			'color' => '#232425',
-		),
 	) );
 
 	// // Registers the responsive menus. (/config/responsive-menus.php)

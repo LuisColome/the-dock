@@ -604,6 +604,22 @@ figure {
   background-color: #616161;
 }
 
+.has-orange-grey-color {
+  color: #27241d;
+}
+
+.has-orange-grey-background-color {
+  background-color: #27241d;
+}
+
+.has-black-color {
+  color: #090c10;
+}
+
+.has-black-background-color {
+  background-color: #090c10;
+}
+
 .site-container p.has-background {
   padding: 1rem 2rem;
 }
@@ -1376,6 +1392,18 @@ table {
 }
 .wp-block-button__link.has-dark-grey-background-color:hover, .wp-block-button__link.has-dark-grey-background-color:focus {
   background-color: #484848;
+}
+.wp-block-button__link.has-orange-grey-color:hover, .wp-block-button__link.has-orange-grey-color:focus {
+  color: #27241d;
+}
+.wp-block-button__link.has-orange-grey-background-color:hover, .wp-block-button__link.has-orange-grey-background-color:focus {
+  background-color: #0a0907;
+}
+.wp-block-button__link.has-black-color:hover, .wp-block-button__link.has-black-color:focus {
+  color: #090c10;
+}
+.wp-block-button__link.has-black-background-color:hover, .wp-block-button__link.has-black-background-color:focus {
+  background-color: black;
 }
 
 /* Group
