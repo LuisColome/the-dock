@@ -188,8 +188,8 @@ function ea_child_theme_setup() {
 			'color' => '#27241d',
 		),
 		array(
-			'name'  => __( 'Black', 'ea_genesis_child' ),
-			'slug'  => 'black',
+			'name'  => __( 'Almost black', 'ea_genesis_child' ),
+			'slug'  => 'almost-black',
 			'color' => '#090c10',
 		),
 		array(
