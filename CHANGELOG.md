@@ -3,16 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) ([Spanish version](https://keepachangelog.com/es-ES/1.0.0/)),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) (or at least I'll try to).
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) (or at least I'm trying to).
 
 ### [Unreleased]
 
--   ~~Better way to organize SASS files.~~
--   ~~Better support for Guetenberg editor styles~~
+-   Fix header issue when the header is not transparent
+-   Fix an issue with full width blocks
 -   Live Demo (work in progress)
--   ~~Start using @use and @fordward instead of @import (depracated) in SASS~~
--   ~~Support for Kadence Blocks plugin~~.
--   ~~Highlight link on main menu~~.
+-   Fix text domains
+-   Add support for custom Gutenberg gradients.
+-   Style Contact form 7 as the general button styles
+-   Better support for Media & Text Gutenberg block
 
 #### [1.0.7](https://github.com/LuisColome/the-dock/releases/tag/v1.0.7) - 2022-02-21
 
