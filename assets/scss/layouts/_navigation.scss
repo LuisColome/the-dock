@@ -239,7 +239,7 @@
         // width: calc( 100% - #{$menu_width} );
         width: auto;
         display: flex;
-        --gap: 0.5rem;
+        --gap: 0.25rem;
         flex-flow: column-reverse nowrap;
 
         .nav-primary,

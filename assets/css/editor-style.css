@@ -757,7 +757,7 @@ figure {
 .full-width-content .entry-content > *.alignwide, .content-width .entry-content > *.alignwide,
 .full-width-content .editor-styles-wrapper > *.alignwide,
 .content-width .editor-styles-wrapper > *.alignwide {
-  margin: calc( 2 * 1.5rem ) calc(50% - 50vw);
+  margin: calc(2 * 1.5rem) calc(50% - 50vw);
   max-width: 100vw;
   width: auto;
   padding: 0 16px;
@@ -766,12 +766,14 @@ figure {
 .full-width-content .editor-styles-wrapper > *.alignwide[class^=wp-block-kadence],
 .content-width .editor-styles-wrapper > *.alignwide[class^=wp-block-kadence] {
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (min-width: 1200px) {
   .full-width-content .entry-content > *.alignwide, .content-width .entry-content > *.alignwide,
 .full-width-content .editor-styles-wrapper > *.alignwide,
 .content-width .editor-styles-wrapper > *.alignwide {
-    margin: calc( 2 * 1.5rem) calc(25% - 25vw);
+    margin: calc(2 * 1.5rem) calc(25% - 25vw);
   }
 }
 .full-width-content .entry-content > *.alignwide:first-child, .content-width .entry-content > *.alignwide:first-child,
@@ -782,7 +784,7 @@ figure {
 .full-width-content .entry-content > *.alignfull, .content-width .entry-content > *.alignfull,
 .full-width-content .editor-styles-wrapper > *.alignfull,
 .content-width .editor-styles-wrapper > *.alignfull {
-  margin: calc( 2 * 1.5rem ) calc(50% - 50vw);
+  margin: calc(2 * 1.5rem) calc(50% - 50vw);
   max-width: 100vw;
   width: 100vw;
   padding: 0 16px;
@@ -791,6 +793,8 @@ figure {
 .full-width-content .editor-styles-wrapper > *.alignfull[class^=wp-block-kadence],
 .content-width .editor-styles-wrapper > *.alignfull[class^=wp-block-kadence] {
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .full-width-content .entry-content > *.aligncontent, .content-width .entry-content > *.aligncontent,
 .full-width-content .editor-styles-wrapper > *.aligncontent,
@@ -837,8 +841,8 @@ figure {
 .entry-content > *.wp-block-quote, .entry-content > *.post-listing-block,
 .editor-styles-wrapper > *.wp-block-quote,
 .editor-styles-wrapper > *.post-listing-block {
-  margin-top: calc( 2 * 1.5rem);
-  margin-bottom: calc( 2 * 1.5rem);
+  margin-top: calc(2 * 1.5rem);
+  margin-bottom: calc(2 * 1.5rem);
 }
 .entry-content > *.wp-block-search,
 .editor-styles-wrapper > *.wp-block-search {
@@ -1451,20 +1455,24 @@ table {
 
 /* Image and Gallery
 --------------------------------------------- */
+.wp-block-image:not(.is-style-rounded) img,
 img {
   display: block;
   max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
+.wp-block-image:not(.is-style-rounded) img.alignleft,
 img.alignleft {
   float: left;
   margin: 0 1.5rem 1.5rem 0;
 }
+.wp-block-image:not(.is-style-rounded) img.alignright,
 img.alignright {
   float: right;
   margin: 0 0 1.5rem 1.5rem;
 }
+.wp-block-image:not(.is-style-rounded) img.aligncenter,
 img.aligncenter {
   margin-left: auto;
   margin-right: auto;
