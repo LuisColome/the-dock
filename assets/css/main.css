@@ -773,17 +773,8 @@ figure {
 .lcm-posts.grid {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 2rem 32px;
-}
-@media (min-width: 600px) {
-  .lcm-posts.grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (min-width: 960px) {
-  .lcm-posts.grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 .lcm-post {

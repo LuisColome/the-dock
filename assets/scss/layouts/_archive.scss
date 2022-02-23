@@ -12,15 +12,16 @@
     &.grid {
         display: grid;
         grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         gap: $margin_2x $grid-gap;
 
-        @include media(">=phablet") {
-            grid-template-columns: 1fr 1fr;
-        }
+        // @include media(">=phablet") {
+        //     grid-template-columns: 1fr 1fr;
+        // }
 
-        @include media(">=medium") {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
+        // @include media(">=medium") {
+        //     grid-template-columns: 1fr 1fr 1fr;
+        // }
     }
 }
 
