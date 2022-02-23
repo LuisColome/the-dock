@@ -18,6 +18,13 @@ genesis_unregister_layout( 'sidebar-sidebar-content' );
 // Add new layouts
 genesis_register_layout( 'content-width', [ 'label' => __( 'Content Width', 'ea_genesis_child' ), ] );
 
+/**
+ * Function to forze the layout.
+ */
+function __genesis_return_content_width_layout() {
+  return 'content-width';
+}
+
 // Remove layout metabox
 //remove_theme_support( 'genesis-inpost-layouts' );
 remove_theme_support( 'genesis-archive-layouts' );
