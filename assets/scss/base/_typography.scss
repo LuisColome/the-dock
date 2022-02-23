@@ -93,7 +93,7 @@ h4,
 h5,
 h6 {
     color: $base-color;
-    font-family: $sans-serif;
+    font-family: $heading-font, $sans-serif;
     font-weight: 600;
     line-height: 1.2;
     margin: 0 0 $margin_2x 0;
