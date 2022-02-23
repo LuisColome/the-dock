@@ -357,7 +357,7 @@ i {
 /* Paragraph and Gutenberg font sizes
 --------------------------------------------- */
 p {
-  margin: 0 0 28px;
+  margin: 0 0 1.5rem;
   padding: 0;
 }
 
@@ -385,7 +385,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #414243;
+  color: #423d33;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 600;
   line-height: 1.2;
@@ -419,7 +419,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  color: #414243;
+  color: #423d33;
 }
 h1 a:hover,
 h2 a:hover,
@@ -781,54 +781,44 @@ figure {
   display: flex;
   flex-flow: column;
 }
-.lcm-post .lcm-post__image-link img {
-  border-radius: 10px;
+.lcm-post__image-link img {
+  border-radius: 2px;
 }
-.lcm-post .lcm-post__title {
-  line-height: 1;
-  margin: 0 0 2rem 0;
+.lcm-post__title {
+  margin: 0.5rem 0 1rem 0;
+  font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.4rem);
 }
-.lcm-post .lcm-post__title a {
-  font-size: 20px;
+.lcm-post__title a {
   text-decoration: none;
-  color: #414243;
-  font-weight: 400;
+  color: #423d33;
 }
-@media (min-width: 768px) {
-  .lcm-post .lcm-post__title a {
-    font-size: 22px;
-  }
-}
-@media (min-width: 960px) {
-  .lcm-post .lcm-post__title a {
-    font-size: 22px;
-  }
-}
-.lcm-post .lcm-post__title a:hover {
+.lcm-post__title a:hover {
   color: #dd6b20;
 }
-.lcm-post .lcm-post__category {
-  color: #9e9e9e;
+.lcm-post__category {
+  color: #dd6b20;
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
-  margin: 0.5rem 0 0 0;
+  margin: 1rem 0 0 0;
 }
-.lcm-post .lcm-post__category a {
+.lcm-post__category a {
   color: inherit;
   text-decoration: none;
 }
-.lcm-post .lcm-post__excerpt {
-  font-size: 17px;
+.lcm-post__excerpt {
+  margin-bottom: 1rem;
 }
-.lcm-post .lcm-post__read-more-link {
+.lcm-post__read-more-link {
   text-decoration: none;
-  font-size: 60%;
+  font-size: 0.875rem;
+  color: #423d33;
   text-transform: uppercase;
 }
-.lcm-post .lcm-post__read-more-link::after {
-  content: "→";
+.lcm-post__read-more-link::after {
+  content: "➞";
   display: inline-block;
+  font-size: 16px;
   margin-left: 4px;
 }
 
@@ -880,32 +870,36 @@ figure {
 }
 .pagination ul {
   margin: 0;
+  padding-left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 .pagination ul li {
   list-style-type: none;
   display: inline-block;
 }
 .pagination ul li a {
-  color: #616161;
-  border-radius: 50%;
+  color: #423d33;
+  background-color: #f2f3f8;
+  border-radius: 3px;
   display: block;
   font-weight: 400;
   text-decoration: none;
-  width: 29px;
-  height: 29px;
+  width: 2rem;
+  height: 2rem;
   line-height: 30px;
   text-align: center;
 }
 .pagination ul li.pagination-next a, .pagination ul li.pagination-previous a {
   width: auto;
+  padding: 0 1rem;
 }
-.pagination ul li:hover > a {
-  color: #cf3033;
-}
-.pagination ul li.active > a {
-  background: #cf3033;
+.pagination ul li:hover > a, .pagination ul li:focus > a, .pagination ul li.active > a {
+  background: #dd6b20;
   color: #ffffff;
-  font-weight: 700;
 }
 
 /* Site Header
@@ -1044,7 +1038,7 @@ figure {
 }
 .nav-menu .menu-item a {
   border: none;
-  color: #616161;
+  color: #423d33;
   display: block;
   font-size: 16px;
   font-weight: 400;
@@ -1154,7 +1148,7 @@ figure {
   }
   .first-block-align-full .site-header:not(.shrink) .nav-menu .menu-item.highlight a:hover, .first-block-align-full .site-header:not(.shrink) .nav-menu .menu-item.highlight a:focus {
     background-color: #ffffff;
-    color: #616161;
+    color: #423d33;
   }
 }
 @media (max-width: 768px) {
@@ -1452,7 +1446,7 @@ figure {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #616161;
+  background: #423d33;
   border-radius: 2em;
   opacity: 1;
   right: 0;
@@ -1953,7 +1947,7 @@ input, select, textarea {
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-  color: #616161;
+  color: #423d33;
   font-size: 18px;
   line-height: 24px;
   padding: 14px 16px;
@@ -2222,7 +2216,7 @@ textarea:focus:-ms-input-placeholder {
 }
 .entry-content .wp-block-quote p,
 .entry-content .wp-block-quote:not(.is-large):not(.is-style-large) p {
-  color: #616161;
+  color: #423d33;
   font-size: 22px;
   font-size: clamp(1.1rem, 1rem + .5vw, 1.25rem);
   font-style: italic;
@@ -2236,7 +2230,7 @@ textarea:focus:-ms-input-placeholder {
 }
 .entry-content .wp-block-quote cite,
 .entry-content .wp-block-quote:not(.is-large):not(.is-style-large) cite {
-  color: #616161;
+  color: #423d33;
   display: block;
   font-size: 85%;
   font-weight: 700;

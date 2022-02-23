@@ -62,7 +62,7 @@ i {
 --------------------------------------------- */
 
 p {
-    margin: 0 0 28px;
+    margin: 0 0 1.5rem;
     padding: 0;
 }
 
@@ -92,7 +92,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: $grey_9;
+    color: $base-color;
     font-family: $sans-serif;
     font-weight: 600;
     line-height: 1.2;
@@ -109,7 +109,7 @@ h6 {
     }
 
     a {
-        color: $grey-9;
+        color: $base-color;
 
         &:hover {
             color: $primary-color;
@@ -176,7 +176,7 @@ h6 {
             }
         }
 
-        // Clear list styles on gallery and other lists.
+        // Clear list styles on lists they don't need them.
         &.wp-block-gallery,
         &.blocks-gallery-grid,
         &.wp-block-social-links {
