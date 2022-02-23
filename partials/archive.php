@@ -11,7 +11,7 @@
 
 echo '<article class="lcm-post">'; 
 
-	echo '<a class="lcm-post__image-link" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . get_the_post_thumbnail( get_the_ID(), 'lcm-featured-images' ) . '</a>';
+	echo '<a class="lcm-post__image-link" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . get_the_post_thumbnail( get_the_ID(), 'lcm-featured-image' ) . '</a>';
 
 	echo '<header class="lcm-post__header">';
 		// $categories = get_the_category();
