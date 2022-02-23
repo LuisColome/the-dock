@@ -112,17 +112,12 @@
 .entry-content > .alignfull {
     &:first-child {
         margin-top: 0;
-        // @include media(">=tablet") {
-        // 	margin-top: -48px;
-        // }
     }
+}
 
-    // &:last-child {
-    // 	margin-bottom: -36px;
-    // 	@include media(">=tablet") {
-    // 		margin-bottom: -48px;
-    // 	}
-    // }
+// Add some space under featured image on single posts.
+.entry-featured-image {
+    margin-bottom: $margin_2x;
 }
 
 // Give some space before footer.
