@@ -40,14 +40,22 @@ add_action( 'genesis_header', 'ea_site_header', 11 );
  */
 function lcm_footer_menu() {
 
-	echo '<nav class="nav-menu" role="navigation">';
-	if( has_nav_menu( 'secondary' ) ) {
-		wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'container_class' => 'nav-secondary' ) );
-	}
-	echo '</nav>';
+    echo '<div class="site-footer__nav-wrapper">';
+
+        echo '<figure class="site-footer__logo">';
+            echo '<img class="site-footer__logo__img" src="'. get_stylesheet_directory_uri() . '/assets/images/logo-footer.svg">';
+        echo '</figure>';
+
+        echo '<nav class="site-footer__nav-menu" role="navigation">';
+            if( has_nav_menu( 'secondary' ) ) {
+                wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'container_class' => 'nav-secondary' ) );
+            }
+        echo '</nav>';
+
+	echo '</div>';
 
 }
-// add_action( 'genesis_footer', 'lcm_footer_menu', 12 );
+add_action( 'genesis_footer', 'lcm_footer_menu', 8 );
 
 
 
@@ -90,9 +98,6 @@ add_filter( 'wp_nav_menu_items', 'ea_nav_extras', 10, 2 );
 function ea_mobile_menu_toggle() {
 	$output = '<button' . ea_amp_class( 'menu-toggle', 'active', 'menuActive' ) . ea_amp_toggle( 'menuActive', array( 'searchActive', 'mobileFollow' ) ) . '>';
         $output .= '<div class="menu-toggle__inner-container">';
-		
-        // $output .= ea_icon( array( 'icon' => 'menu', 'size' => 24, 'class' => 'open' ) );
-		// $output .= ea_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
 		$output .= '<span class="toggl__bar first"></span><span class="toggl__bar second"></span><span class="toggl__bar third"></span>';
 		$output .= '<span class="screen-reader-text">Menu</span>';
         $output .= '</div>';
