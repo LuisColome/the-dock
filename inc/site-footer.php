@@ -8,18 +8,28 @@
  * @license      GPL-2.0+
 **/
 
+// Remove Genesis default footer
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+
 /**
- * Site Footer
+ * Site Footer - Creds + social links
  */
 function lcm_site_footer() {
-	echo '<div class="footer-left">';
-		echo '<p class="copyright">Copyright &copy; ' . date( 'Y' ) . ' ' . get_bloginfo( 'name' ) . ' ®. All Rights Reserved.</p>';
-		echo '<p class="footer-links"><a href="' . home_url( 'privacy-policy' ) . '">Privacy Policy</a> <a href="' . home_url( 'terms' ) . '">Terms</a></p>';
+    echo '<div class="site-footer__creds-wrapper">';
+
+        echo '<div class="site-footer__social">';
+	        echo '<a class="site-footer__social__link" href="#">' . ea_icon( array( 'icon' => 'facebook', 'group' => 'social', 'size' => '24' ) ) . '</a>';
+	        echo '<a class="site-footer__social__link" href="#">' . ea_icon( array( 'icon' => 'twitter', 'group' => 'social', 'size' => '24' ) ) . '</a>';
+	        echo '<a class="site-footer__social__link" href="#">' . ea_icon( array( 'icon' => 'linkedin', 'group' => 'social', 'size' => '24' ) ) . '</a>';
+        echo '</div>';
+
+        echo '<div class="site-footer__creds">';
+            echo '<p class="site-footer__copyright">&copy; ' . date( 'Y' ) . ' <a href="' . get_bloginfo('url') . '" class="site-footer__link">' . get_bloginfo( 'name' ) . '</a> - WordPress Theme by <a href="htpps://Luiscolome.com/" class="site-footer__link">Luis Colomé</a></p>';
+        echo '</div>';
+
 	echo '</div>';
-	// echo '<a class="backtotop" href="#">Back to top' . ea_icon( array( 'icon' => 'arrow-up' ) ) . '</a>';
 }
-add_action( 'genesis_footer', 'lcm_site_footer' );
-remove_action( 'genesis_footer', 'genesis_do_footer' );
+add_action( 'genesis_footer', 'lcm_site_footer', 12 );
 
 /**
  * Back to top link
@@ -28,4 +38,4 @@ remove_action( 'genesis_footer', 'genesis_do_footer' );
 function lcm_back_to_top(){
 	echo '<a class="backtotop" href="#">' . ea_icon( array( 'icon' => 'arrow-up' ) ) . '</a>';
 }
-add_action( 'genesis_after', 'lcm_back_to_top', 10 );
+add_action( 'genesis_footer', 'lcm_back_to_top', 10 );

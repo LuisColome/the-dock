@@ -86,53 +86,77 @@
     }
 }
 
-/* Site Footer
+/* Site Footer (Creds)
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-    background: $grey_10;
-    color: rgba($white, 0.75);
-    font-size: 14px;
-    padding: 32px 0;
-    text-align: center;
+    background: $submenu-bg;
+    color: $grey_2;
+    font-size: 1rem;
+    padding: 2rem 0;
+    // text-align: center;
 
     .wrap {
-        max-width: $grid-width;
+        max-width: $grid-width + $wrap_edge;
+        padding: 0 $wrap_edge;
         margin: 0 auto;
-
-        & > *:last-child {
-            margin-bottom: 0;
-        }
     }
 
     a {
-        color: rgba($white, 0.75);
+        text-decoration: underline;
+        color: $grey_2;
+        font-weight: 400;
 
         &:hover {
-            color: rgba($white, 1);
+            color: $primary-color;
         }
     }
 
-    .footer-links a + a {
-        margin-left: 12px;
+    // Footer logo + secondary navigation.
+
+    // Both, Nav + logo and Social icons + site credits wrappers.
+    &__nav-wrapper,
+    &__creds-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+        gap: var(--gap, 2rem);
+
+        @include media(">=mobile_menu") {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
-    @include media(">=tablet") {
-        text-align: left;
+    // Footer logo (orange)
+    &__logo__img {
+        margin: 0;
+        overflow: hidden;
+        width: calc(12rem + 2vw);
+    }
 
-        .footer-left {
-            float: left;
+    /** Footer creds border top
+    ---------------------------------------------- */
+    &__creds-wrapper {
+        border-top: 1px solid $grey_2;
+        --gap: 1rem;
+    }
 
-            & > *:last-child {
-                margin-bottom: 0;
+    &__social {
+        display: flex;
+        gap: 0.5rem;
+        // Social icons colors
+        &__link {
+            svg {
+                fill: $grey_2;
             }
         }
+    }
 
-        .copyright,
-        .footer-links {
-            display: inline-block;
-            margin-right: 20px;
-        }
+    &__copyright {
+        margin-bottom: 0;
     }
 }
 

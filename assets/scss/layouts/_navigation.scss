@@ -634,3 +634,41 @@
         }
     }
 }
+
+/* Secondary Navigation
+---------------------------------------------------------------------------------------------------- */
+.site-footer {
+    &__nav-menu {
+        // Reset line-height.
+        & > * {
+            line-height: 0;
+        }
+
+        // Reset styles for nav lists.
+        ul {
+            clear: both;
+            line-height: 1;
+            margin: 0;
+            padding-left: 0;
+            width: 100%;
+        }
+
+        // As a standard, give a display:flex to all menus.
+        .menu {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: var(--gap, 2rem);
+            list-style: none;
+        }
+
+        // Menu item. General styles.
+        .menu-item {
+            position: relative;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
