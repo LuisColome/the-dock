@@ -31,16 +31,16 @@
 
         a {
             text-decoration: none;
-            color: $base-color;
+            color: $clr-font-400;
 
             &:hover {
-                color: $primary-color;
+                color: $clr-primary-400;
             }
         }
     }
 
     &__category {
-        color: $primary-color;
+        color: $clr-primary-400;
         font-size: 12px;
         font-weight: 600;
         text-transform: uppercase;
@@ -60,7 +60,7 @@
     &__read-more-link {
         text-decoration: none;
         font-size: 0.875rem;
-        color: $base-color;
+        color: $clr-font-400;
         text-transform: uppercase;
 
         &::after {
@@ -114,7 +114,7 @@
 
 .pagination {
     grid-column: 1 / -1;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $clr-border-400;
     font-size: 16px;
     text-align: center;
     padding-top: 22px;
@@ -134,7 +134,7 @@
             display: inline-block;
 
             a {
-                color: $base-color;
+                color: $clr-font-400;
                 background-color: $grey_2;
                 border-radius: 3px;
                 display: block;
@@ -156,13 +156,13 @@
             &:focus,
             &.active {
                 > a {
-                    background: $primary-color;
+                    background: $clr-primary-400;
                     color: $white;
                 }
             }
 
             // &.active > a {
-            //     background: $primary-color;
+            //     background: $clr-primary-400;
             //     color: $white;
             // }
         }

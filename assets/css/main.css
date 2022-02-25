@@ -285,7 +285,7 @@ html {
 }
 
 body {
-  color: #414243;
+  color: #423d33;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
@@ -316,11 +316,11 @@ textarea:focus,
 }
 
 a {
-  color: #dd6b20;
+  color: #df6c20;
   font-weight: 600;
   text-decoration: underline;
-  -webkit-text-decoration-color: #de8974;
-          text-decoration-color: #de8974;
+  -webkit-text-decoration-color: #de8873;
+          text-decoration-color: #de8873;
   transition: all 0.2s ease-in-out;
 }
 a:hover {
@@ -335,7 +335,7 @@ hr {
   border-collapse: collapse;
   border-bottom: 1px solid currentColor;
   clear: both;
-  color: #eeeeee;
+  color: #ededed;
   margin: 1.65em auto;
 }
 
@@ -427,7 +427,7 @@ h3 a:hover,
 h4 a:hover,
 h5 a:hover,
 h6 a:hover {
-  color: #dd6b20;
+  color: #df6c20;
   text-decoration: none;
 }
 h1:focus,
@@ -565,19 +565,19 @@ figure {
 /* Color Options
 --------------------------------------------- */
 .has-orange-color {
-  color: #dd6b20;
+  color: #df6c20;
 }
 
 .has-orange-background-color {
-  background-color: #dd6b20;
+  background-color: #df6c20;
 }
 
 .has-light-orange-color {
-  color: #de8974;
+  color: #de8873;
 }
 
 .has-light-orange-background-color {
-  background-color: #de8974;
+  background-color: #de8873;
 }
 
 .has-red-color {
@@ -605,11 +605,11 @@ figure {
 }
 
 .has-orange-grey-color {
-  color: #27241d;
+  color: #26231c;
 }
 
 .has-orange-grey-background-color {
-  background-color: #27241d;
+  background-color: #26231c;
 }
 
 .has-almost-black-color {
@@ -756,8 +756,8 @@ figure {
   font-size: 1em;
   font-weight: bold;
   padding: 15px 23px 14px;
-  color: #414243;
-  background: #ffffff;
+  color: #414244;
+  background: white;
   z-index: 100000;
   /* Above WP toolbar. */
   text-decoration: none;
@@ -793,10 +793,10 @@ figure {
   color: #423d33;
 }
 .lcm-post__title a:hover {
-  color: #dd6b20;
+  color: #df6c20;
 }
 .lcm-post__category {
-  color: #dd6b20;
+  color: #df6c20;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -898,8 +898,8 @@ figure {
   padding: 0 1rem;
 }
 .pagination ul li:hover > a, .pagination ul li:focus > a, .pagination ul li.active > a {
-  background: #dd6b20;
-  color: #ffffff;
+  background: #df6c20;
+  color: white;
 }
 
 /* Site Header
@@ -913,7 +913,7 @@ figure {
   align-items: center;
   width: 100%;
   height: 90px;
-  background-color: #ffffff;
+  background-color: white;
   padding: 0 16px;
   transition: all 0.2s ease-in-out;
 }
@@ -927,7 +927,7 @@ figure {
 }
 .site-header.shrink {
   position: fixed;
-  background-color: #ffffff;
+  background-color: white;
   height: 64px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
   animation: fadein 0.5s;
@@ -936,7 +936,7 @@ figure {
   content: none;
 }
 .site-header.shrink .site-title a {
-  color: #414243;
+  color: #414244;
 }
 @media (max-width: 768px) {
   .site-header.shrink {
@@ -1054,8 +1054,8 @@ figure {
   margin-right: 0;
 }
 .nav-menu .menu-item:hover > a, .nav-menu .menu-item:hover .submenu-expand svg {
-  stroke: #dd6b20;
-  color: #dd6b20;
+  stroke: #df6c20;
+  color: #df6c20;
 }
 .nav-menu .menu-item span {
   display: inline-block;
@@ -1066,7 +1066,7 @@ figure {
   content: "";
   display: block;
   height: 2px;
-  background: #dd6b20;
+  background: #df6c20;
   transform: scale(0, 1);
   transition: transform ease-in-out 0.25s;
   transform-origin: left;
@@ -1083,9 +1083,9 @@ figure {
   justify-content: center;
 }
 .nav-menu .menu-item.highlight a {
-  border: 2px solid #dd6b20;
+  border: 2px solid #df6c20;
   border-radius: 10px;
-  color: #dd6b20;
+  color: #df6c20;
 }
 @media (max-width: 768px) {
   .nav-menu .menu-item.highlight a {
@@ -1095,8 +1095,8 @@ figure {
   }
 }
 .nav-menu .menu-item.highlight a:hover, .nav-menu .menu-item.highlight a:focus {
-  background-color: #dd6b20;
-  color: #ffffff;
+  background-color: #df6c20;
+  color: white;
 }
 .nav-menu .menu-item.highlight a span {
   padding: 0;
@@ -1135,19 +1135,19 @@ figure {
 }
 @media (min-width: 769px) {
   .first-block-align-full .site-header:not(.shrink) .nav-menu .menu-item a {
-    color: #ffffff;
+    color: white;
   }
   .first-block-align-full .site-header:not(.shrink) .nav-menu .menu-item a span::after {
-    background: #ffffff;
+    background: white;
   }
   .first-block-align-full .site-header:not(.shrink) .nav-menu .menu-item .submenu-expand svg {
-    stroke: #ffffff;
+    stroke: white;
   }
   .first-block-align-full .site-header:not(.shrink) .nav-menu .menu-item.highlight a {
-    border-color: #ffffff;
+    border-color: white;
   }
   .first-block-align-full .site-header:not(.shrink) .nav-menu .menu-item.highlight a:hover, .first-block-align-full .site-header:not(.shrink) .nav-menu .menu-item.highlight a:focus {
-    background-color: #ffffff;
+    background-color: white;
     color: #423d33;
   }
 }
@@ -1196,7 +1196,7 @@ figure {
   .nav-menu .sub-menu {
     flex-flow: column nowrap;
     --gap: 0;
-    background: #27241d;
+    background: #26231c;
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -1208,12 +1208,12 @@ figure {
     transition: all 0.2s ease-in-out;
   }
   .nav-menu .sub-menu .menu-item a {
-    color: #ffffff;
+    color: white;
     font-size: 0.875rem;
     padding: 1rem;
   }
   .nav-menu .sub-menu .menu-item a:hover, .nav-menu .sub-menu .menu-item a:focus {
-    background-color: #423d33;
+    background-color: #433e32;
   }
   .nav-menu .sub-menu .menu-item a span {
     padding: 0;
@@ -1222,7 +1222,7 @@ figure {
     content: none;
   }
   .nav-menu .sub-menu .menu-item .submenu-expand {
-    stroke: #ffffff;
+    stroke: white;
     right: 15px;
     transform: translateY(-50%) rotate(-90deg);
   }
@@ -1262,8 +1262,8 @@ figure {
     margin-right: 0;
   }
   .nav-menu .menu .menu-item a {
-    color: #ffffff;
-    border-bottom: 1px solid #212223;
+    color: white;
+    border-bottom: 1px solid #202122;
     padding: 1rem 0;
     font-size: 1rem;
   }
@@ -1274,22 +1274,22 @@ figure {
     content: none;
   }
   .nav-menu .menu .menu-item.highlight a {
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid white;
+    color: white;
     margin: 2rem 0;
     max-width: 70%;
   }
   .nav-menu .menu .menu-item.highlight a:hover {
-    background-color: #ffffff;
-    color: #27241d;
+    background-color: white;
+    color: #26231c;
   }
   .nav-menu .menu .menu-item .submenu-expand {
     padding: 1.1rem 1.25rem;
     top: 0;
-    border-left: 1px solid #212223;
+    border-left: 1px solid #202122;
   }
   .nav-menu .menu .menu-item .submenu-expand svg {
-    stroke: #ffffff;
+    stroke: white;
   }
   .nav-menu .sub-menu {
     display: none;
@@ -1346,7 +1346,7 @@ figure {
   display: none;
 }
 .search-toggle:hover, .search-toggle.active {
-  background: #eeeeee;
+  background: #ededed;
 }
 .search-toggle.active .close {
   display: inline;
@@ -1371,7 +1371,7 @@ figure {
 /* Header Search
 --------------------------------------------- */
 .header-search {
-  background: #eeeeee;
+  background: #ededed;
   overflow: hidden;
   padding: 16px;
   width: 100%;
@@ -1430,7 +1430,7 @@ figure {
     border-radius: 200px;
     line-height: 0;
     text-align: center;
-    background-color: #ffffff;
+    background-color: white;
     box-shadow: 0px 8px 20px -4px rgba(0, 0, 0, 0.48);
     transform: translate(-1rem, 1rem);
   }
@@ -1466,13 +1466,13 @@ figure {
   transition-delay: 100ms;
 }
 .first-block-align-full .site-header:not(.shrink) .menu-toggle .toggl__bar {
-  background: #ffffff;
+  background: white;
 }
 .first-block-align-full .site-header:not(.shrink) .menu-toggle.active .toggl__bar {
-  background: #dd6b20;
+  background: #df6c20;
 }
 .menu-toggle:hover .toggl__bar, .menu-toggle.active .toggl__bar {
-  background: #dd6b20;
+  background: #df6c20;
 }
 .menu-toggle.active {
   background-color: transparent;
@@ -1510,7 +1510,7 @@ figure {
   margin-bottom: 20px;
 }
 .sidebar .widget-title a {
-  color: #414243;
+  color: #414244;
   text-decoration: none;
 }
 .sidebar p {
@@ -1656,7 +1656,7 @@ figure {
   margin-right: 4px;
 }
 .entry-author a {
-  color: #dd6b20;
+  color: #df6c20;
   text-decoration: none;
 }
 .entry-author a:hover {
@@ -1671,7 +1671,7 @@ figure {
   margin-bottom: 20px;
 }
 .entry-footer .entry-meta {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #ededed;
   padding-top: 20px;
 }
 .entry-meta .entry-comments-link::before {
@@ -1689,13 +1689,13 @@ figure {
   margin-bottom: 24px;
 }
 .breadcrumb a {
-  color: #dd6b20;
+  color: #df6c20;
 }
 .breadcrumb a:hover {
   color: #cf3033;
 }
 .single .breadcrumb {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #ededed;
   padding-top: 32px;
   text-align: center;
 }
@@ -1737,7 +1737,7 @@ figure {
   margin: 0;
 }
 .post-summary__title a {
-  color: #212223;
+  color: #202122;
   text-decoration: none;
 }
 .post-summary__title a:hover {
@@ -1878,7 +1878,7 @@ figure {
 /* Featured Content
 --------------------------------------------- */
 .featured-content .entry {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #ededed;
   margin-bottom: 20px;
 }
 
@@ -1894,7 +1894,7 @@ figure {
 }
 
 body {
-  color: #414243;
+  color: #423d33;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
@@ -1947,8 +1947,10 @@ div[data-type="core/button"] div[data-block] {
 
 /* Forms
 --------------------------------------------- */
-input, select, textarea {
-  background: #ffffff;
+input,
+select,
+textarea {
+  background: white;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   color: #423d33;
@@ -2032,7 +2034,7 @@ textarea:focus:-ms-input-placeholder {
   background: #616161;
   padding: 40px 16px 10px;
   position: relative;
-  color: #ffffff;
+  color: white;
 }
 .footer-widgets .wrap::before, .footer-widgets .wrap::after {
   content: none;
@@ -2045,20 +2047,20 @@ textarea:focus:-ms-input-placeholder {
   margin-bottom: 12px;
 }
 .footer-widgets .widget-title {
-  color: #ffffff;
+  color: white;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
 }
 .footer-widgets a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 .footer-widgets a:hover {
   text-decoration: underline;
 }
 .footer-widgets a svg {
-  fill: #ffffff;
+  fill: white;
   width: 20px;
   height: 20px;
   margin-right: 12px;
@@ -2094,7 +2096,7 @@ textarea:focus:-ms-input-placeholder {
     margin-left: 2.8368794326%;
     width: 31.4420803783%;
   }
-  .footer-widgets .wrap > div:nth-of-type(3n+1) {
+  .footer-widgets .wrap > div:nth-of-type(3n + 1) {
     clear: both;
     margin-left: 0;
   }
@@ -2108,7 +2110,10 @@ textarea:focus:-ms-input-placeholder {
       margin-left: 0;
       width: 100%;
     }
-    .footer-widgets .wrap header, .footer-widgets .wrap nav, .footer-widgets .wrap aside, .footer-widgets .wrap footer {
+    .footer-widgets .wrap header,
+.footer-widgets .wrap nav,
+.footer-widgets .wrap aside,
+.footer-widgets .wrap footer {
       grid-column: 1/-1;
     }
   }
@@ -2117,7 +2122,7 @@ textarea:focus:-ms-input-placeholder {
 /* Site Footer
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
-  background: #212223;
+  background: #202122;
   color: rgba(255, 255, 255, 0.75);
   font-size: 14px;
   padding: 32px 0;
@@ -2160,7 +2165,7 @@ textarea:focus:-ms-input-placeholder {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  background-color: #dd6b20;
+  background-color: #df6c20;
   border-radius: 4px;
   line-height: 0;
   padding: 0.75rem;
@@ -2169,7 +2174,7 @@ textarea:focus:-ms-input-placeholder {
   transition: all 0.2s ease-in-out;
 }
 .backtotop svg {
-  fill: #ffffff;
+  fill: white;
   vertical-align: middle;
 }
 .backtotop.visible {
@@ -2188,7 +2193,7 @@ textarea:focus:-ms-input-placeholder {
   position: relative;
   padding: calc(5% + 10px) 5%;
   margin: 2rem auto;
-  border: 2px solid #eeeeee;
+  border: 2px solid #ededed;
   border-radius: 10px;
   text-align: left;
 }
@@ -2211,10 +2216,10 @@ textarea:focus:-ms-input-placeholder {
   height: 40px;
   left: 50%;
   transform: translateY(-50%) translateX(-20px) rotate(180deg);
-  border: 2px solid #eeeeee;
+  border: 2px solid #ededed;
   border-radius: 100px;
   padding: 20px;
-  background: #ffffff url(../icons/utility/quote.svg) no-repeat center center;
+  background: white url(../icons/utility/quote.svg) no-repeat center center;
   background-size: 25px;
   text-align: left;
 }
@@ -2222,7 +2227,7 @@ textarea:focus:-ms-input-placeholder {
 .entry-content .wp-block-quote:not(.is-large):not(.is-style-large) p {
   color: #423d33;
   font-size: 22px;
-  font-size: clamp(1.1rem, 1rem + .5vw, 1.25rem);
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.25rem);
   font-style: italic;
   font-weight: 400;
 }
@@ -2247,7 +2252,7 @@ textarea:focus:-ms-input-placeholder {
   margin-bottom: 0;
 }
 .entry-content .wp-block-quote.is-style-large p {
-  font-size: clamp(1.35rem, 1.2rem + .5vw, 1.55rem);
+  font-size: clamp(1.35rem, 1.2rem + 0.5vw, 1.55rem);
   font-weight: 500;
   font-style: normal;
 }
@@ -2255,7 +2260,7 @@ textarea:focus:-ms-input-placeholder {
   position: relative;
   padding: calc(3% + 10px);
   margin: 2rem auto;
-  border: 2px solid #eeeeee;
+  border: 2px solid #ededed;
   border-right: none;
   border-left: none;
 }
@@ -2272,15 +2277,15 @@ textarea:focus:-ms-input-placeholder {
   height: 40px;
   left: 50%;
   transform: translateY(-50%) translateX(-20px) rotate(180deg);
-  border: 2px solid #eeeeee;
+  border: 2px solid #ededed;
   border-radius: 100px;
   padding: 20px;
-  background: #ffffff url(../icons/utility/quote.svg) no-repeat center center;
+  background: white url(../icons/utility/quote.svg) no-repeat center center;
   background-size: 25px;
   text-align: left;
 }
 .entry-content .wp-block-pullquote p {
-  font-size: clamp(1.45rem, 1.2rem + .5vw, 1.65rem);
+  font-size: clamp(1.45rem, 1.2rem + 0.5vw, 1.65rem);
   font-weight: 500;
   font-style: normal;
 }
@@ -2290,7 +2295,7 @@ textarea:focus:-ms-input-placeholder {
 .wp-block-code {
   padding: 1.5rem;
   margin-bottom: 16px;
-  background-color: #eeeeee;
+  background-color: #ededed;
   border-radius: 10px;
   overflow: auto;
   white-space: nowrap;
@@ -2315,7 +2320,7 @@ textarea:focus:-ms-input-placeholder {
 /* Button
 --------------------------------------------- */
 .wp-block-button__link {
-  border: 2px solid #dd6b20;
+  border: 2px solid #df6c20;
   border-radius: 3px;
   font-size: 20px;
   font-weight: 600;
@@ -2333,40 +2338,40 @@ textarea:focus:-ms-input-placeholder {
   color: white;
 }
 .wp-block-button__link:not(.has-background) {
-  background-color: #dd6b20;
+  background-color: #df6c20;
 }
 .wp-block-button__link:not(.has-background):hover, .wp-block-button__link:not(.has-background):focus {
-  border: 2px solid #b0551a;
-  background-color: #b0551a;
+  border: 2px solid #b3571a;
+  background-color: #b3571a;
 }
 .is-style-outline > .wp-block-button__link:not(.has-text-color), .is-style-outline .wp-block-button__link {
-  border: 2px solid #dd6b20;
-  color: #dd6b20;
+  border: 2px solid #df6c20;
+  color: #df6c20;
   background-color: transparent;
   padding: 0.5em 1.5em;
 }
 .is-style-outline > .wp-block-button__link:not(.has-text-color):hover, .is-style-outline > .wp-block-button__link:not(.has-text-color):focus, .is-style-outline .wp-block-button__link:hover, .is-style-outline .wp-block-button__link:focus {
-  border: 2px solid #b0551a;
-  background-color: #b0551a;
-  color: #ffffff;
+  border: 2px solid #b3571a;
+  background-color: #b3571a;
+  color: white;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-orange-color {
-  border-color: #dd6b20;
-  color: #dd6b20;
+  border-color: #df6c20;
+  color: #df6c20;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-orange-color:hover, .is-style-outline > .wp-block-button__link.has-text-color.has-orange-color:focus {
-  border-color: #dd6b20;
-  background-color: #dd6b20;
-  color: #ffffff;
+  border-color: #df6c20;
+  background-color: #df6c20;
+  color: white;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-light-orange-color {
-  border-color: #de8974;
-  color: #de8974;
+  border-color: #de8873;
+  color: #de8873;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-light-orange-color:hover, .is-style-outline > .wp-block-button__link.has-text-color.has-light-orange-color:focus {
-  border-color: #de8974;
-  background-color: #de8974;
-  color: #ffffff;
+  border-color: #de8873;
+  background-color: #de8873;
+  color: white;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-red-color {
   border-color: #cf3033;
@@ -2375,7 +2380,7 @@ textarea:focus:-ms-input-placeholder {
 .is-style-outline > .wp-block-button__link.has-text-color.has-red-color:hover, .is-style-outline > .wp-block-button__link.has-text-color.has-red-color:focus {
   border-color: #cf3033;
   background-color: #cf3033;
-  color: #ffffff;
+  color: white;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-grey-color {
   border-color: #f2f3f8;
@@ -2384,7 +2389,7 @@ textarea:focus:-ms-input-placeholder {
 .is-style-outline > .wp-block-button__link.has-text-color.has-grey-color:hover, .is-style-outline > .wp-block-button__link.has-text-color.has-grey-color:focus {
   border-color: #f2f3f8;
   background-color: #f2f3f8;
-  color: #ffffff;
+  color: white;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-dark-grey-color {
   border-color: #616161;
@@ -2393,16 +2398,16 @@ textarea:focus:-ms-input-placeholder {
 .is-style-outline > .wp-block-button__link.has-text-color.has-dark-grey-color:hover, .is-style-outline > .wp-block-button__link.has-text-color.has-dark-grey-color:focus {
   border-color: #616161;
   background-color: #616161;
-  color: #ffffff;
+  color: white;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-orange-grey-color {
-  border-color: #27241d;
-  color: #27241d;
+  border-color: #26231c;
+  color: #26231c;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-orange-grey-color:hover, .is-style-outline > .wp-block-button__link.has-text-color.has-orange-grey-color:focus {
-  border-color: #27241d;
-  background-color: #27241d;
-  color: #ffffff;
+  border-color: #26231c;
+  background-color: #26231c;
+  color: white;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-almost-black-color {
   border-color: #090c10;
@@ -2411,29 +2416,29 @@ textarea:focus:-ms-input-placeholder {
 .is-style-outline > .wp-block-button__link.has-text-color.has-almost-black-color:hover, .is-style-outline > .wp-block-button__link.has-text-color.has-almost-black-color:focus {
   border-color: #090c10;
   background-color: #090c10;
-  color: #ffffff;
+  color: white;
 }
 .wp-block-button__link.has-orange-color:hover, .wp-block-button__link.has-orange-color:focus {
-  color: #dd6b20;
+  color: #df6c20;
 }
 .wp-block-button__link.has-orange-background-color {
-  background-color: #dd6b20;
-  border-color: #dd6b20;
+  background-color: #df6c20;
+  border-color: #df6c20;
 }
 .wp-block-button__link.has-orange-background-color:hover, .wp-block-button__link.has-orange-background-color:focus {
-  background-color: #b0551a;
-  border-color: #b0551a;
+  background-color: #b3571a;
+  border-color: #b3571a;
 }
 .wp-block-button__link.has-light-orange-color:hover, .wp-block-button__link.has-light-orange-color:focus {
-  color: #de8974;
+  color: #de8873;
 }
 .wp-block-button__link.has-light-orange-background-color {
-  background-color: #de8974;
-  border-color: #de8974;
+  background-color: #de8873;
+  border-color: #de8873;
 }
 .wp-block-button__link.has-light-orange-background-color:hover, .wp-block-button__link.has-light-orange-background-color:focus {
-  background-color: #d4664b;
-  border-color: #d4664b;
+  background-color: #d46549;
+  border-color: #d46549;
 }
 .wp-block-button__link.has-red-color:hover, .wp-block-button__link.has-red-color:focus {
   color: #cf3033;
@@ -2443,8 +2448,8 @@ textarea:focus:-ms-input-placeholder {
   border-color: #cf3033;
 }
 .wp-block-button__link.has-red-background-color:hover, .wp-block-button__link.has-red-background-color:focus {
-  background-color: #a62629;
-  border-color: #a62629;
+  background-color: #a52729;
+  border-color: #a52729;
 }
 .wp-block-button__link.has-grey-color:hover, .wp-block-button__link.has-grey-color:focus {
   color: #f2f3f8;
@@ -2465,19 +2470,19 @@ textarea:focus:-ms-input-placeholder {
   border-color: #616161;
 }
 .wp-block-button__link.has-dark-grey-background-color:hover, .wp-block-button__link.has-dark-grey-background-color:focus {
-  background-color: #484848;
-  border-color: #484848;
+  background-color: #474747;
+  border-color: #474747;
 }
 .wp-block-button__link.has-orange-grey-color:hover, .wp-block-button__link.has-orange-grey-color:focus {
-  color: #27241d;
+  color: #26231c;
 }
 .wp-block-button__link.has-orange-grey-background-color {
-  background-color: #27241d;
-  border-color: #27241d;
+  background-color: #26231c;
+  border-color: #26231c;
 }
 .wp-block-button__link.has-orange-grey-background-color:hover, .wp-block-button__link.has-orange-grey-background-color:focus {
-  background-color: #0a0907;
-  border-color: #0a0907;
+  background-color: #090807;
+  border-color: #090807;
 }
 .wp-block-button__link.has-almost-black-color:hover, .wp-block-button__link.has-almost-black-color:focus {
   color: #090c10;
@@ -2512,7 +2517,7 @@ textarea:focus:-ms-input-placeholder {
   max-width: 1128px;
 }
 .wp-block-group.has-background:not(.has-grey-background-color) {
-  color: #ffffff;
+  color: white;
 }
 .wp-block-group.has-background:not(.has-grey-background-color) h1,
 .wp-block-group.has-background:not(.has-grey-background-color) h2,
@@ -2521,7 +2526,7 @@ textarea:focus:-ms-input-placeholder {
 .wp-block-group.has-background:not(.has-grey-background-color) h5,
 .wp-block-group.has-background:not(.has-grey-background-color) h6,
 .wp-block-group.has-background:not(.has-grey-background-color) p {
-  color: #ffffff;
+  color: white;
 }
 
 .full-width-content .entry-content .wp-block-group,
@@ -2706,7 +2711,7 @@ img.aligncenter {
 }
 .lcm-cf7-form label .wpcf7-form-control-wrap input:focus,
 .lcm-cf7-form label .wpcf7-form-control-wrap textarea:focus {
-  border-color: #dd6b20;
+  border-color: #df6c20;
   outline: none;
 }
 .lcm-cf7-form label .wpcf7-form-control-wrap input.wpcf7-not-valid,
@@ -2723,8 +2728,8 @@ img.aligncenter {
   width: auto;
   min-width: 230px;
   border: none;
-  color: #ffffff;
-  background-color: #dd6b20;
+  color: white;
+  background-color: #df6c20;
   border-radius: 10px;
 }
 .lcm-cf7-form .lcm-cf7-form__input input:hover {
