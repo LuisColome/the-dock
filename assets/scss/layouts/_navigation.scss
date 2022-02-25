@@ -44,13 +44,6 @@
             text-decoration: none;
         }
 
-        // Menu item with a children Sub-menu.
-        &.menu-item-has-children {
-            > a {
-                margin-right: 0.7em;
-            }
-        }
-
         // Last menu item with no margin right
         &:last-child a {
             margin-right: 0;
@@ -87,6 +80,7 @@
             }
         }
 
+        // Animation for the bottom bar on menu links.
         a:hover,
         a:focus {
             span {
@@ -128,6 +122,15 @@
                         content: none;
                     }
                 }
+            }
+        }
+    }
+
+    // Menu item with a children Sub-menu. Give space for the chevron arrow.
+    .menu {
+        > .menu-item-has-children {
+            > a {
+                margin-right: 0.7em;
             }
         }
     }

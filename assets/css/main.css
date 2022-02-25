@@ -1041,9 +1041,6 @@ figure {
   position: relative;
   text-decoration: none;
 }
-.nav-menu .menu-item.menu-item-has-children > a {
-  margin-right: 0.7em;
-}
 .nav-menu .menu-item:last-child a {
   margin-right: 0;
 }
@@ -1097,6 +1094,9 @@ figure {
 }
 .nav-menu .menu-item.highlight a span::after {
   content: none;
+}
+.nav-menu .menu > .menu-item-has-children > a {
+  margin-right: 0.7em;
 }
 .nav-menu .submenu-expand {
   background: transparent;
