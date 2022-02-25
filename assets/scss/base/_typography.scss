@@ -15,10 +15,10 @@ textarea:focus,
 }
 
 a {
-    color: $primary-color;
+    color: $clr-primary-400;
     font-weight: 600;
     text-decoration: underline;
-    text-decoration-color: $secondary-color;
+    text-decoration-color: $clr-secondary-400;
     @include transition;
 
     &:hover {
@@ -92,7 +92,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: $base-color;
+    color: $clr-font-400;
     font-family: $heading-font, $sans-serif;
     font-weight: 600;
     line-height: 1.2;
@@ -109,10 +109,10 @@ h6 {
     }
 
     a {
-        color: $base-color;
+        color: $clr-font-400;
 
         &:hover {
-            color: $primary-color;
+            color: $clr-primary-400;
             text-decoration: none;
         }
     }
