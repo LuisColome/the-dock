@@ -161,8 +161,7 @@
         }
     }
 
-    /** Reverse menu colors for transparent background only on desktop. (first-block-align-ful class).
-    ---------------------------------------------------------------------------------------------------- */
+    // Reverse menu colors for transparent background only on desktop. (first-block-align-ful class).
     .first-block-align-full .site-header:not(.shrink) & {
         @include media(">mobile_menu") {
             .menu-item {
@@ -315,8 +314,7 @@
         }
     }
 
-    /* Mobile menu
-    ------------------------------------------------------------------------------ */
+    // Mobile menu
     @include media("<=mobile_menu") {
         position: fixed;
         width: min(90%, 600px);
