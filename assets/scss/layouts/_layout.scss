@@ -27,7 +27,7 @@
 
 .site-inner {
     clear: both;
-    max-width: calc($grid-width + $wrap_edge); // 1160px
+    max-width: $grid-width + $wrap_edge * 2; // 1160px
     margin: 0 auto;
     padding: 60px 0 30px;
 
