@@ -7,7 +7,6 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-    // background: brand-color( 'blue' );
     background: $grey_8;
     padding: 40px $wrap_edge 10px;
     position: relative;
@@ -90,7 +89,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-    background: $submenu-bg;
+    background: $clr-submenu-bg;
     color: $grey_2;
     font-size: 1rem;
     padding: 2rem 0;
@@ -108,7 +107,7 @@
         font-weight: 400;
 
         &:hover {
-            color: $primary-color;
+            color: $clr-primary-400;
         }
     }
 

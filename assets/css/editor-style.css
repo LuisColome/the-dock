@@ -648,7 +648,7 @@ figure {
 --------------------------------------------- */
 .site-inner {
   clear: both;
-  max-width: calc($grid-width + $wrap_edge);
+  max-width: 1160px;
   margin: 0 auto;
   padding: 60px 0 30px;
 }
