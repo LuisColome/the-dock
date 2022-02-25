@@ -23,7 +23,7 @@ $brand_colors: (
     almost-black: hsl(214, 28%, 5%),
 );
 
-// color variables
+// General color variables
 $clr-primary-300: hsl(24, 75%, 60%);
 $clr-primary-400: hsl(24, 75%, 50%);
 $clr-primary-500: hsl(24, 75%, 40%);
@@ -34,7 +34,7 @@ $clr-highlight-400: hsl(359, 62%, 50%);
 $clr-font-400: hsl(40, 13%, 23%);
 $clr-border-400: $grey_4;
 
-// Menu colors
+// Menu color variables
 $clr-submenu-bg: hsl(42, 15%, 13%);
 $clr-submenu-bg-hover: hsl(42, 15%, 23%);
 $clr-mobile-menu-bg: hsl(214, 28%, 5%);
@@ -43,7 +43,7 @@ $clr-toggle-menu-bg: $white;
 $clr-toggle-menu-bars: $clr-font-400;
 $clr-toggle-menu-bars-active: $clr-primary-400;
 
-// Social colors
+// Social color variables
 $clr-facebook: hsl(221, 44%, 41%);
 $clr-twitter: hsl(195, 100%, 47%);
 $clr-pinterest: hsl(358, 73%, 46%);
