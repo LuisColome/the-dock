@@ -1060,7 +1060,6 @@ figure {
   background: #df6c20;
   transform: scale(0, 1);
   transition: transform ease-in-out 0.25s;
-  transform-origin: left;
   margin-top: 5px;
 }
 .nav-menu .menu-item a:hover span::after,
@@ -1410,6 +1409,7 @@ figure {
   text-align: center;
   order: 3;
   z-index: 9999;
+  transition: transform 0.35s ease-in-out;
 }
 @media (min-width: 769px) {
   .menu-toggle {
@@ -1420,13 +1420,13 @@ figure {
   .shrink .menu-toggle {
     position: fixed;
     top: 0;
-    right: 0;
+    right: 1rem;
     border-radius: 200px;
     line-height: 0;
     text-align: center;
     background-color: white;
     box-shadow: 0px 8px 20px -4px rgba(0, 0, 0, 0.48);
-    transform: translate(-1rem, 1rem);
+    transform: translateY(1rem);
   }
 }
 .menu-toggle .menu-toggle__inner-container {

@@ -75,7 +75,7 @@
                 background: $clr-primary-400;
                 transform: scale(0, 1);
                 transition: transform ease-in-out 0.25s;
-                transform-origin: left;
+                // transform-origin: left;
                 margin-top: 5px;
             }
         }
@@ -538,6 +538,7 @@
     text-align: center;
     order: 3;
     z-index: 9999;
+    transition: transform 0.35s ease-in-out;
 
     @include media(">mobile_menu") {
         display: none; // Only display the toggle menu on mobile.
@@ -548,13 +549,14 @@
         .shrink & {
             position: fixed;
             top: 0;
-            right: 0;
+            right: 1rem;
             border-radius: 200px;
             line-height: 0;
             text-align: center;
             background-color: $clr-toggle-menu-bg;
             box-shadow: 0px 8px 20px -4px rgba(0, 0, 0, 0.48);
-            transform: translate(-1rem, 1rem);
+            // transform: translate(-1rem, 1rem);
+            transform: translateY(1rem);
         }
     }
 
