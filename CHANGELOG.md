@@ -7,13 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [Unreleased]
 
--   Fix header issue when the header is not transparent
--   Fix an issue with full width blocks
+-   Fix header animation issue when the header is not transparent
+-   Fix an issue with margins on blocks with full-width alignment
 -   Live Demo (work in progress)
 -   Fix text domains
 -   Add support for custom Gutenberg gradients.
 -   Style Contact form 7 as the general button styles
--   Better support for Media & Text Gutenberg block
+-   ~~Better support for Media & Text Gutenberg block~~
+
+### [1.0.9](https://github.com/LuisColome/the-dock/releases/tag/v1.0.9) - 2022-02-26
+
+#### Added
+
+-   New footer design and structure.
+-   New footer logo SVG file
+-   Add a home url link to the footer logo
+
+#### Changed
+
+-   Update variable colors + new menu variables
+-   Update Media & Text core block to render at mobile_menu breakpoint
+-   Updated variables on footer to match new ones on colors
+-   Change the menu item hover animation origin to center
+
+#### Fixed
+
+-   Fix hover effect on submenu chevron icons
+-   Fix: Right space for menu items with submenu only on first level menu items
+
+#### Removed
+
+-   Remove the index.scss files due to Prepros can't proccess them
 
 ### [1.0.8](https://github.com/LuisColome/the-dock/releases/tag/v1.0.8) - 2022-02-23
 
