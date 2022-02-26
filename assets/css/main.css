@@ -2611,28 +2611,49 @@ textarea:focus:-ms-input-placeholder {
 
 /** Media and Text 
 --------------------------------------------- */
-@media (min-width: 600px) {
-  .full-width-content .entry-content > *.wp-block-media-text.alignwide, .full-width-content .entry-content > *.wp-block-media-text.alignfull, .content-width .entry-content > *.wp-block-media-text.alignwide, .content-width .entry-content > *.wp-block-media-text.alignfull,
-.full-width-content .block-area > *.wp-block-media-text.alignwide,
-.full-width-content .block-area > *.wp-block-media-text.alignfull,
-.content-width .block-area > *.wp-block-media-text.alignwide,
-.content-width .block-area > *.wp-block-media-text.alignfull {
-    padding: 0;
+@media (min-width: 768px) {
+  .full-width-content .entry-content .wp-block-media-text .wp-block-media-text__content, .content-width .entry-content .wp-block-media-text .wp-block-media-text__content,
+.full-width-content .block-area .wp-block-media-text .wp-block-media-text__content,
+.content-width .block-area .wp-block-media-text .wp-block-media-text__content {
+    padding: 0 0 0 2rem;
+  }
+  .full-width-content .entry-content .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content, .content-width .entry-content .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content,
+.full-width-content .block-area .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content,
+.content-width .block-area .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+    padding: 0 2rem 0 0;
   }
 }
-@media (max-width: 599px) {
-  .full-width-content .entry-content > * .wp-block-media-text.is-stacked-on-mobile figure, .content-width .entry-content > * .wp-block-media-text.is-stacked-on-mobile figure,
-.full-width-content .block-area > * .wp-block-media-text.is-stacked-on-mobile figure,
-.content-width .block-area > * .wp-block-media-text.is-stacked-on-mobile figure {
+@media (max-width: 767px) {
+  .full-width-content .entry-content .wp-block-media-text.is-stacked-on-mobile, .content-width .entry-content .wp-block-media-text.is-stacked-on-mobile,
+.full-width-content .block-area .wp-block-media-text.is-stacked-on-mobile,
+.content-width .block-area .wp-block-media-text.is-stacked-on-mobile {
+    grid-template-columns: 100% !important;
+  }
+  .full-width-content .entry-content .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media, .content-width .entry-content .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media,
+.full-width-content .block-area .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media,
+.content-width .block-area .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .full-width-content .entry-content .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content, .content-width .entry-content .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content,
+.full-width-content .block-area .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content,
+.content-width .block-area .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0 1rem 1rem;
+  }
+  .full-width-content .entry-content .wp-block-media-text.is-stacked-on-mobile figure, .content-width .entry-content .wp-block-media-text.is-stacked-on-mobile figure,
+.full-width-content .block-area .wp-block-media-text.is-stacked-on-mobile figure,
+.content-width .block-area .wp-block-media-text.is-stacked-on-mobile figure {
     margin-bottom: 1.5rem;
   }
 }
-.entry-content > * .wp-block-media-text .wp-block-media-text__media img,
-.block-area > * .wp-block-media-text .wp-block-media-text__media img {
+.entry-content .wp-block-media-text .wp-block-media-text__media img,
+.block-area .wp-block-media-text .wp-block-media-text__media img {
   border-radius: 10px;
 }
-.entry-content > * .wp-block-media-text.is-image-fill .wp-block-media-text__media,
-.block-area > * .wp-block-media-text.is-image-fill .wp-block-media-text__media {
+.entry-content .wp-block-media-text.is-image-fill .wp-block-media-text__media,
+.block-area .wp-block-media-text.is-image-fill .wp-block-media-text__media {
   border-radius: 10px;
 }
 

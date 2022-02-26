@@ -4,22 +4,60 @@
 /** Media and Text 
 --------------------------------------------- */
 
-.entry-content > *,
-.block-area > * {
+.entry-content,
+.block-area {
     .full-width-content &,
     .content-width & {
-        @include media(">=600px") {
+        @include media(">=mobile_menu") {
             //remove the padding for alignfull and alignwide
-            &.wp-block-media-text.alignwide,
-            &.wp-block-media-text.alignfull {
-                padding: 0;
+            // .wp-block-media-text.alignfull {
+            //     padding: 0;
+            // }
+
+            // reduce the padding-left on desktop.
+            .wp-block-media-text {
+                .wp-block-media-text__content {
+                    padding: 0 0 0 2rem;
+                }
+
+                &.has-media-on-the-right {
+                    .wp-block-media-text__content {
+                        padding: 0 2rem 0 0;
+                    }
+                }
             }
         }
 
-        @include media("<600px") {
-            // give space between image and text on mobile
-            .wp-block-media-text.is-stacked-on-mobile figure {
-                margin-bottom: $block-margin;
+        // Lets make the block render at mobile_menu screen size.
+        @include media("<mobile_menu") {
+            .wp-block-media-text {
+                &.is-stacked-on-mobile {
+                    grid-template-columns: 100% !important;
+
+                    // Render the blog at 768px
+                    .wp-block-media-text__media {
+                        grid-column: 1;
+                        grid-row: 1;
+                    }
+
+                    // Render the blog at 768px
+                    .wp-block-media-text__content {
+                        grid-column: 1;
+                        grid-row: 2;
+                        padding: 0 1rem 1rem;
+                    }
+
+                    // &.has-media-on-the-right {
+                    //     .wp-block-media-text__content {
+                    //         padding: 0 1rem;
+                    //     }
+                    // }
+
+                    // give space between image and text on mobile
+                    figure {
+                        margin-bottom: $block-margin;
+                    }
+                }
             }
         }
     }
