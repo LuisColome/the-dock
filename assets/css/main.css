@@ -1044,7 +1044,7 @@ figure {
 .nav-menu .menu-item:last-child a {
   margin-right: 0;
 }
-.nav-menu .menu-item:hover > a, .nav-menu .menu-item:hover .submenu-expand svg {
+.nav-menu .menu-item:hover > a, .nav-menu .menu-item:hover > .submenu-expand svg {
   stroke: #df6c20;
   color: #df6c20;
 }
@@ -1215,9 +1215,11 @@ figure {
     content: none;
   }
   .nav-menu .sub-menu .menu-item .submenu-expand {
-    stroke: white;
     right: 15px;
     transform: translateY(-50%) rotate(-90deg);
+  }
+  .nav-menu .sub-menu .menu-item .submenu-expand svg {
+    stroke: white;
   }
   .nav-menu .sub-menu .sub-menu {
     margin: -48px 0 0 215px;

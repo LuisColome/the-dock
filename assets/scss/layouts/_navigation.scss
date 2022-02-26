@@ -51,7 +51,7 @@
 
         // Hover and focus effects for menu links. Both links and svg.
         &:hover > a,
-        &:hover .submenu-expand svg {
+        &:hover > .submenu-expand svg {
             stroke: $clr-primary-400;
             color: $clr-primary-400;
         }
@@ -302,11 +302,13 @@
                     }
                 }
 
-                // Chevron arrow on submenu.
+                // Chevron arrow on submenu (menu-item-has-children).
                 .submenu-expand {
-                    stroke: $white;
                     right: 15px;
                     transform: translateY(-50%) rotate(-90deg);
+                    svg {
+                        stroke: $white;
+                    }
                 }
             }
 
