@@ -43,7 +43,7 @@ function lcm_footer_menu() {
     echo '<div class="site-footer__nav-wrapper">';
 
         echo '<figure class="site-footer__logo">';
-            echo '<img class="site-footer__logo__img" src="'. get_stylesheet_directory_uri() . '/assets/images/logo-footer.svg">';
+            echo '<a href="' . get_bloginfo('url') . '"><img class="site-footer__logo__img" src="'. get_stylesheet_directory_uri() . '/assets/images/logo-footer.svg"></a>';
         echo '</figure>';
 
         echo '<nav class="site-footer__nav-menu" role="navigation">';
