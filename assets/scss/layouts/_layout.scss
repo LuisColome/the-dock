@@ -29,10 +29,10 @@
     clear: both;
     max-width: $grid-width + $wrap_edge * 2; // 1160px
     margin: 0 auto;
-    padding: 60px 0 30px;
+    padding: 120px 0 30px;
 
     @include media("<=large") {
-        padding: 60px $wrap_edge 30px;
+        padding: 120px $wrap_edge 1.5rem;
     }
 
     // Remove the top padding if the first block is alignfull.

@@ -650,11 +650,11 @@ figure {
   clear: both;
   max-width: 1160px;
   margin: 0 auto;
-  padding: 60px 0 30px;
+  padding: 120px 0 30px;
 }
 @media (max-width: 1200px) {
   .site-inner {
-    padding: 60px 16px 30px;
+    padding: 120px 16px 1.5rem;
   }
 }
 .first-block-align-full .site-inner, .first-block-cover-full .site-inner {
@@ -905,9 +905,9 @@ figure {
 /* Site Header
 ---------------------------------------------------------------------------- */
 .site-header {
-  position: sticky;
+  position: absolute;
   top: 0;
-  z-index: 99;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -921,8 +921,6 @@ figure {
   content: none;
 }
 .first-block-align-full .site-header {
-  position: absolute;
-  z-index: 9999;
   background-color: transparent;
 }
 .site-header.shrink {

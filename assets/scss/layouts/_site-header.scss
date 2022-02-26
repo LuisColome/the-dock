@@ -7,9 +7,9 @@
 ---------------------------------------------------------------------------- */
 
 .site-header {
-    position: sticky;
+    position: absolute;
     top: 0;
-    z-index: 99;
+    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,8 +50,8 @@
     // }
 
     .first-block-align-full & {
-        position: absolute;
-        z-index: 9999;
+        // position: absolute;
+        // z-index: 9999;
         background-color: transparent;
     }
 
