@@ -7,13 +7,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [Unreleased]
 
--   Fix header animation issue when the header is not transparent
 -   Fix an issue with margins on blocks with full-width alignment
 -   Live Demo (work in progress)
 -   Fix text domains
 -   Add support for custom Gutenberg gradients.
 -   Style Contact form 7 as the general button styles
+-   ~~Fix header animation issue when the header is not transparent~~
 -   ~~Better support for Media & Text Gutenberg block~~
+
+### [1.1.1](https://github.com/LuisColome/the-dock/releases/tag/v1.1.1) - 2022-02-27
+
+#### Added
+
+-   Support for single posts. Entry header and footer structure.
+-   New single.scss file for single posts styles
+-   Entry-meta support on single posts
+-   A second featured image size 1128x634px (aspect ratio 3:2)
+
+#### Changed
+
+-   Updated category markup on blog posts partial
+-   Position featured image on single post for the markup hierarchy to make sense.
+
+#### Fixed
+
+-   Fix function to display category link only on single posts
+-   Fixed header position issue when it wasn't transparent.
+
+#### Removed
+
+-   Depracated post-summary.scss file due to duplicated content.
 
 ### [1.0.9](https://github.com/LuisColome/the-dock/releases/tag/v1.0.9) - 2022-02-26
 
