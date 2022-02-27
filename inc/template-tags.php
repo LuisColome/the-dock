@@ -16,7 +16,7 @@
 function ea_entry_category() {
 	$term = ea_first_term();
 	if( !empty( $term ) && ! is_wp_error( $term ) )
-		echo '<p class="lcm-post__category"><a href="' . get_term_link( $term, 'category' ) . '">' . $term->name . '</a></p>';
+		echo '<a href="' . get_term_link( $term, 'category' ) . '">' . $term->name . '</a>';
 }
 
 /**

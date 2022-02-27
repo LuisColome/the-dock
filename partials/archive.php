@@ -14,7 +14,9 @@ echo '<article class="lcm-post">';
 	echo '<a class="lcm-post__image-link" href="' . get_permalink() . '" tabindex="-1" aria-hidden="true">' . get_the_post_thumbnail( get_the_ID(), 'lcm-featured-image' ) . '</a>';
 
 	echo '<header class="lcm-post__header">';
-		ea_entry_category();
+		echo '<p class="lcm-post__category">';
+            ea_entry_category();
+        echo '</p>';
  		echo '<h2 class="lcm-post__title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2>';
         echo '<p class="lcm-post__excerpt">';
             echo wp_trim_words( get_the_content(), 32, '...' );
