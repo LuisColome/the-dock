@@ -173,18 +173,8 @@ function genesis_sample_blocks_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'genesis_sample_blocks_body_classes' );
 
-/*  
- * Display the featured image on single posts from blog.
- * 
- */
-function featured_post_image() {
-    if ( ! is_singular( 'post' ) )
-        return;
-        echo '<figure class="entry-featured-image">';
-        the_post_thumbnail('lcm-featured-image');
-        echo '</figure>';
-}
-add_action( 'genesis_entry_content', 'featured_post_image', 8 );
+/* Single post
+------------------------------------------------------------------------------ */
 
 /**
  * Force Content Width layout on single posts.
@@ -197,3 +187,32 @@ function force_content_width_on_single_posts(){
     add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_width_layout' );
 }
 add_action( 'genesis_site_layout', 'force_content_width_on_single_posts', 10 );
+
+/*  
+ * Display the featured image on single posts from blog.
+ * 
+ */
+function featured_post_image() {
+    if ( ! is_singular( 'post' ) )
+        return;
+        echo '<figure class="entry-featured-image">';
+            the_post_thumbnail('lcm-featured-image');
+        echo '</figure>';
+}
+add_action( 'genesis_entry_header', 'featured_post_image', 4 );
+
+
+/**
+ * Show posts categories on single posts. 
+ *
+ */
+function custom_post_meta_filter( $post_meta ) {
+    
+    echo '<p class="entry-meta">';
+        echo '<span class="entry-category">';
+            ea_entry_category();
+        echo '</span>';
+    echo '</p>';
+
+}
+add_filter( 'genesis_entry_header', 'custom_post_meta_filter', 8 );
