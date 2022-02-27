@@ -1,0 +1,20 @@
+@use "abstracts" as *;
+@use "../vendor/include-media" as *;
+
+/* Single - Styles for single posts.
+---------------------------------------------------------------------------------------------------- */
+// Give some space before footer.
+.entry {
+    margin-bottom: $margin_2x;
+}
+
+// Add some space under featured image on single posts.
+.entry-featured-image {
+    margin-bottom: $margin_2x;
+}
+
+.entry-header {
+    .entry-title {
+        line-height: 1.1;
+    }
+}
