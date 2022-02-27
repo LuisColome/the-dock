@@ -207,9 +207,12 @@ add_action( 'genesis_entry_header', 'featured_post_image', 4 );
  *
  */
 function custom_post_meta_filter( $post_meta ) {
+
+    if ( ! is_singular( 'post' ) )
+        return;
     
     echo '<p class="entry-meta">';
-        echo '<span class="entry-category">';
+        echo '<span class="entry-categories">';
             ea_entry_category();
         echo '</span>';
     echo '</p>';
