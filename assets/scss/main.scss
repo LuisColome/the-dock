@@ -20,8 +20,9 @@
 @use "layouts/navigation";
 @use "layouts/sidebar";
 @use "layouts/singular";
+@use "layouts/single";
 @use "layouts/entry-meta";
-@use "layouts/post-summary";
+// @use "layouts/post-summary";
 @use "layouts/comments";
 @use "layouts/widgets";
 @use "layouts/gutenberg";

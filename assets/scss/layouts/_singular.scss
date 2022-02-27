@@ -109,18 +109,9 @@
     }
 }
 
+// Avoid any margin top if the first block is aligned to full-width.
 .entry-content > .alignfull {
     &:first-child {
         margin-top: 0;
     }
-}
-
-// Add some space under featured image on single posts.
-.entry-featured-image {
-    margin-bottom: $margin_2x;
-}
-
-// Give some space before footer.
-.entry {
-    margin-bottom: $margin_2x;
 }
