@@ -124,7 +124,7 @@ function ea_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
 	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add SVG icon to parent items.
-		$icon = ea_icon( array( 'icon' => 'chevron-bottom', 'size' => 16, 'title' => 'Submenu Dropdown' ) );
+		$icon = ea_icon( array( 'icon' => 'arrow-down', 'size' => 16, 'title' => 'Submenu Dropdown' ) );
 
 		$output .= sprintf(
 			'<button' . ea_amp_nav_dropdown( $args->theme_location, $depth ) . ' tabindex="-1">%s</button>',
