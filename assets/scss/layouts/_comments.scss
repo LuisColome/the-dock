@@ -2,84 +2,154 @@
 
 // Comments
 
-/* Entry Comments
+/* Entry Comments 
 --------------------------------------------- */
-
-.comment-respond,
-.entry-comments,
-.entry-pings {
-  margin-bottom: 40px;
-}
-
-.comment-list {
-
-    li {
-        padding: 40px 0 0 30px;
+.entry-comments {
+    // Remove list styles
+    ol,
+    ul {
+        list-style: none;
     }
 
-    .depth-1 {
+    .comment-list {
         padding-left: 0;
+        li {
+            padding: 2rem 0 0 0;
+        }
     }
-}
 
-.comment-header {
-    margin-bottom: 30px;
-
-    p {
-        margin-bottom: 0;
+    .comment {
+        article {
+            border: 1px solid $grey_3;
+            border-radius: $border-radius;
+        }
     }
-}
 
-.comment-content {
-    clear: both;
+    .comment-header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: first baseline;
+        padding: 0.5rem 1rem;
+        background-color: $grey_3;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .comment-author {
+        width: max-content;
+        font-family: $sans-serif;
+        font-size: 1.15rem;
+        line-height: 0;
+        margin: 0.35rem 0.6rem 0 0;
+
+        a {
+            color: $clr-font-400;
+            text-decoration: none;
+            font-weight: 700;
+
+            &:hover,
+            &:focus {
+                color: $clr-primary-400;
+            }
+        }
+    }
+
+    // Add "Staff" word to registered users
+    .staff {
+        > article {
+            > .comment-header {
+                .comment-author {
+                    &::after {
+                        content: "Staff";
+                        font-size: 70%;
+                        padding: 0.3rem 0.6rem 0.05rem 0.6rem;
+                        margin-left: 0.2rem;
+                        background-color: $clr-primary-400;
+                        color: $white;
+                        border-radius: $border-radius;
+                        position: relative;
+                        top: -0.13rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .comment-meta {
+        a {
+            text-decoration: none;
+            color: $clr-font-400;
+            font-size: 80%;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .comment-content {
+        clear: both;
+        padding: 0.5rem 1rem;
 
         ul > li {
             list-style-type: disc;
         }
+    }
+
+    .comment-reply {
+        padding: 1rem;
+
+        a {
+            text-decoration: none;
+            padding: 0.15rem 0.65rem;
+            border: 1px solid $clr-primary-400;
+            border-radius: $border-radius;
+            font-weight: 400;
+
+            &:hover,
+            &:focus {
+                background-color: $clr-primary-400;
+                color: $white;
+            }
+        }
+    }
 }
 
 .comment-respond {
+    margin-top: $margin_4x;
+}
 
-    .comment-reply-title {
-        font-size: 22px;
-        font-weight: 700;
-    }
+.comment-respond,
+.entry-comments,
+.entry-pings {
+    margin-bottom: 40px;
+}
 
-    .comment-form {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 0 $grid-gap;
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+    width: 50%;
+}
 
-        a {
-            font-weight: 400;
-        }
-    }
-
-    .comment-form-comment,
-    .comment-form-cookies-consent {
-        grid-column: 1/-1;
-    }
-
-    .comment-form-cookies-consent {
-        display: flex;
-        flex-flow: row nowrap;
-
-        input {
-            max-width: 14px;
-        }
-    }
-
-    label {
-        display: block;
-        margin-right: 12px;
-    }
+.comment-respond label {
+    display: block;
+    margin-right: 12px;
 }
 
 .entry-pings .reply {
-  display: none;
+    display: none;
 }
 
 .comment-form-cookies-consent label {
-  display: inline;
-  padding-left: 10px;
+    display: inline;
+    padding-left: 10px;
+}
+
+.comment-edit-link {
+    display: none;
 }
