@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   ~~Fix header animation issue when the header is not transparent~~
 -   ~~Better support for Media & Text Gutenberg block~~
 
-### [1.1.1](https://github.com/LuisColome/the-dock/releases/tag/v1.1.1) - 2022-02-27
+### [1.1.0](https://github.com/LuisColome/the-dock/releases/tag/v1.1.0) - 2022-02-27
 
 #### Added
 
