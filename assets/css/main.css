@@ -1918,9 +1918,16 @@ figure {
   display: none;
 }
 
+.comment-form-cookies-consent {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
+.comment-form-cookies-consent input {
+  width: 1rem;
+}
 .comment-form-cookies-consent label {
-  display: inline;
-  padding-left: 10px;
+  font-size: 1rem;
 }
 
 .comment-edit-link {
