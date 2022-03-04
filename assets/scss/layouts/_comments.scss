@@ -2,84 +2,191 @@
 
 // Comments
 
-/* Entry Comments
+/* Entry Comments 
 --------------------------------------------- */
-
-.comment-respond,
-.entry-comments,
-.entry-pings {
-  margin-bottom: 40px;
-}
-
-.comment-list {
-
-    li {
-        padding: 40px 0 0 30px;
+.entry-comments {
+    // Remove list styles
+    ol,
+    ul {
+        list-style: none;
     }
 
-    .depth-1 {
+    .comment-list {
         padding-left: 0;
+
+        // Standarize the list spacing on comments.
+        ul.children {
+            padding-left: 2rem;
+        }
+
+        // Separate comments vertically.
+        li {
+            margin: 2rem 0 0 0;
+        }
     }
-}
 
-.comment-header {
-    margin-bottom: 30px;
-
-    p {
-        margin-bottom: 0;
+    // General style for a comments (comment box)
+    .comment {
+        article {
+            border: 1px solid $grey_4;
+            border-radius: $border-radius;
+            padding: 1rem 2rem;
+        }
     }
-}
 
-.comment-content {
-    clear: both;
+    // Comment header
+    // ----------------------------------------------------------------------------
+    .comment-header {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        align-items: baseline;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .comment-author {
+        width: max-content;
+        font-family: $sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: $clr-font-400;
+        text-transform: uppercase;
+        line-height: 0;
+        margin: 0;
+
+        a {
+            text-decoration: none;
+            color: $clr-primary-400;
+
+            // &:hover,
+            // &:focus {
+            // }
+        }
+
+        .says {
+            display: none;
+        }
+    }
+
+    // Add "Staff" word to registered users
+    .staff {
+        > article {
+            > .comment-header {
+                .comment-author {
+                    display: flex;
+                    align-items: baseline;
+                    gap: 1rem;
+
+                    &::after {
+                        content: "Staff";
+                        position: relative;
+                        // top: -0.13rem;
+                        font-size: 75%;
+                        line-height: 1;
+                        text-transform: none;
+                        color: $white;
+                        background-color: $clr-primary-400;
+                        padding: 0.2rem 0.75rem;
+                        margin-left: 0.2rem;
+                        border-radius: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    .comment-meta {
+        a {
+            text-decoration: none;
+            color: $clr-font-400;
+            font-size: 80%;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Comment Content
+    // ----------------------------------------------------------------------------
+    .comment-content {
+        clear: both;
+        // padding: 0.5rem 1rem;
 
         ul > li {
             list-style-type: disc;
         }
+    }
+
+    // Comment reply button.
+    .comment-reply {
+        line-height: 1;
+        margin-bottom: 1rem;
+
+        a {
+            position: relative;
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                transform: translateY(2px);
+                @include transition;
+                width: 100%;
+                height: 2px;
+                background-color: $clr-primary-400;
+            }
+
+            &:hover {
+                &::before {
+                    transform: translateY(4px);
+                    opacity: 0;
+                }
+            }
+        }
+    }
 }
 
 .comment-respond {
+    margin-top: $margin_4x;
+}
 
-    .comment-reply-title {
-        font-size: 22px;
-        font-weight: 700;
-    }
+.comment-respond,
+.entry-comments,
+.entry-pings {
+    margin-bottom: 40px;
+}
 
-    .comment-form {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 0 $grid-gap;
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+    width: 50%;
+}
 
-        a {
-            font-weight: 400;
-        }
-    }
-
-    .comment-form-comment,
-    .comment-form-cookies-consent {
-        grid-column: 1/-1;
-    }
-
-    .comment-form-cookies-consent {
-        display: flex;
-        flex-flow: row nowrap;
-
-        input {
-            max-width: 14px;
-        }
-    }
-
-    label {
-        display: block;
-        margin-right: 12px;
-    }
+.comment-respond label {
+    display: block;
+    margin-right: 12px;
 }
 
 .entry-pings .reply {
-  display: none;
+    display: none;
 }
 
 .comment-form-cookies-consent label {
-  display: inline;
-  padding-left: 10px;
+    display: inline;
+    padding-left: 10px;
+}
+
+.comment-edit-link {
+    display: none;
 }

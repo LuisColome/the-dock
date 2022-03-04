@@ -219,3 +219,25 @@ function custom_post_meta_filter( $post_meta ) {
 
 }
 add_filter( 'genesis_entry_header', 'custom_post_meta_filter', 8 );
+
+/* Comments
+------------------------------------------------------------------------------ */
+
+/**
+ * Remove "Says" from comments.
+ * @link https://mundogenesis.com/tutoriales-genesis/elminar-el-dicede-los-comentarios-en-genesis/
+ */
+function lcm_remove_comment_says_text() {
+    return ' ';
+}
+add_filter( 'comment_author_says_text', 'lcm_remove_comment_says_text' );
+
+/**
+ * Remove time from comments leaving only the date.
+ * @link https://robincornett.com/remove-comment-time-genesis/
+ * @return string
+ */
+function lcm_remove_comment_time() {
+	return get_comment_date();
+}
+add_filter( 'genesis_markup_comment-time-link_content', 'lcm_remove_comment_time' );
