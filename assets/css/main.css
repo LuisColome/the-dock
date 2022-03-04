@@ -1797,19 +1797,23 @@ figure {
 .entry-comments .comment-list {
   padding-left: 0;
 }
+.entry-comments .comment-list ul.children {
+  padding-left: 2rem;
+}
 .entry-comments .comment-list li {
-  padding: 2rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 .entry-comments .comment article {
-  border: 1px solid #ededed;
+  border: 1px solid #e0e0e0;
   border-radius: 10px;
+  padding: 1rem 2rem;
 }
 .entry-comments .comment-header {
   display: flex;
   flex-flow: row nowrap;
-  align-items: first baseline;
-  padding: 0.5rem 1rem;
-  background-color: #ededed;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: baseline;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -1819,28 +1823,36 @@ figure {
 .entry-comments .comment-author {
   width: max-content;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #423d33;
+  text-transform: uppercase;
   line-height: 0;
-  margin: 0.35rem 0.6rem 0 0;
+  margin: 0;
 }
 .entry-comments .comment-author a {
-  color: #423d33;
   text-decoration: none;
-  font-weight: 700;
-}
-.entry-comments .comment-author a:hover, .entry-comments .comment-author a:focus {
   color: #df6c20;
+}
+.entry-comments .comment-author .says {
+  display: none;
+}
+.entry-comments .staff > article > .comment-header .comment-author {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
 }
 .entry-comments .staff > article > .comment-header .comment-author::after {
   content: "Staff";
-  font-size: 70%;
-  padding: 0.3rem 0.6rem 0.05rem 0.6rem;
-  margin-left: 0.2rem;
-  background-color: #df6c20;
-  color: white;
-  border-radius: 10px;
   position: relative;
-  top: -0.13rem;
+  font-size: 75%;
+  line-height: 1;
+  text-transform: none;
+  color: white;
+  background-color: #df6c20;
+  padding: 0.2rem 0.75rem;
+  margin-left: 0.2rem;
+  border-radius: 100px;
 }
 .entry-comments .comment-meta a {
   text-decoration: none;
@@ -1852,24 +1864,33 @@ figure {
 }
 .entry-comments .comment-content {
   clear: both;
-  padding: 0.5rem 1rem;
 }
 .entry-comments .comment-content ul > li {
   list-style-type: disc;
 }
 .entry-comments .comment-reply {
-  padding: 1rem;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 .entry-comments .comment-reply a {
+  position: relative;
   text-decoration: none;
-  padding: 0.15rem 0.65rem;
-  border: 1px solid #df6c20;
-  border-radius: 10px;
-  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
-.entry-comments .comment-reply a:hover, .entry-comments .comment-reply a:focus {
+.entry-comments .comment-reply a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  transform: translateY(2px);
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  height: 2px;
   background-color: #df6c20;
-  color: white;
+}
+.entry-comments .comment-reply a:hover::before {
+  transform: translateY(4px);
+  opacity: 0;
 }
 
 .comment-respond {
