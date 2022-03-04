@@ -135,7 +135,7 @@ add_filter( 'post_class', 'ea_clean_post_classes', 5 );
  * Staff comment class
  * @author Bill Erickson
  */
- function ea_staff_comment_class( $classes, $class, $comment_id, $comment, $post_id ) {
+function ea_staff_comment_class( $classes, $class, $comment_id, $comment, $post_id ) {
 	if( empty( $comment->user_id ) )
 		return $classes;
 	$staff_roles = array( 'comment_manager', 'author', 'editor', 'administrator' );
@@ -147,6 +147,7 @@ add_filter( 'post_class', 'ea_clean_post_classes', 5 );
 }
 add_filter( 'comment_class', 'ea_staff_comment_class', 10, 5 );
 
+
 /**
  * Remove avatars from comment list
  *
@@ -157,6 +158,7 @@ function lcm_remove_avatars_from_comments( $avatar ) {
 }
 add_filter( 'get_avatar', 'lcm_remove_avatars_from_comments' );
 
+
 /**
  * Comment form, button class
  * @author Bill Erickson
@@ -166,6 +168,7 @@ function ea_comment_form_button_class( $args ) {
 	return $args;
 }
 add_filter( 'comment_form_defaults', 'ea_comment_form_button_class' );
+
 
 /**
  * Excerpt More
@@ -178,4 +181,3 @@ add_filter( 'excerpt_more', 'lcm_excerpt_more' );
 
 // Remove inline CSS for emoji
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
-
