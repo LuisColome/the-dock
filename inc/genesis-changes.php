@@ -237,7 +237,7 @@ add_filter( 'comment_author_says_text', 'lcm_remove_comment_says_text' );
  * @link https://robincornett.com/remove-comment-time-genesis/
  * @return string
  */
-// function lcm_remove_comment_time() {
-// 	return get_comment_date();
-// }
-// add_filter( 'genesis_markup_comment-time-link_content', 'lcm_remove_comment_time' );
+function lcm_remove_comment_time() {
+	return get_comment_date();
+}
+add_filter( 'genesis_markup_comment-time-link_content', 'lcm_remove_comment_time' );
