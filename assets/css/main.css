@@ -1231,7 +1231,7 @@ figure {
     top: 0;
     right: -100%;
     background: #090c10;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
     padding: 105px 32px 0;
     overflow: auto;
     z-index: 997;
