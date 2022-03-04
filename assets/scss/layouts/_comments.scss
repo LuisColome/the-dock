@@ -182,9 +182,17 @@
     display: none;
 }
 
-.comment-form-cookies-consent label {
-    display: inline;
-    padding-left: 10px;
+.comment-form-cookies-consent {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+
+    input {
+        width: 1rem;
+    }
+    label {
+        font-size: 1rem;
+    }
 }
 
 .comment-edit-link {
