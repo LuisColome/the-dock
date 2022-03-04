@@ -154,12 +154,12 @@
         // Chevron arrow on desktop screens
         @include media(">=mobile_menu") {
             top: 50%;
-            transform: translateY(-45%);
-            right: 9px;
+            transform: translateY(-50%);
+            right: 11px;
             @include icon-position(14px);
 
             &.expanded {
-                transform: translateY(-45%);
+                transform: translateY(-50%);
             }
         }
     }

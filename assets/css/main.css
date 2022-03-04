@@ -1115,13 +1115,13 @@ figure {
 @media (min-width: 768px) {
   .nav-menu .submenu-expand {
     top: 50%;
-    transform: translateY(-45%);
-    right: 9px;
+    transform: translateY(-50%);
+    right: 11px;
     width: 14px;
     height: 14px;
   }
   .nav-menu .submenu-expand.expanded {
-    transform: translateY(-45%);
+    transform: translateY(-50%);
   }
 }
 @media (min-width: 769px) {
