@@ -15,6 +15,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   ~~Fix header animation issue when the header is not transparent~~
 -   ~~Better support for Media & Text Gutenberg block~~
 
+### [1.2.0](https://github.com/LuisColome/the-dock/releases/tag/v1.2.0) - 2022-03-04
+
+#### Added
+
+-   Added a base structure for styling comments
+
+#### Changed
+
+-   Update comments on WordPress-cleanup.php file
+-   Update comments style for a simpler version
+-   Change navigation arrow down for items with submenu
+
+#### Fixed
+
+-   Fix a version mistake on changelog
+
+#### Removed
+
+-   Remove time from comments
+
 ### [1.1.0](https://github.com/LuisColome/the-dock/releases/tag/v1.1.0) - 2022-02-27
 
 #### Added
