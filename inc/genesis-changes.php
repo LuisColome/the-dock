@@ -97,20 +97,31 @@ add_filter( 'genesis_search_form', 'ea_search_form' );
  * Disable customizer theme settings
  *
  */
- function ea_disable_customizer_theme_settings( $config ) {
-	// $remove = [ 'genesis_header', 'genesis_single', 'genesis_archives', 'genesis_footer' ];
-	$remove = [ 'genesis_footer' ];
-	foreach( $remove as $item ) {
-		unset( $config['genesis']['sections'][ $item ] );
-	}
-	return $config;
-}
+//  function ea_disable_customizer_theme_settings( $config ) {
+// 	// $remove = [ 'genesis_header', 'genesis_single', 'genesis_archives', 'genesis_footer' ];
+// 	$remove = [ 'genesis_footer' ];
+// 	foreach( $remove as $item ) {
+// 		unset( $config['genesis']['sections'][ $item ] );
+// 	}
+// 	return $config;
+// }
 //add_filter( 'genesis_customizer_theme_settings_config', 'ea_disable_customizer_theme_settings' );
+
+/**
+ * Display author box on single posts
+ * 
+ * @since 1.2.0
+ */
+add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
+
+//* Display author box on archive pages
+add_filter( 'get_the_author_genesis_author_box_archive', '__return_true' );
+
 
 /**
  * Modifies size of the Gravatar in the author box.
  *
- * @since 2.2.3
+ * @since 1.0.0
  *
  * @param int $size Original icon size.
  * @return int Modified icon size.

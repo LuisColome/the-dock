@@ -1,4 +1,5 @@
 @use "abstracts" as *;
+@use "../vendor/include-media" as *;
 
 /* Entry Meta
 ----------------------------------------------------------------------------- */
@@ -144,23 +145,51 @@
 --------------------------------------------- */
 .author-box {
     position: relative;
-    padding-left: 120px;
-    min-height: 120px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
 
-    .archive & {
-        grid-column: 1 / -1;
-        max-width: $content-width;
-        margin: 0 auto $grid-gap;
+    @include media(">=small") {
+        // We define the width of the image column based on the avatar size set up in genesis-changes.php
+        grid-template-columns: 90px 1fr;
+        // grid-template-rows: repeat(3, 30px);
     }
 
-    .author-box-title {
-        @include font-sizes(22px, 28px);
+    max-width: $content-width;
+    margin: 4rem 0 6rem 0;
+
+    // Clean the default content
+    &::before,
+    &:after {
+        content: none;
     }
 
     .avatar {
-        border-radius: 50%;
-        position: absolute;
-        top: 0;
-        left: 0;
+        border-radius: $border-radius;
+        @include media(">=small") {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .author-box-title {
+        font-size: clamp(1.6rem, 1.2rem + 1vw, 1.85rem);
+        margin: 0;
+        @include media(">=small") {
+            grid-column: 2 / 3;
+        }
+    }
+
+    .author-box-content {
+        margin: 0;
+        @include media(">=small") {
+            grid-column: 2 / 3;
+        }
+    }
+
+    // Box author from author archive pages.
+    .archive & {
+        margin: 4rem 0;
     }
 }

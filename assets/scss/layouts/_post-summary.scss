@@ -25,7 +25,7 @@
 
 .post-summary__image {
     display: block;
-    @include media(">phablet") {
+    @include media(">small") {
         margin-bottom: 12px;
     }
 }
