@@ -51,13 +51,17 @@ remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
 // Removes navigation.
 remove_theme_support( 'genesis-menus' );
 
+// Removes custom navigation
+remove_action( 'genesis_header', 'ea_site_header', 11 );
+
 // Removes site footer elements.
 remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
 
-// Removes custom HTML footer
-remove_action( 'genesis_footer', 'ea_site_footer' );
+// Removes custom HTML footer and footer menu
+remove_action( 'genesis_footer', 'lcm_site_footer', 12 );
+remove_action( 'genesis_footer', 'lcm_footer_menu', 8 );
 
 // Runs the Genesis loop.
 genesis();
