@@ -2,14 +2,16 @@
 
 @use "../vendor/include-media.scss" as *;
 
-// Include Media Breakpoints 
+// Include Media Breakpoints
 $breakpoints: (
-  'phone' : 320px,
-  'phablet' : 600px,
-  'tablet' : 768px, // required for include-media
-  'mobile_menu' : 768px,
-  'medium' : 960px,
-  'large' : 1200px,
-  'desktop' : $grid-width + $grid-gap, // required for include-media
-  'content-width' : $content-width + $grid-gap,
+    "phone": 320px,
+    "small": 600px,
+    "tablet": 768px,
+    // required for include-media
+    "mobile_menu": 768px,
+    "medium": 960px,
+    "large": 1200px,
+    "desktop": $grid-width + $grid-gap,
+    // required for include-media
+    "content-width": $content-width + $grid-gap,
 );
