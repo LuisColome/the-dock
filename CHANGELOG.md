@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Fix text domains
 -   Add support for custom Gutenberg gradients.
 -   Style Contact form 7 as the general button styles
+-   Support for portfolio CPT
+-   Support for Team CPT
 -   ~~Fix header animation issue when the header is not transparent~~
 -   ~~Better support for Media & Text Gutenberg block~~
 
