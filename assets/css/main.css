@@ -1765,27 +1765,49 @@ figure {
 --------------------------------------------- */
 .author-box {
   position: relative;
-  padding-left: 120px;
-  min-height: 120px;
-}
-.archive .author-box {
-  grid-column: 1/-1;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
   max-width: 768px;
-  margin: 0 auto 32px;
+  margin: 4rem 0 6rem 0;
 }
-.author-box .author-box-title {
-  font-size: 22px;
-}
-@media (min-width: 768px) {
-  .author-box .author-box-title {
-    font-size: 28px;
+@media (min-width: 600px) {
+  .author-box {
+    grid-template-columns: 90px 1fr;
   }
 }
+.author-box::before, .author-box:after {
+  content: none;
+}
 .author-box .avatar {
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  border-radius: 10px;
+}
+@media (min-width: 600px) {
+  .author-box .avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.author-box .author-box-title {
+  font-size: clamp(1.6rem, 1.2rem + 1vw, 1.85rem);
+  margin: 0;
+}
+@media (min-width: 600px) {
+  .author-box .author-box-title {
+    grid-column: 2/3;
+  }
+}
+.author-box .author-box-content {
+  margin: 0;
+}
+@media (min-width: 600px) {
+  .author-box .author-box-content {
+    grid-column: 2/3;
+  }
+}
+.archive .author-box {
+  margin: 4rem 0;
 }
 
 /* Entry Comments 
