@@ -50,6 +50,10 @@
             width: 100vw;
             padding: 0 $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
 
+            &.wp-block-image {
+                padding: 0;
+            }
+
             &[class^="wp-block-kadence"] {
                 padding: 0;
                 margin-top: 0;
