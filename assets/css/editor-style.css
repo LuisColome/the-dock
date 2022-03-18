@@ -1287,7 +1287,7 @@ table {
 /* Button
 --------------------------------------------- */
 .wp-block-button__link {
-  border: 2px solid #df6c20;
+  border: 2px solid brand-color(orange);
   border-radius: 3px;
   font-size: 20px;
   font-weight: 600;
@@ -1305,21 +1305,21 @@ table {
   color: white;
 }
 .wp-block-button__link:not(.has-background) {
-  background-color: #df6c20;
+  background-color: brand-color(orange);
 }
 .wp-block-button__link:not(.has-background):hover, .wp-block-button__link:not(.has-background):focus {
-  border: 2px solid #b3571a;
-  background-color: #b3571a;
+  border: 2px solid brand-color(orange, "darken");
+  background-color: brand-color(orange, "darken");
 }
 .is-style-outline > .wp-block-button__link:not(.has-text-color), .is-style-outline .wp-block-button__link {
-  border: 2px solid #df6c20;
-  color: #df6c20;
+  border: 2px solid brand-color(orange);
+  color: brand-color(orange);
   background-color: transparent;
   padding: 0.5em 1.5em;
 }
 .is-style-outline > .wp-block-button__link:not(.has-text-color):hover, .is-style-outline > .wp-block-button__link:not(.has-text-color):focus, .is-style-outline .wp-block-button__link:hover, .is-style-outline .wp-block-button__link:focus {
-  border: 2px solid #b3571a;
-  background-color: #b3571a;
+  border: 2px solid brand-color(orange, "darken");
+  background-color: brand-color(orange, "darken");
   color: white;
 }
 .is-style-outline > .wp-block-button__link.has-text-color.has-orange-color {
@@ -1389,78 +1389,78 @@ table {
   color: #df6c20;
 }
 .wp-block-button__link.has-orange-background-color {
-  background-color: #df6c20;
-  border-color: #df6c20;
+  background-color: brand-color(orange);
+  border-color: brand-color(orange);
 }
 .wp-block-button__link.has-orange-background-color:hover, .wp-block-button__link.has-orange-background-color:focus {
-  background-color: #b3571a;
-  border-color: #b3571a;
+  background-color: brand-color(orange, "darken");
+  border-color: brand-color(orange, "darken");
 }
 .wp-block-button__link.has-light-orange-color:hover, .wp-block-button__link.has-light-orange-color:focus {
   color: #de8873;
 }
 .wp-block-button__link.has-light-orange-background-color {
-  background-color: #de8873;
-  border-color: #de8873;
+  background-color: brand-color(light-orange);
+  border-color: brand-color(light-orange);
 }
 .wp-block-button__link.has-light-orange-background-color:hover, .wp-block-button__link.has-light-orange-background-color:focus {
-  background-color: #d46549;
-  border-color: #d46549;
+  background-color: brand-color(light-orange, "darken");
+  border-color: brand-color(light-orange, "darken");
 }
 .wp-block-button__link.has-red-color:hover, .wp-block-button__link.has-red-color:focus {
   color: #cf3033;
 }
 .wp-block-button__link.has-red-background-color {
-  background-color: #cf3033;
-  border-color: #cf3033;
+  background-color: brand-color(red);
+  border-color: brand-color(red);
 }
 .wp-block-button__link.has-red-background-color:hover, .wp-block-button__link.has-red-background-color:focus {
-  background-color: #a52729;
-  border-color: #a52729;
+  background-color: brand-color(red, "darken");
+  border-color: brand-color(red, "darken");
 }
 .wp-block-button__link.has-grey-color:hover, .wp-block-button__link.has-grey-color:focus {
   color: #f2f3f8;
 }
 .wp-block-button__link.has-grey-background-color {
-  background-color: #f2f3f8;
-  border-color: #f2f3f8;
+  background-color: brand-color(grey);
+  border-color: brand-color(grey);
 }
 .wp-block-button__link.has-grey-background-color:hover, .wp-block-button__link.has-grey-background-color:focus {
-  background-color: #d1d4e6;
-  border-color: #d1d4e6;
+  background-color: brand-color(grey, "darken");
+  border-color: brand-color(grey, "darken");
 }
 .wp-block-button__link.has-dark-grey-color:hover, .wp-block-button__link.has-dark-grey-color:focus {
   color: #616161;
 }
 .wp-block-button__link.has-dark-grey-background-color {
-  background-color: #616161;
-  border-color: #616161;
+  background-color: brand-color(dark-grey);
+  border-color: brand-color(dark-grey);
 }
 .wp-block-button__link.has-dark-grey-background-color:hover, .wp-block-button__link.has-dark-grey-background-color:focus {
-  background-color: #474747;
-  border-color: #474747;
+  background-color: brand-color(dark-grey, "darken");
+  border-color: brand-color(dark-grey, "darken");
 }
 .wp-block-button__link.has-orange-grey-color:hover, .wp-block-button__link.has-orange-grey-color:focus {
   color: #26231c;
 }
 .wp-block-button__link.has-orange-grey-background-color {
-  background-color: #26231c;
-  border-color: #26231c;
+  background-color: brand-color(orange-grey);
+  border-color: brand-color(orange-grey);
 }
 .wp-block-button__link.has-orange-grey-background-color:hover, .wp-block-button__link.has-orange-grey-background-color:focus {
-  background-color: #090807;
-  border-color: #090807;
+  background-color: brand-color(orange-grey, "darken");
+  border-color: brand-color(orange-grey, "darken");
 }
 .wp-block-button__link.has-almost-black-color:hover, .wp-block-button__link.has-almost-black-color:focus {
   color: #090c10;
 }
 .wp-block-button__link.has-almost-black-background-color {
-  background-color: #090c10;
-  border-color: #090c10;
+  background-color: brand-color(almost-black);
+  border-color: brand-color(almost-black);
 }
 .wp-block-button__link.has-almost-black-background-color:hover, .wp-block-button__link.has-almost-black-background-color:focus {
-  background-color: black;
-  border-color: black;
+  background-color: brand-color(almost-black, "darken");
+  border-color: brand-color(almost-black, "darken");
 }
 
 /* Group
