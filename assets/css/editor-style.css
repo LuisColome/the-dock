@@ -620,6 +620,22 @@ figure {
   background-color: #090c10;
 }
 
+.has-white-color {
+  color: white;
+}
+
+.has-white-background-color {
+  background-color: white;
+}
+
+.has-black-color {
+  color: black;
+}
+
+.has-black-background-color {
+  background-color: black;
+}
+
 .site-container p.has-background {
   padding: 1rem 2rem;
 }
@@ -1385,6 +1401,24 @@ table {
   background-color: #090c10;
   color: white;
 }
+.is-style-outline > .wp-block-button__link.has-text-color.has-white-color {
+  border-color: white;
+  color: white;
+}
+.is-style-outline > .wp-block-button__link.has-text-color.has-white-color:hover, .is-style-outline > .wp-block-button__link.has-text-color.has-white-color:focus {
+  border-color: white;
+  background-color: white;
+  color: white;
+}
+.is-style-outline > .wp-block-button__link.has-text-color.has-black-color {
+  border-color: black;
+  color: black;
+}
+.is-style-outline > .wp-block-button__link.has-text-color.has-black-color:hover, .is-style-outline > .wp-block-button__link.has-text-color.has-black-color:focus {
+  border-color: black;
+  background-color: black;
+  color: white;
+}
 .wp-block-button__link.has-orange-color:hover, .wp-block-button__link.has-orange-color:focus {
   color: #df6c20;
 }
@@ -1461,6 +1495,28 @@ table {
 .wp-block-button__link.has-almost-black-background-color:hover, .wp-block-button__link.has-almost-black-background-color:focus {
   background-color: brand-color(almost-black, "darken");
   border-color: brand-color(almost-black, "darken");
+}
+.wp-block-button__link.has-white-color:hover, .wp-block-button__link.has-white-color:focus {
+  color: white;
+}
+.wp-block-button__link.has-white-background-color {
+  background-color: brand-color(white);
+  border-color: brand-color(white);
+}
+.wp-block-button__link.has-white-background-color:hover, .wp-block-button__link.has-white-background-color:focus {
+  background-color: brand-color(white, "darken");
+  border-color: brand-color(white, "darken");
+}
+.wp-block-button__link.has-black-color:hover, .wp-block-button__link.has-black-color:focus {
+  color: black;
+}
+.wp-block-button__link.has-black-background-color {
+  background-color: brand-color(black);
+  border-color: brand-color(black);
+}
+.wp-block-button__link.has-black-background-color:hover, .wp-block-button__link.has-black-background-color:focus {
+  background-color: brand-color(black, "darken");
+  border-color: brand-color(black, "darken");
 }
 
 /* Group
