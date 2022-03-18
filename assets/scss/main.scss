@@ -9,9 +9,7 @@
 @use "base/reset";
 @use "base/base";
 @use "base/typography";
-
-// Components
-@use "components/color-options";
+@use "base/color-options";
 
 // Layouts
 @use "layouts/layout";

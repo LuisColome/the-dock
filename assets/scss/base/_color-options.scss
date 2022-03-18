@@ -1,8 +1,7 @@
 @use "abstracts" as *;
 
-/* Color Options
+/* Gutenberg color ptions for text
 --------------------------------------------- */
-
 @each $name, $color in $brand_colors {
     .has-#{$name}-color {
         color: $color;
@@ -10,15 +9,5 @@
 
     .has-#{$name}-background-color {
         background-color: $color;
-    }
-}
-
-.site-container {
-    p.has-background {
-        padding: $base-margin $margin_2x;
-
-        &.has-box-shadow {
-            box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.4);
-        }
     }
 }

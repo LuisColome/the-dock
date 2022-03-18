@@ -377,6 +377,16 @@ p {
   font-size: 1.75rem !important;
 }
 
+/* Spacing and shadow for Gutenberg paragraphs
+---------------------------------------------------- */
+.site-container p.has-background {
+  padding: 1rem 2rem;
+}
+.site-container p.has-box-shadow {
+  padding: 1rem 2rem;
+  box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.4);
+}
+
 /* Headings
 --------------------------------------------- */
 h1,
@@ -562,7 +572,7 @@ figure {
   margin-bottom: 0 !important;
 }
 
-/* Color Options
+/* Gutenberg color ptions for text
 --------------------------------------------- */
 .has-orange-color {
   color: #df6c20;
@@ -634,13 +644,6 @@ figure {
 
 .has-black-background-color {
   background-color: black;
-}
-
-.site-container p.has-background {
-  padding: 1rem 2rem;
-}
-.site-container p.has-background.has-box-shadow {
-  box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Structure and Layout

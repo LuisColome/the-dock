@@ -83,6 +83,20 @@ p {
     font-size: 1.75rem !important;
 }
 
+/* Spacing and shadow for Gutenberg paragraphs
+---------------------------------------------------- */
+.site-container {
+    p {
+        &.has-background {
+            padding: $base-margin $margin_2x;
+        }
+        &.has-box-shadow {
+            padding: $base-margin $margin_2x;
+            box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+
 /* Headings
 --------------------------------------------- */
 
