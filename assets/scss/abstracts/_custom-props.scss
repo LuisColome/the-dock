@@ -1,0 +1,14 @@
+@use "colors" as *;
+@use "mixins" as *;
+
+// Colors CSS custom properties
+// ----------------------------------------------
+:root {
+    @each $color, $value in $brand_colors {
+        --clr-#{$color}: #{$value};
+    }
+
+    @each $color, $value in $colors {
+        --clr-#{$color}: #{$value};
+    }
+}

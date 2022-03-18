@@ -2,10 +2,10 @@
 @use "abstracts/colors";
 @use "abstracts/mixins";
 @use "abstracts/breakpoints";
-@use "abstracts/functions";
 @use "abstracts/variables";
 
 // Base
+@use "abstracts/custom-props";
 @use "base/reset";
 @use "base/base";
 @use "base/typography";

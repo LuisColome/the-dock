@@ -3,8 +3,10 @@
 @use "colors" as *;
 @use "../vendor/include-media" as *;
 
-//Mixins
+// Mixins
+// ------------------------------------------------
 
+// Base styles
 @mixin base-style {
     color: $clr-font-400;
     font-family: $sans-serif;
@@ -19,14 +21,12 @@
     }
 }
 
+// Transition time
 @mixin transition {
     transition: all 0.2s ease-in-out;
 }
 
-/**
- * Button Reset
- *
- */
+// Button Reset
 @mixin button-reset() {
     background: transparent;
     border: none;
@@ -37,10 +37,8 @@
     cursor: pointer;
 }
 
-/**
- * Margin, No Edge
- * Removes left margin from first item, right margin from last item
- */
+// Margin, No Edge
+// Removes left margin from first item, right margin from last item
 @mixin margin-no-edge($margin) {
     margin: $margin;
 
@@ -53,10 +51,7 @@
     }
 }
 
-/**
- * Icon Position
- *
- */
+// Icon Position
 @mixin icon-position($icon_size, $container_size: null) {
     width: $icon_size;
     height: $icon_size;
@@ -66,10 +61,8 @@
     }
 }
 
-/**
- * Block Cover
- * Creates a block that covers the full width/height of parent div. Typically used on a :before pseudo element
- */
+// Block Cover
+// Creates a block that covers the full width/height of parent div. Typically used on a :before pseudo element
 @mixin block-cover() {
     content: "";
     display: block;
@@ -81,10 +74,7 @@
     z-index: 1;
 }
 
-/**
- * Placeholder Color
- *
- */
+// Placeholder Color
 @mixin placeholder-color($color) {
     ::-moz-placeholder {
         color: $color;
@@ -109,10 +99,7 @@
     }
 }
 
-/**
- * Clearfix
- *
- */
+// Clearfix
 @mixin clearfix() {
     &:after {
         content: "";
@@ -121,10 +108,7 @@
     }
 }
 
-/**
- * Font Sizes
- *
-**/
+// Font Sizes
 @mixin font-sizes($base: null, $tablet: null, $medium: null, $large: null) {
     @if ($base) {
         font-size: $base;
@@ -149,10 +133,7 @@
     }
 }
 
-/**
- * Columns
- *
- */
+// Columns
 @mixin columns($columns, $grid_item_element: article, $gap: null) {
     @if ($gap == null) {
         $gap: $grid-gap;
