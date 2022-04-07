@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### [Unreleased]
 
 -   Fix an issue with margins on blocks with full-width alignment
--   Live Demo (work in progress)
+-   ~~Live Demo~~
 -   Fix text domains
 -   Add support for custom Gutenberg gradients.
 -   Style Contact form 7 as the general button styles
@@ -16,6 +16,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Support for Team CPT
 -   ~~Fix header animation issue when the header is not transparent~~
 -   ~~Better support for Media & Text Gutenberg block~~
+
+### [1.2.1](https://github.com/LuisColome/the-dock/releases/tag/v1.2.1) - 2022-07-04
+
+#### Added
+
+-   CSS custom properties for colors.
+
+#### Changed
+
+-   New design for WordPress Login screen.
+
+#### Removed
+
+-   Depracated Brand colors function
+-   Sass color variables (using map color instead).
 
 ### [1.2.0](https://github.com/LuisColome/the-dock/releases/tag/v1.2.0) - 2022-03-04
 
