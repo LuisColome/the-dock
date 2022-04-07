@@ -15,10 +15,10 @@ textarea:focus,
 }
 
 a {
-    color: $clr-primary-400;
+    color: var(--clr-primary-400);
     font-weight: 600;
     text-decoration: underline;
-    text-decoration-color: $clr-secondary-400;
+    text-decoration-color: var(--clr-secondary-400);
     @include transition;
 
     &:hover {
@@ -41,7 +41,7 @@ hr {
     border-collapse: collapse;
     border-bottom: 1px solid currentColor;
     clear: both;
-    color: $grey_3;
+    color: var(--clr-grey-300);
     margin: 1.65em auto;
 }
 
@@ -106,7 +106,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: $clr-font-400;
+    color: var(--clr-headings-400);
     font-family: $heading-font, $sans-serif;
     font-weight: 600;
     line-height: 1.2;
@@ -123,10 +123,10 @@ h6 {
     }
 
     a {
-        color: $clr-font-400;
+        color: var(--clr-font-400);
 
         &:hover {
-            color: $clr-primary-400;
+            color: var(--clr-primary-400);
             text-decoration: none;
         }
     }

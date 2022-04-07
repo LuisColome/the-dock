@@ -20,22 +20,24 @@ $brand_colors: (
     grey: hsl(230, 30%, 96%),
     dark-grey: hsl(0, 0%, 38%),
     orange-grey: hsl(42, 15%, 13%),
-    almost-black: hsl(214, 28%, 5%),
+    black: hsl(214, 28%, 5%),
+    white: hsl(0, 0%, 100%),
 );
 
 // Colors
 $colors: (
+    //
     // Mains colors
     primary-300: hsl(24, 75%, 60%),
     primary-400: hsl(24, 75%, 50%),
-    primary-500: hsl(24, 75%, 40%),
+    primary-500: hsl(24, 75%, 46%),
     secondary-300: hsl(12, 62%, 80%),
     secondary-400: hsl(12, 62%, 66%),
     secondary-500: hsl(12, 62%, 50%),
-    // Utility colors
-    highlight-400: hsl(359, 62%, 50%),
-    font-400: hsl(40, 13%, 23%),
-    border-400: hsl(0, 0%, 88%),
+    // tertiary-300: hsl(359, 62%, 60%),
+    // tertiary-400: hsl(359, 62%, 50%),
+    // tertiary-500: hsl(359, 62%, 40%),
+    //
     // Greys
     grey-100: hsl(0, 0%, 95%),
     grey-200: hsl(0, 0%, 90%),
@@ -46,44 +48,64 @@ $colors: (
     grey-700: hsl(0, 0%, 46%),
     grey-800: hsl(0, 0%, 32%),
     grey-900: hsl(0, 0%, 15%),
+    //
+    // Font and utility colors
+    font-400: hsl(40, 13%, 23%),
+    headings-400: hsl(40, 13%, 23%),
+    border-400: hsl(0, 0%, 88%),
+    //
     // Menu color variables
     submenu-bg: hsl(42, 15%, 13%),
     submenu-bg-hover: hsl(42, 15%, 23%),
     mobile-menu-bg: hsl(214, 28%, 5%),
-    // Toggle
+    //
+    // Toggle menu
     toggle-menu-bg: white,
+    // toggle-menu-bg-active: white,
     toggle-menu-bars: hsl(40, 13%, 23%),
     toggle-menu-bars-active: hsl(24, 75%, 50%),
+    //
+    // Buttons
+    button-bg-300: hsl(24, 75%, 60%),
+    button-bg-400: hsl(24, 75%, 50%),
+    button-bg-500: hsl(24, 75%, 40%),
+    button-border-300: hsl(24, 75%, 60%),
+    button-border-400: hsl(24, 75%, 50%),
+    button-border-500: hsl(24, 75%, 40%),
+    button-text: hsl(24, 75%, 50%),
+    //
     // Social colors
     facebook: hsl(221, 44%, 41%),
     twitter: hsl(195, 100%, 47%),
-    pinterest: hsl(358, 73%, 46%)
+    pinterest: hsl(358, 73%, 46%),
+    linkedin: hsl(199, 85%, 36%),
+    instagram: hsl(276, 51%, 47%)
 );
 
 // General color variables
-$clr-primary-300: hsl(24, 75%, 60%);
-$clr-primary-400: hsl(24, 75%, 50%);
-$clr-primary-500: hsl(24, 75%, 40%);
-$clr-secondary-300: hsl(12, 62%, 80%);
-$clr-secondary-400: hsl(12, 62%, 66%);
-$clr-secondary-500: hsl(12, 62%, 50%);
-$clr-highlight-400: hsl(359, 62%, 50%);
-$clr-font-400: hsl(40, 13%, 23%);
-$clr-border-400: $grey_4;
+// $clr-primary-300: hsl(24, 75%, 60%);
+// $clr-primary-400: hsl(24, 75%, 50%);
+// $clr-primary-500: hsl(24, 75%, 40%);
+// $clr-secondary-300: hsl(12, 62%, 80%);
+// $clr-secondary-400: hsl(12, 62%, 66%);
+// $clr-secondary-500: hsl(12, 62%, 50%);
+// $clr-highlight-400: hsl(359, 62%, 50%);
+// $clr-font-400: hsl(40, 13%, 23%);
+// $clr-border-400: $grey_4;
 
 // Menu color variables
-$clr-submenu-bg: hsl(42, 15%, 13%);
-$clr-submenu-bg-hover: hsl(42, 15%, 23%);
-$clr-mobile-menu-bg: hsl(214, 28%, 5%);
+// $clr-submenu-bg: hsl(42, 15%, 13%);
+// $clr-submenu-bg-hover: hsl(42, 15%, 23%);
+// $clr-mobile-menu-bg: hsl(214, 28%, 5%);
 
-$clr-toggle-menu-bg: $white;
-$clr-toggle-menu-bars: $clr-font-400;
-$clr-toggle-menu-bars-active: $clr-primary-400;
+// $clr-toggle-menu-bg: white;
+// $clr-toggle-menu-bars: $clr-font-400;
+// $clr-toggle-menu-bars-active: $clr-primary-400;
 
 // Social color variables
-$clr-facebook: hsl(221, 44%, 41%);
-$clr-twitter: hsl(195, 100%, 47%);
-$clr-pinterest: hsl(358, 73%, 46%);
+// $clr-facebook: hsl(221, 44%, 41%);
+// $clr-twitter: hsl(195, 100%, 47%);
+// $clr-pinterest: hsl(358, 73%, 46%);
 
 /**
  * Brand Color
@@ -94,7 +116,6 @@ $clr-pinterest: hsl(358, 73%, 46%);
  *  https://github.com/billerickson/EA-Genesis-Child/blob/master/assets/scss/modules/_brand-color.scss
  *
  */
-
 // @function brand-color($key, $variant: null) {
 //     @if map-has-key($brand_colors, $key) {
 //         $color: map-get($brand_colors, $key);

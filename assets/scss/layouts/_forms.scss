@@ -8,10 +8,10 @@
 input,
 select,
 textarea {
-    background: $white;
-    border: 1px solid $clr-border-400;
+    background: white;
+    border: 1px solid var(--clr-border-400);
     border-radius: 4px;
-    color: $clr-font-400;
+    color: var(--clr-font-400);
     font-size: 18px;
     line-height: 24px;
     padding: 14px 16px;
@@ -27,13 +27,13 @@ textarea {
     width: 100%;
 }
 
-@include placeholder-color($grey_5);
+@include placeholder-color(var(--clr-grey-500));
 
 /* Search Form
 --------------------------------------------- */
 
 .search-form {
-    border: 1px solid $clr-border-400;
+    border: 1px solid var(--clr-border-400);
     max-width: 400px;
     position: relative;
     overflow: hidden;
@@ -60,11 +60,11 @@ textarea {
         right: 0;
 
         svg {
-            fill: $grey_7;
+            fill: var(--clr-grey-700);
             @include icon-position(20px);
 
             &:hover {
-                fill: $clr-highlight-400;
+                fill: var(--clr-secondary-400);
             }
         }
     }

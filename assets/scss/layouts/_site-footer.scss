@@ -7,10 +7,10 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-    background: $grey_8;
+    background: var(--clr-grey-800);
     padding: 40px $wrap_edge 10px;
     position: relative;
-    color: $white;
+    color: white;
 
     .wrap {
         &::before,
@@ -29,14 +29,14 @@
     }
 
     .widget-title {
-        color: $white;
+        color: white;
         font-size: 16px;
         font-weight: 700;
         text-transform: uppercase;
     }
 
     a {
-        color: $white;
+        color: white;
         text-decoration: none;
 
         &:hover {
@@ -44,7 +44,7 @@
         }
 
         svg {
-            fill: $white;
+            fill: white;
             @include icon-position(20px);
             margin-right: 12px;
         }
@@ -89,8 +89,8 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-    background: $clr-submenu-bg;
-    color: $grey_2;
+    background: var(--clr-submenu-bg);
+    color: var(--clr-grey-200);
     font-size: 1rem;
     padding: 2rem 0;
     // text-align: center;
@@ -103,11 +103,11 @@
 
     a {
         text-decoration: underline;
-        color: $grey_2;
+        color: var(--clr-grey-200);
         font-weight: 400;
 
         &:hover {
-            color: $clr-primary-400;
+            color: var(--clr-primary-400);
         }
     }
 
@@ -139,7 +139,7 @@
     /** Footer creds border top
     ---------------------------------------------- */
     &__creds-wrapper {
-        border-top: 1px solid $grey_2;
+        border-top: 1px solid var(--clr-grey-200);
         --gap: 1rem;
     }
 
@@ -149,7 +149,7 @@
         // Social icons colors
         &__link {
             svg {
-                fill: $grey_2;
+                fill: var(--clr-grey-200);
             }
         }
     }
@@ -163,7 +163,7 @@
     position: fixed;
     right: 1rem;
     bottom: 1rem;
-    background-color: $clr-primary-400;
+    background-color: var(--clr-primary-400);
     border-radius: 4px;
     line-height: 0;
     padding: 0.75rem;
@@ -172,7 +172,7 @@
     @include transition;
 
     svg {
-        fill: $white;
+        fill: white;
         vertical-align: middle;
     }
 

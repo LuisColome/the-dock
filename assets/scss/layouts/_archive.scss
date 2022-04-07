@@ -31,16 +31,16 @@
 
         a {
             text-decoration: none;
-            color: $clr-font-400;
+            color: var(--clr-font-400);
 
             &:hover {
-                color: $clr-primary-400;
+                color: var(--clr-primary-400);
             }
         }
     }
 
     &__category {
-        color: $clr-primary-400;
+        color: var(--clr-primary-400);
         font-size: 12px;
         font-weight: 600;
         text-transform: uppercase;
@@ -60,7 +60,7 @@
     &__read-more-link {
         text-decoration: none;
         font-size: 0.875rem;
-        color: $clr-font-400;
+        color: var(--clr-font-400);
         text-transform: uppercase;
 
         &::after {
@@ -103,7 +103,7 @@
 }
 
 .author-title {
-    color: $grey_8;
+    color: var(--clr-grey-800);
     @include font-sizes(18px, 20px);
     font-weight: 700;
     text-transform: uppercase;
@@ -114,7 +114,7 @@
 
 .pagination {
     grid-column: 1 / -1;
-    border-top: 1px solid $clr-border-400;
+    border-top: 1px solid var(--clr-border-400);
     font-size: 16px;
     text-align: center;
     padding-top: 22px;
@@ -134,8 +134,8 @@
             display: inline-block;
 
             a {
-                color: $clr-font-400;
-                background-color: $grey_2;
+                color: var(--clr-font-400);
+                background-color: var(--clr-grey-200);
                 border-radius: 3px;
                 display: block;
                 font-weight: 400;
@@ -156,14 +156,14 @@
             &:focus,
             &.active {
                 > a {
-                    background: $clr-primary-400;
-                    color: $white;
+                    background: var(--clr-primary-400);
+                    color: white;
                 }
             }
 
             // &.active > a {
-            //     background: $clr-primary-400;
-            //     color: $white;
+            //     background: var(--clr-primary-400);
+            //     color: white;
             // }
         }
     }

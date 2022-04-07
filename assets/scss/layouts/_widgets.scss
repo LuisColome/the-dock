@@ -5,58 +5,58 @@
 
 .widget {
     margin-bottom: 40px;
-  }
-  
-  .widget p:last-child,
-  .widget ul > li:last-of-type {
+}
+
+.widget p:last-child,
+.widget ul > li:last-of-type {
     margin-bottom: 0;
-  }
-  
-  .widget ul > li {
+}
+
+.widget ul > li {
     margin-bottom: 10px;
-  }
-  
-  .widget ul > li:last-of-type {
+}
+
+.widget ul > li:last-of-type {
     padding-bottom: 0;
-  }
-  
-  .widget ol > li {
+}
+
+.widget ol > li {
     list-style-position: inside;
     list-style-type: decimal;
     padding-left: 20px;
     text-indent: -20px;
-  }
-  
-  .widget li li {
+}
+
+.widget li li {
     border: 0;
     margin: 0 0 0 30px;
     padding: 0;
-  }
-  
-  .widget_calendar table {
+}
+
+.widget_calendar table {
     width: 100%;
-  }
-  
-  .widget_calendar td,
-  .widget_calendar th {
+}
+
+.widget_calendar td,
+.widget_calendar th {
     text-align: center;
-  }
-  
-  /* Featured Content
+}
+
+/* Featured Content
   --------------------------------------------- */
-  
-  .featured-content .entry {
-    border-bottom: 1px solid $grey_3;
+
+.featured-content .entry {
+    border-bottom: 1px solid var(--clr-grey-300);
     margin-bottom: 20px;
-  }
-  
-  .featured-content .entry:last-of-type {
+}
+
+.featured-content .entry:last-of-type {
     border-bottom: none;
     margin-bottom: 0;
-  }
-  
-  .featured-content .entry-title {
+}
+
+.featured-content .entry-title {
     font-size: 16px;
     margin-bottom: 5px;
     margin-top: 10px;
-  }
+}

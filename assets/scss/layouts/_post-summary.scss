@@ -14,11 +14,11 @@
     margin: 0;
 
     a {
-        color: $grey_10;
+        color: var(--clr-grey-100) 0;
         text-decoration: none;
 
         &:hover {
-            color: $clr-highlight-400;
+            color: var(--clr-secondary-400);
         }
     }
 }
@@ -38,11 +38,11 @@
     margin-bottom: 4px;
 
     a {
-        color: $grey_8;
+        color: var(--clr-grey-800);
         text-decoration: none;
 
         &:hover {
-            color: $clr-highlight-400;
+            color: var(--clr-secondary-400);
         }
     }
 }

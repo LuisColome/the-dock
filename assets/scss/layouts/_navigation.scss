@@ -33,7 +33,7 @@
 
         a {
             border: none;
-            color: $clr-font-400;
+            color: var(--clr-font-400);
             display: block;
             font-size: 16px;
             font-weight: 400;
@@ -52,14 +52,14 @@
         // Hover and focus effects for menu links. Both links and svg.
         &:hover > a,
         &:hover > .submenu-expand svg {
-            stroke: $clr-primary-400;
-            color: $clr-primary-400;
+            stroke: var(--clr-primary-400);
+            color: var(--clr-primary-400);
         }
 
         // Visual effetcs for current menu item if needed
         // &.current-menu-item > a,
         // &.current-menu-ancestor > a {
-        //     color: $clr-primary-400;
+        //     color: var(--clr-primary-400);
         // }
 
         // Underlined effect (on hover)
@@ -72,7 +72,7 @@
                 content: "";
                 display: block;
                 height: 2px;
-                background: $clr-primary-400;
+                background: var(--clr-primary-400);
                 transform: scale(0, 1);
                 transition: transform ease-in-out 0.25s;
                 // transform-origin: left;
@@ -98,9 +98,9 @@
             justify-content: center;
 
             a {
-                border: 2px solid $clr-primary-400;
+                border: 2px solid var(--clr-primary-400);
                 border-radius: $border-radius;
-                color: $clr-primary-400;
+                color: var(--clr-primary-400);
                 // margin-left: 0.5em;
 
                 @include media("<=mobile_menu") {
@@ -111,8 +111,8 @@
 
                 &:hover,
                 &:focus {
-                    background-color: $clr-primary-400;
-                    color: $white;
+                    background-color: var(--clr-primary-400);
+                    color: white;
                 }
 
                 span {
@@ -170,37 +170,37 @@
             .menu-item {
                 // Styles for menu links on transparent header
                 a {
-                    color: $white;
+                    color: white;
 
                     span {
                         &::after {
-                            background: $white;
+                            background: white;
                         }
                     }
                 }
 
                 // Styles for chevron arrows on transparent header
                 .submenu-expand svg {
-                    stroke: $white;
+                    stroke: white;
                 }
 
                 // Hightlight menu link on transparent header
                 &.highlight {
                     a {
-                        border-color: $white;
+                        border-color: white;
 
                         &:hover,
                         &:focus {
-                            background-color: $white;
-                            color: $clr-font-400;
+                            background-color: white;
+                            color: var(--clr-font-400);
                         }
                     }
                 }
 
                 // &:hover > a,
                 // &:hover .submenu-expand svg {
-                //     stroke: $clr-primary-400;
-                //     color: $clr-primary-400;
+                //     stroke: var(--clr-primary-400);
+                //     color: var(--clr-primary-400);
                 // }
             }
         }
@@ -269,7 +269,7 @@
         .sub-menu {
             flex-flow: column nowrap;
             --gap: 0;
-            background: $clr-submenu-bg;
+            background: var(--clr-submenu-bg);
             visibility: hidden;
             opacity: 0;
             position: absolute;
@@ -285,13 +285,13 @@
             .menu-item {
                 // Links on submenus.
                 a {
-                    color: $white;
+                    color: white;
                     font-size: 0.875rem; // 14px
                     padding: 1rem;
 
                     &:hover,
                     &:focus {
-                        background-color: $clr-submenu-bg-hover;
+                        background-color: var(--clr-submenu-bg-hover);
                     }
 
                     span {
@@ -307,7 +307,7 @@
                     right: 15px;
                     transform: translateY(-50%) rotate(-90deg);
                     svg {
-                        stroke: $white;
+                        stroke: white;
                     }
                 }
             }
@@ -326,7 +326,7 @@
         height: 100%;
         top: 0;
         right: -100%;
-        background: $clr-mobile-menu-bg;
+        background: var(--clr-mobile-menu-bg);
         transition: all 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
         padding: 105px $grid-gap 0;
         overflow: auto;
@@ -364,8 +364,8 @@
 
                 // White links on mobile menu and no animations
                 a {
-                    color: $white;
-                    border-bottom: 1px solid $grey_10;
+                    color: white;
+                    border-bottom: 1px solid var(--clr-grey-100) 0;
                     padding: 1rem 0;
                     font-size: 1rem;
 
@@ -379,14 +379,14 @@
 
                 &.highlight {
                     a {
-                        border: 1px solid $white;
-                        color: $white;
+                        border: 1px solid white;
+                        color: white;
                         margin: 2rem 0;
                         max-width: 70%;
 
                         &:hover {
-                            background-color: $white;
-                            color: $clr-submenu-bg;
+                            background-color: white;
+                            color: var(--clr-submenu-bg);
                         }
                     }
                 }
@@ -395,10 +395,10 @@
                 .submenu-expand {
                     padding: 1.1rem 1.25rem;
                     top: 0;
-                    border-left: 1px solid $grey_10;
+                    border-left: 1px solid var(--clr-grey-100) 0;
 
                     svg {
-                        stroke: $white;
+                        stroke: white;
                     }
                 }
             }
@@ -460,7 +460,7 @@
 
     &:hover,
     &.active {
-        background: $grey_3;
+        background: var(--clr-grey-300);
     }
 
     &.active {
@@ -499,7 +499,7 @@
 --------------------------------------------- */
 
 .header-search {
-    background: $grey_3;
+    background: var(--clr-grey-300);
     overflow: hidden;
     padding: 16px;
     width: 100%;
@@ -552,13 +552,15 @@
             position: fixed;
             top: 0;
             right: 1rem;
-            border-radius: 200px;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 4rem;
             line-height: 0;
             text-align: center;
-            background-color: $clr-toggle-menu-bg;
+            background-color: var(--clr-toggle-menu-bg);
             box-shadow: 0px 8px 20px -4px rgba(0, 0, 0, 0.48);
-            // transform: translate(-1rem, 1rem);
             transform: translateY(1rem);
+            transition: background-color 0.3s ease-in-out;
         }
     }
 
@@ -574,7 +576,7 @@
         position: absolute;
         height: 3px;
         width: 100%;
-        background: $clr-toggle-menu-bars;
+        background: var(--clr-toggle-menu-bars);
         border-radius: 2em;
         opacity: 1;
         right: 0;
@@ -600,12 +602,12 @@
     // togll__bar color when header is transparent.
     .first-block-align-full .site-header:not(.shrink) & {
         .toggl__bar {
-            background: $white;
+            background: white;
         }
 
         &.active {
             .toggl__bar {
-                background: $clr-toggle-menu-bars-active;
+                background: var(--clr-toggle-menu-bars-active);
             }
         }
     }
@@ -614,7 +616,7 @@
     &:hover,
     &.active {
         .toggl__bar {
-            background: $clr-toggle-menu-bars-active;
+            background: var(--clr-toggle-menu-bars-active);
         }
     }
 

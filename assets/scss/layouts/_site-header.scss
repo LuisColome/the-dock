@@ -15,9 +15,9 @@
     align-items: center;
     width: 100%;
     height: $header-height;
-    background-color: $white;
+    background-color: white;
     padding: 0 $wrap_edge;
-    // border-bottom: 1px solid $grey_3;
+    // border-bottom: 1px solid var(--clr-grey-300);
     @include transition;
 
     &::before,
@@ -57,7 +57,7 @@
 
     &.shrink {
         position: fixed;
-        background-color: $white;
+        background-color: white;
         height: 64px;
         box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
         animation: fadein 0.5s;
@@ -67,7 +67,7 @@
         }
 
         .site-title a {
-            color: $grey_9;
+            color: var(--clr-grey-900);
         }
 
         @include media("<=mobile_menu") {
@@ -80,7 +80,7 @@
     //     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
     //     .site-title a {
-    //     color: $grey_9;
+    //     color: var(--clr-grey-900);
     //     }
     // }
 

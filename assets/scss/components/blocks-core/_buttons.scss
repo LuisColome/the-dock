@@ -3,89 +3,88 @@
 /* Button
 --------------------------------------------- */
 
-$default: nth(nth($brand_colors, 1), 1); // first color in $brand_colors array
+// Depracated since I started using CSS Custom Props
+//$default: nth(nth($brand_colors, 1), 1); // first color in $brand_colors array
 
 .wp-block-button__link {
-    border: 2px solid brand-color($default);
+    // Common buttons styles
     border-radius: 3px;
     font-size: 20px;
     font-weight: 600;
-    // line-height: 32px;
-    padding: 0.5em 1.5em;
+    padding: 0.5rem 1.25rem;
     text-decoration: none;
 
-    .is-style-full &,
-    &.full {
-        display: block;
-        width: 100%;
+    // Add primary color border to default button
+    &:not(.has-background):not(.has-text-color) {
+        border: 2px solid var(--clr-primary-400);
     }
 
-    &:not(.has-text-color) {
-        color: white;
+    // depraceted since Gutenberg has its own predifined widths.
+    // .is-style-full &,
+    // &.full {
+    //     display: block;
+    //     width: 100%;
+    // }
 
-        &:hover {
+    // Default Gutenberg button.
+    &:not(.has-background):not(.has-text-color) {
+        background-color: var(--clr-primary-400);
+
+        &:hover,
+        &:focus {
+            border: 2px solid var(--clr-primary-500);
+            background-color: var(--clr-primary-500);
+        }
+    }
+
+    // Default outline gutenberg button
+    .is-style-outline > &:not(.has-text-color) {
+        border: 2px solid var(--clr-primary-400);
+        color: var(--clr-primary-400);
+        background-color: transparent;
+        padding: calc(0.5em - 2px) calc(1.5em -2px);
+
+        &:hover,
+        &:focus {
+            border: 2px solid var(--clr-primary-500);
+            background-color: var(--clr-primary-500);
             color: white;
         }
     }
 
-    &:not(.has-background) {
-        background-color: brand-color($default);
-
-        &:hover,
-        &:focus {
-            border: 2px solid brand-color($default, "darken");
-            background-color: brand-color($default, "darken");
-        }
-    }
-
-    .is-style-outline > &:not(.has-text-color), // front-end
-    .is-style-outline & {
-        border: 2px solid brand-color($default);
-        color: brand-color($default);
-        background-color: transparent;
-        padding: 0.5em 1.5em;
-
-        &:hover,
-        &:focus {
-            border: 2px solid brand-color($default, "darken");
-            background-color: brand-color($default, "darken");
-            color: $white;
-        }
-    }
-
-    @each $name, $color in $brand_colors {
-        .is-style-outline > &.has-text-color {
+    // Color loop from $brand_colors to have outline Gutenberg buttons support.
+    .is-style-outline > &.has-text-color {
+        @each $name, $color in $brand_colors {
             &.has-#{$name}-color {
-                border-color: $color;
-                color: $color;
+                border: 2px solid var(--clr-#{$name});
+                color: var(--clr-#{$name});
 
                 &:hover,
                 &:focus {
-                    border-color: $color;
-                    background-color: $color;
-                    color: $white;
+                    border-color: var(--clr-#{$name});
+                    background-color: var(--clr-#{$name});
+                    color: white !important;
                 }
             }
         }
     }
 
-    // > .wp-block-button__link:not(.has-text-color), .wp-block-button__link.is-style-outline:not(.has-text-color)
-
+    // Color loop from $brand_colors to have default Gutenberg buttons support.
     @each $name, $color in $brand_colors {
         &.has-#{$name}-color:hover,
         &.has-#{$name}-color:focus {
-            color: $color;
+            color: var(--clr-#{$name});
         }
 
         &.has-#{$name}-background-color {
-            background-color: brand-color($name);
-            border-color: brand-color($name);
+            background-color: var(--clr-#{$name});
+            border: 2px solid var(--clr-#{$name});
         }
 
         &.has-#{$name}-background-color:hover,
         &.has-#{$name}-background-color:focus {
-            background-color: brand-color($name, "darken");
-            border-color: brand-color($name, "darken");
+            background-color: var(--clr-#{$name});
+            border-color: var(--clr-#{$name});
         }
     }
 }

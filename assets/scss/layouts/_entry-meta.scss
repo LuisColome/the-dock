@@ -61,7 +61,7 @@
     .entry-categories {
         a {
             font-size: 1rem;
-            color: $clr-primary-400;
+            color: var(--clr-primary-400);
             text-transform: uppercase;
             text-decoration: none;
         }
@@ -75,7 +75,7 @@
     flex-flow: row wrap;
     margin: 4rem 0 2rem;
     padding: 1rem 0;
-    border-bottom: 1px solid $grey_4;
+    border-bottom: 1px solid var(--clr-grey-400);
 
     a {
         font-size: 16px;
@@ -85,15 +85,15 @@
         margin: 0 0.5rem 0.5rem 0;
         background-color: transparent;
         text-decoration: none;
-        color: $clr-font-400;
+        color: var(--clr-font-400);
         border-radius: $border-radius;
-        border: 1px solid $clr-font-400;
+        border: 1px solid var(--clr-font-400);
         position: relative;
 
         &:hover {
-            background-color: $clr-primary-400;
-            border-color: $clr-primary-400;
-            color: $white;
+            background-color: var(--clr-primary-400);
+            border-color: var(--clr-primary-400);
+            color: white;
         }
     }
 }
@@ -111,7 +111,7 @@
 //     }
 
 //     a {
-//         color: $primary-color;
+//         color: var(--clr-primary-400);
 //         text-decoration: none;
 
 //         &:hover {
@@ -127,15 +127,15 @@
     margin-bottom: 24px;
 
     a {
-        color: $clr-primary-400;
+        color: var(--clr-primary-400);
 
         &:hover {
-            color: $clr-highlight-400;
+            color: var(--clr-secondary-400);
         }
     }
 
     .single & {
-        border-top: 1px solid $grey_3;
+        border-top: 1px solid var(--clr-grey-300);
         padding-top: 32px;
         text-align: center;
     }
