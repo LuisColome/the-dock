@@ -35,10 +35,10 @@ function ea_login_logo() {
         display: grid;
         place-items: center;
         background: hsl(212, 100%, 91%);
-        background: linear-gradient(
+        background-image: linear-gradient(
             180deg,
-            hsl(212, 100%, 91%) 11%,
-            hsl(212, 66%, 75%) 100%
+            hsl(212, 100%, 92%) 11%,
+            hsl(212, 66%, 82%) 100%
         );
         height: 100vh;
         overflow: hidden;
