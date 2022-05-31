@@ -7,7 +7,7 @@
     .wp-block-quote:not(.is-large):not(.is-style-large) {
         position: relative;
         padding: calc(5% + 10px) 5%;
-        margin: $margin_2x auto;
+        margin: calc(2 * #{$block-margin}) auto;
         border: 2px solid var(--clr-grey-300);
         border-radius: $border-radius;
         text-align: left;
@@ -58,6 +58,12 @@
 
     .wp-block-quote {
         &.is-style-large {
+            padding: calc(5% + 10px) 5%;
+        }
+    }
+
+    .wp-block-quote {
+        &.is-style-large {
             p {
                 font-size: clamp(1.35rem, 1.2rem + 0.5vw, 1.55rem);
                 font-weight: 500;
@@ -71,9 +77,7 @@
         position: relative;
         padding: calc(3% + 10px);
         margin: $margin_2x auto;
-        border: 2px solid var(--clr-grey-300);
-        border-right: none;
-        border-left: none;
+        border-top: 2px solid var(--clr-grey-300);
 
         &::before {
             @include block-cover();
