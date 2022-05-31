@@ -11,11 +11,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   ~~Live Demo~~
 -   Fix text domains
 -   Add support for custom Gutenberg gradients.
--   Style Contact form 7 as the general button styles
+-   ~~Style Contact form 7 as the general button styles~~
 -   Support for portfolio CPT
 -   Support for Team CPT
 -   ~~Fix header animation issue when the header is not transparent~~
 -   ~~Better support for Media & Text Gutenberg block~~
+
+### [1.2.2](https://github.com/LuisColome/the-dock/releases/tag/v1.2.2) - 2022-31-05
+
+#### Added
+
+-   Add new colors as custom properties for the footer
+-   Add new custom properties (border radius)
+
+#### Changed
+
+-   Moved some Contact Form 7 style forms.scss to treat them as global styles.
+-   Update background css specificity
+-   Update custom image slug
+
+#### Fixed
+
+-   Fixed space (padding) in big blockquote block
 
 ### [1.2.1](https://github.com/LuisColome/the-dock/releases/tag/v1.2.1) - 2022-07-04
 

@@ -1,6 +1,6 @@
 # TheDock - Genesis Starter Child Theme
 
-[![TheDock Genesis Starter Theme v1.2.1 badge][changelog-badge]][changelog] [![Version 1.2.1 Badge][version-badge]][changelog] [![Last commit badge][last-commit]][last-commit-link]
+[![TheDock Genesis Starter Theme v1.2.2 badge][changelog-badge]][changelog] [![Version 1.2.2 Badge][version-badge]][changelog] [![Last commit badge][last-commit]][last-commit-link]
 
 ![TheDock Screenshot](screenshot.png)
 
@@ -42,7 +42,7 @@ Without these projects, this WordPress Genesis Starter Child Theme wouldn't be w
 -   [Eduardo Boucas' Include Media Queries](https://eduardoboucas.github.io/include-media/)
 
 [changelog]: ./CHANGELOG.md
-[changelog-badge]: https://img.shields.io/badge/Changelog-TheDock%20Genesis%20Starter%20Theme%20v1.2.1-orange
-[version-badge]: https://img.shields.io/badge/version-1.2.1-informational.svg
+[changelog-badge]: https://img.shields.io/badge/Changelog-TheDock%20Genesis%20Starter%20Theme%20v1.2.2-orange
+[version-badge]: https://img.shields.io/badge/version-1.2.2-informational.svg
 [last-commit]: https://img.shields.io/github/last-commit/luiscolome/Thedock/develop?color=yellow&logoColor=red
 [last-commit-link]: https://github.com/LuisColome/the-dock/commit/develop
