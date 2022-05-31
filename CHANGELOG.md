@@ -17,6 +17,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   ~~Fix header animation issue when the header is not transparent~~
 -   ~~Better support for Media & Text Gutenberg block~~
 
+### [1.2.3](https://github.com/LuisColome/the-dock/releases/tag/v1.2.3) - 2022-31-05
+
+#### Fixed
+
+-   Fixed Issue with the internal margin (padding) on embed fulwidth blocks.
+
+#### Changed
+
+-   Updated old text domains.
+
 ### [1.2.2](https://github.com/LuisColome/the-dock/releases/tag/v1.2.2) - 2022-31-05
 
 #### Added
