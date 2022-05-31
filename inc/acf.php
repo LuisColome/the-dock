@@ -31,7 +31,7 @@ class BE_ACF_Customizations {
 	function register_options_page() {
 	    if ( function_exists( 'acf_add_options_page' ) ) {
 	        acf_add_options_page( array(
-	        	'title'      => __( 'Site Options', 'ea_genesis_child' ),
+	        	'title'      => __( 'Site Options', 'thedock' ),
 	        	'capability' => 'manage_options',
 	        ) );
 	    }

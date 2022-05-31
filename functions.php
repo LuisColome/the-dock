@@ -129,26 +129,26 @@ function ea_child_theme_setup() {
 	// -- Editor Font Sizes
 	add_theme_support( 'editor-font-sizes', array(
 		array(
-			'name'      => __( 'Small', 'ea_genesis_child' ),
-			'shortName' => __( 'S', 'ea_genesis_child' ),
+			'name'      => __( 'Small', 'thedock' ),
+			'shortName' => __( 'S', 'thedock' ),
 			'size'      => 16,
 			'slug'      => 'small'
 		),
 		array(
-			'name'      => __( 'Normal', 'ea_genesis_child' ),
-			'shortName' => __( 'M', 'ea_genesis_child' ),
+			'name'      => __( 'Normal', 'thedock' ),
+			'shortName' => __( 'M', 'thedock' ),
 			'size'      => 18,
 			'slug'      => 'normal'
 		),
 		array(
-			'name'      => __( 'Large', 'ea_genesis_child' ),
-			'shortName' => __( 'L', 'ea_genesis_child' ),
+			'name'      => __( 'Large', 'thedock' ),
+			'shortName' => __( 'L', 'thedock' ),
 			'size'      => 24,
 			'slug'      => 'large'
 		),
 		array(
-			'name'      => __( 'Huge', 'ea_genesis_child' ),
-			'shortName' => __( 'H', 'ea_genesis_child' ),
+			'name'      => __( 'Huge', 'thedock' ),
+			'shortName' => __( 'H', 'thedock' ),
 			'size'      => 28,
 			'slug'      => 'huge'
 		),
@@ -160,42 +160,42 @@ function ea_child_theme_setup() {
 	// -- Editor Color Palette
 	add_theme_support( 'editor-color-palette', array(
 		array(
-			'name'  => __( 'Orange', 'ea_genesis_child' ),
+			'name'  => __( 'Orange', 'thedock' ),
 			'slug'  => 'orange',
 			'color'	=> '#dd6b20',
 		),
 		array(
-			'name'  => __( 'Light Orange', 'ea_genesis_child' ),
+			'name'  => __( 'Light Orange', 'thedock' ),
 			'slug'  => 'light-orange',
 			'color'	=> '#de8974',
 		),
 		array(
-			'name'  => __( 'Red', 'ea_genesis_child' ),
+			'name'  => __( 'Red', 'thedock' ),
 			'slug'  => 'red',
 			'color'	=> '#cf3033',
 		),
 		array(
-			'name'  => __( 'Grey', 'ea_genesis_child' ),
+			'name'  => __( 'Grey', 'thedock' ),
 			'slug'  => 'grey',
 			'color' => '#f2f3f8',
 		),
 		array(
-			'name'  => __( 'Dark grey', 'ea_genesis_child' ),
+			'name'  => __( 'Dark grey', 'thedock' ),
 			'slug'  => 'dark-grey',
 			'color' => '#616161',
 		),
 		array(
-			'name'  => __( 'Orange grey', 'ea_genesis_child' ),
+			'name'  => __( 'Orange grey', 'thedock' ),
 			'slug'  => 'orange-grey',
 			'color' => '#27241d',
 		),
 		array(
-			'name'  => __( 'Almost black', 'ea_genesis_child' ),
+			'name'  => __( 'Almost black', 'thedock' ),
 			'slug'  => 'almost-black',
 			'color' => '#090c10',
 		),
 		array(
-			'name'  => __( 'White', 'ea_genesis_child' ),
+			'name'  => __( 'White', 'thedock' ),
 			'slug'  => 'white',
 			'color' => '#ffffff',
         ),
@@ -218,8 +218,8 @@ add_action( 'genesis_setup', 'ea_child_theme_setup', 15 );
  * @return array
  */
 function ea_comment_text( $args ) {
-	$args['title_reply']          = __( 'Leave A Comment', 'ea_genesis_child' );
-	$args['label_submit']         = __( 'Post Comment',  'ea_genesis_child' );
+	$args['title_reply']          = __( 'Leave A Comment', 'thedock' );
+	$args['label_submit']         = __( 'Post Comment',  'thedock' );
 	$args['comment_notes_before'] = '';
 	$args['comment_notes_after']  = '';
 	return $args;
