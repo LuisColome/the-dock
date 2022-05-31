@@ -89,8 +89,8 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-    background: var(--clr-submenu-bg);
-    color: var(--clr-grey-200);
+    background: var(--clr-footer-bg);
+    color: var(--clr-footer-text);
     font-size: 1rem;
     padding: 2rem 0;
     // text-align: center;
@@ -103,7 +103,7 @@
 
     a {
         text-decoration: underline;
-        color: var(--clr-grey-200);
+        color: var(--clr-footer-link);
         font-weight: 400;
 
         &:hover {
