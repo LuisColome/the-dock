@@ -50,7 +50,8 @@
             width: 100vw;
             padding: 0 $wrap_edge; // to make it match to the site-inner padding. layout.scss:41
 
-            &.wp-block-image {
+            &.wp-block-image,
+            &.wp-block-embed {
                 padding: 0;
             }
 
