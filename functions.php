@@ -96,7 +96,7 @@ function ea_child_theme_setup() {
 
 	// Adds image sizes.
 	add_image_size( 'lcm-featured-image', 768, 512, true ); // Aspect ratio 3:2
-	add_image_size( 'lcm-featured-image', 1128, 634, true ); // Aspect ratio 3:2
+	add_image_size( 'lcm-featured-image-big', 1128, 634, true ); // Aspect ratio 3:2
 
 	/**
 	 * Register custom images sizes to use in Gutenberg
