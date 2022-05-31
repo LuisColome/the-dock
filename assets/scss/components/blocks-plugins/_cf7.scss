@@ -62,9 +62,6 @@
         .wpcf7-form-control-wrap {
             input,
             textarea {
-                margin: 0.2em 0;
-                background-color: var(--clr-grey-100);
-
                 &:focus {
                     border-color: var(--clr-primary-400);
                     outline: none;
@@ -86,18 +83,34 @@
         margin: $block-margin 0;
         padding: 12px 36px;
         width: auto;
-        min-width: 230px;
+        min-width: 250px;
         border: none;
         color: white;
-        background-color: var(--clr-primary-400);
-        border-radius: $border-radius;
+        background-color: var(--clr-button-bg-400);
+        border-radius: var(--btn-border-radius);
 
         &:hover {
-            background-color: var(--clr-secondary-400);
+            background-color: var(--clr-button-bg-500);
         }
     }
 
     input {
-        border-radius: $border-radius;
+        border-radius: var(--btn-border-radius);
+    }
+}
+
+// Privacy Policy Contact Form 7 consent.
+.wpcf7-acceptance {
+    .wpcf7-list-item {
+        margin: 0;
+    }
+
+    label {
+        display: flex;
+
+        input {
+            width: 16px;
+            margin-inline-end: 1rem;
+        }
     }
 }

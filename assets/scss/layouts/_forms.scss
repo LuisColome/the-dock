@@ -8,13 +8,14 @@
 input,
 select,
 textarea {
-    background: white;
+    background-color: var(--clr-grey-100);
     border: 1px solid var(--clr-border-400);
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     color: var(--clr-font-400);
     font-size: 18px;
-    line-height: 24px;
-    padding: 14px 16px;
+    line-height: 1.5;
+    padding: 0.75rem 1rem;
+    margin: 0.2em 0;
     width: 100%;
 }
 
