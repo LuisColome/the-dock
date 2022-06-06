@@ -17,6 +17,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   ~~Fix header animation issue when the header is not transparent~~
 -   ~~Better support for Media & Text Gutenberg block~~
 
+### [1.2.4](https://github.com/LuisColome/the-dock/releases/tag/v1.2.4) - 2022-06-06
+
+#### Added
+
+-   Add new custom props for font sizes (paragraphs and headers)
+-   Add header style mixing for genereal header styles
+-   Font size custom prop on Base style mixin
+-   Add layouts as body classes
+-   Force fullwidth on pages
+-   Add editor-style.css file to functions and remove old comment
+
+#### Changed
+
+-   Improved code on editor-layout.scss and gutenberg.scss
+-   Use new custom props and header-style mixin
+-   Updated theme text domain
+
+#### Fixed
+
+-   Fixed padding issue on fullwidth embeds blocks.
+
+#### Removed
+
+-   Removed base and typography files to compile on editor style sheet.
+
 ### [1.2.3](https://github.com/LuisColome/the-dock/releases/tag/v1.2.3) - 2022-31-05
 
 #### Fixed
