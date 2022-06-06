@@ -50,6 +50,8 @@ add_action( 'wp_enqueue_scripts', 'lcm_global_enqueues' );
 function ea_gutenberg_scripts() {
 	wp_enqueue_style( 'lcm-fonts', lcm_theme_fonts_url() );
 	//wp_enqueue_script( 'ea-editor', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
+    wp_enqueue_style( 'lcm-editor-style', get_stylesheet_directory_uri() . "/assets/css/editor-style.css", false, '1.0', 'all' );
+
 }
 add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
 
@@ -87,7 +89,6 @@ function ea_child_theme_setup() {
 
 	// Editor Styles
 	add_theme_support( 'editor-styles' );
-	// add_editor_style( '/inc/gutenberg/style-editor.css' );
 	add_editor_style( '/assets/css/editor-style.css' );
 
 	// Remove image sizes
