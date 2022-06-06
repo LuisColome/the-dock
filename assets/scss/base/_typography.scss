@@ -106,11 +106,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--clr-headings-400);
-    font-family: $heading-font, $sans-serif;
-    font-weight: 600;
-    line-height: 1.2;
-    margin: 0 0 $margin_2x 0;
+    @include header-styles();
     scroll-margin-top: 5rem; // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
 
     .entry-content > & {
@@ -137,32 +133,27 @@ h6 {
 }
 
 h1 {
-    // @include font-sizes(34px, 48px, 42px);
-    font-size: clamp(2.2rem, 1.35rem + 2.65vw, 3rem);
+    font-size: var(--hfs-1);
 }
 
 h2 {
-    // @include font-sizes(26px, 32px, 36px);
-    font-size: clamp(1.9rem, 1.4rem + 2vw, 2.6rem);
+    font-size: var(--hfs-2);
 }
 
 h3 {
-    // @include font-sizes(22px, 26px, 28px);
-    font-size: clamp(1.6rem, 1.2rem + 1vw, 1.85rem);
+    font-size: var(--hfs-3);
 }
 
 h4 {
-    // @include font-sizes(20px, 24px, 26px);
-    font-size: clamp(1.4rem, 1.1rem + 0.8vw, 1.7rem);
+    font-size: var(--hfs-4);
 }
 
 h5 {
-    // @include font-sizes(18px, 22px);
-    font-size: clamp(1.1rem, 1rem + 0.7vw, 1.4rem);
+    font-size: var(--hfs-5);
 }
 
 h6 {
-    font-size: clamp(1.05rem, 1rem + 0.5vw, 1.25rem);
+    font-size: var(--hfs-6);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -170,7 +161,7 @@ h6 {
 /* Lists
 --------------------------------------------- */
 .entry-content > *,
-.block-editor > * {
+.editor-style-wrapper > * {
     // Common lists
     ul,
     ol {
