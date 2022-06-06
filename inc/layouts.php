@@ -16,7 +16,7 @@ genesis_unregister_layout( 'sidebar-sidebar-content' );
 //genesis_unregister_layout( 'content-sidebar' );
 
 // Add new layouts
-genesis_register_layout( 'content-width', [ 'label' => __( 'Content Width', 'ea_genesis_child' ), ] );
+genesis_register_layout( 'content-width', [ 'label' => __( 'Content Width', 'thedock' ), ] );
 
 /**
  * Function to forze the layout.
@@ -47,33 +47,28 @@ add_action( 'genesis_meta', function() {
 });
 
 /**
- * Editor layout style
- *
- */
-function ea_editor_layout_style() {
-	wp_enqueue_style( 'ea-editor-layout', get_stylesheet_directory_uri() . '/assets/css/editor-layout.css', [], filemtime( get_stylesheet_directory() . '/assets/css/editor-layout.css' ) );
-}
-// add_action( 'enqueue_block_editor_assets', 'ea_editor_layout_style', 5 );
-
-/**
- * Editor layout class
- * @link https://www.billerickson.net/change-gutenberg-content-width-to-match-layout/
+ * Gutenberg layout class
+ * @link https://www.billerickson.net/change-gutenberg-content-width-to-match-genesis-layout/
  *
  * @param string $classes
  * @return string
  */
-function ea_editor_layout_class( $classes ) {
+function ea_gutenberg_layout_class( $classes ) {
 	$screen = get_current_screen();
 	if( ! $screen->is_block_editor() )
 		return $classes;
 
 	$layout = false;
 	$post_id = isset( $_GET['post'] ) ? intval( $_GET['post'] ) : false;
-
+  
 	// Get post-specific layout
 	if( $post_id )
 		$layout = genesis_get_custom_field( '_genesis_layout', $post_id );
-
+    
+	// Pages use full width as default, see below
+	if( empty( $layout ) && 'page' === get_post_type() )
+		$layout = 'full-width-content';
+    
 	// If no post-specific layout, use site-wide default
 	elseif( empty( $layout ) )
 		$layout = genesis_get_option( 'site_layout' );
@@ -81,4 +76,17 @@ function ea_editor_layout_class( $classes ) {
 	$classes .= ' ' . $layout . ' ';
 	return $classes;
 }
-add_filter( 'admin_body_class', 'ea_editor_layout_class' );
+add_filter( 'admin_body_class', 'ea_gutenberg_layout_class' );
+
+/**
+ * Full width layout for pages as default
+ *
+ * @param string $layout 
+ * @return string
+ */
+function lcm_full_width_pages( $layout ) {
+	if( is_page() )
+		$layout = 'full-width-content';
+	return $layout;
+}
+add_filter( 'genesis_pre_get_option_site_layout', 'lcm_full_width_pages' );

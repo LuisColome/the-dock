@@ -17,4 +17,16 @@
     // Border custom properties
     --border-radius: 10px;
     --btn-border-radius: 10px;
+
+    // Typography custom props.
+    --fs-small: 1rem;
+    --fs-base: 1.125rem;
+    --fs-big: 1.5rem;
+    --fs-huge: 1.75rem;
+    --hfs-1: clamp(2.2rem, 1.35rem + 2.65vw, 3rem);
+    --hfs-2: clamp(1.9rem, 1.4rem + 2vw, 2.6rem);
+    --hfs-3: clamp(1.6rem, 1.2rem + 1vw, 1.85rem);
+    --hfs-4: clamp(1.4rem, 1.1rem + 0.8vw, 1.7rem);
+    --hfs-5: clamp(1.1rem, 1rem + 0.7vw, 1.4rem);
+    --hfs-6: clamp(1.05rem, 1rem + 0.5vw, 1.25rem);
 }

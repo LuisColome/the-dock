@@ -1,31 +1,66 @@
 @use "abstracts" as *;
 
-body {
+.editor-styles-wrapper {
     @include base-style();
 }
 
+.editor-styles-wrapper {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @include header-styles();
+    }
+}
+
+h1 {
+    font-size: var(--hfs-1);
+}
+
+h2 {
+    font-size: var(--hfs-2);
+}
+
+h3 {
+    font-size: var(--hfs-3);
+}
+
+h4 {
+    font-size: var(--hfs-4);
+}
+
+h5 {
+    font-size: var(--hfs-5);
+}
+
+h6 {
+    font-size: var(--hfs-6);
+}
+
 p {
+    margin: 0 0 1.5rem;
+    padding: 0;
     overflow-x: initial;
 }
 
-/* Post title width */
-.editor-post-title__block.wp-block {
-    max-width: $grid-width;
-
-    /* Post title styling */
-    // .editor-post-title__input {
-    // }
+// Add !important to override Gutenberg styles.
+.has-small-font-size {
+    font-size: var(--fs-small) !important;
 }
 
-/* Main column width */
-.wp-block {
-    max-width: $content-width;
+.has-normal-font-size {
+    // Value in accordance with Base-style mixins
+    font-size: var(--fs-base) !important;
+}
 
-    /* Wide column width */
-    &[data-align="wide"],
-    &[data-align="full"] {
-        max-width: none;
-    }
+.has-large-font-size {
+    font-size: var(--fs-big) !important;
+}
+
+.has-huge-font-size {
+    font-size: var(--fs-huge) !important;
 }
 
 // Undo blockquote styles

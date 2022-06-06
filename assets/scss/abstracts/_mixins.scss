@@ -10,7 +10,7 @@
 @mixin base-style {
     color: var(--clr-font-400);
     font-family: $sans-serif;
-    font-size: 1.125rem; // 18px
+    font-size: var(--fs-base); // 18px
     // @include font-sizes(1rem, 1.075rem, 1.125rem, );
     font-weight: 400;
     line-height: 1.55;
@@ -19,6 +19,15 @@
     @media print {
         font-family: sans-serif;
     }
+}
+
+// Headers style
+@mixin header-styles {
+    color: var(--clr-headings-400);
+    font-family: $heading-font, $sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 $margin_2x 0;
 }
 
 // Transition time
