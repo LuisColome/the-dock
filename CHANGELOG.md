@@ -22,10 +22,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added
 
 -   Add new custom props for font sizes (paragraphs and headers)
--   Add header style mixing for genereal header styles
+-   Add header style mixing for general header styles
 -   Font size custom prop on Base style mixin
 -   Add layouts as body classes
--   Force fullwidth on pages
+-   Force full width on pages
 -   Add editor-style.css file to functions and remove old comment
 
 #### Changed
@@ -36,7 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Fixed
 
--   Fixed padding issue on fullwidth embeds blocks.
+-   Fixed padding issue on full width embeds blocks.
 
 #### Removed
 
@@ -46,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Fixed
 
--   Fixed Issue with the internal margin (padding) on embed fulwidth blocks.
+-   Fixed Issue with the internal margin (padding) on embed full width blocks.
 
 #### Changed
 
@@ -56,7 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Added
 
--   Add new colors as custom properties for the footer
+-   Add new colours as custom properties for the footer
 -   Add new custom properties (border radius)
 
 #### Changed
@@ -73,7 +73,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Added
 
--   CSS custom properties for colors.
+-   CSS custom properties for colours.
 
 #### Changed
 
@@ -81,8 +81,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Removed
 
--   Depracated Brand colors function
--   Sass color variables (using map color instead).
+-   Deprecated Brand colours function
+-   Sass colour variables (using map colour instead).
 
 ### [1.2.0](https://github.com/LuisColome/the-dock/releases/tag/v1.2.0) - 2022-03-04
 
@@ -125,7 +125,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Removed
 
--   Depracated post-summary.scss file due to duplicated content.
+-   Deprecated post-summary.scss file due to duplicated content.
 
 ### [1.0.9](https://github.com/LuisColome/the-dock/releases/tag/v1.0.9) - 2022-02-26
 
@@ -149,13 +149,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Removed
 
--   Remove the index.scss files due to Prepros can't proccess them
+-   Remove the index.scss files due to Prepros can't process them
 
 ### [1.0.8](https://github.com/LuisColome/the-dock/releases/tag/v1.0.8) - 2022-02-23
 
 #### Added
 
--   Fira Sans Condesed as the heading font
+-   Fira Sans Condensed as the heading font
 -   Genesis featured image on single posts
 -   Support for embeds blocks has been added
 -   New logo, color and white version
@@ -168,7 +168,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Archive title is now aligned to left
 -   Gutenberg custom colors
 -   Reduce the time of the header animation when scrolling down
--   Mobile navigation style complety redone
+-   Mobile navigation style completely redone
 -   Update header with a transparent version available when fist block is fullwidth.
 -   New colors on Bakctotop link
 -   New favicon
@@ -196,7 +196,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Updated
 
 -   Body font size
--   Marings on cover block according to the 8pt design system
+-   Margins on cover block according to the 8pt design system
 -   Site header height with a variable
 -   Archive title margin
 -   Variables based on 8pt design system
@@ -204,8 +204,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Custom Gutenberg font sizes
 -   Native Cover block. paddings and max-width inner-container.
 -   Border radius on Media & Text native block
--   Site header height and logo withd according Demo design
--   Site main width on full-widht layout according to 8pt design system
+-   Site header height and logo width according Demo design
+-   Site main width on full-width layout according to 8pt design system
 -   Width layout based on $grid-width (1128px) variable
 -   Screenshot
 -   In text links color.
@@ -237,7 +237,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Gitignore
 -   Margins on headings
--   Style for blockquote and pullquote block
+-   Style for blockquote and pull quote block
 -   Close mobile menu when clicking outside of it
 -   Fixed site header size on scrolling down
 
@@ -259,7 +259,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Fix
 
 -   Padding on secondary buttons (outlined)
--   Color variables conflict with brand-color funciton.
+-   Color variables conflict with brand-color function.
 
 ### [1.0.5](https://github.com/LuisColome/the-dock/releases/tag/v1.0.5) - 2021-09-21
 
@@ -283,12 +283,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Changed
 
--   Better way to organize SASS files. Following the 7:1 Sass rule, adapted to the way I work with Genesis Child Themes.
+-   Better way to organise SASS files. Following the 7:1 Sass rule, adapted to the way I work with Genesis Child Themes.
 -   Start using @use and @forward Sass rules.
 
 #### Remove
 
--   @import Sass rule depracated.
+-   @import Sass rule deprecated.
 
 ### [1.0.3] - 2021-04-20
 
@@ -298,7 +298,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Added
 
--   Support for Contact Form 7. Remove the p tag from the CF7 code and only loads the CSS, JS and Google Reacptcha where CF7 shortcode is used.
+-   Support for Contact Form 7. Remove the p tag from the CF7 code and only loads the CSS, JS and Google Recaptcha where CF7 shortcode is used.
 -   Check list style. Just add .check-list class on List Gutenberg Block.
 -   Two new icons. Chevron Bottom and Chevron Right.
 -   Support for Genesis featured images on single posts.
@@ -328,4 +328,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Added
 
--   Inicial upload.
+-   Initial upload.
